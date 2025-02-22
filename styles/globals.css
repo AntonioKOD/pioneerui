@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 224 71% 4%;
+    --card: 220 33% 98%;
+    --card-foreground: 224 71% 4%;
+    --popover: 220 33% 98%;
+    --popover-foreground: 224 71% 4%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 199 89% 48%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+    --radius: 0.75rem;
+
+    /* Chart colors - vibrant and distinct */
+    --chart-1: 262 83% 58%;
+    --chart-2: 199 89% 48%;
+    --chart-3: 326 100% 74%;
+    --chart-4: 169 65% 42%;
+    --chart-5: 33 100% 53%;
+
+    /* Sidebar specific colors */
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 224 71% 4%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 262 83% 58%;
+
+    /* Additional color palette */
+    --color-1: 326 100% 74%;
+    --color-2: 262 83% 58%;
+    --color-3: 199 89% 48%;
+    --color-4: 169 65% 42%;
+    --color-5: 33 100% 53%;
+  }
+
+  .dark {
+    /* Base colors - deeper dark theme */
+    --background: 240 20% 3%;
+    --foreground: 0 0% 98%;
+    --card: 240 20% 3%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 20% 3%;
+    --popover-foreground: 0 0% 98%;
+  
+    /* Vibrant primary with glass effect */
+    --primary: 265 89% 78%;
+    --primary-foreground: 240 20% 3%;
+  
+    /* Glassy secondary */
+    --secondary: 240 20% 12%;
+    --secondary-foreground: 0 0% 98%;
+  
+    /* Subtle muted tones */
+    --muted: 240 20% 8%;
+    --muted-foreground: 240 5% 64%;
+  
+    /* Accent matches primary for consistency */
+    --accent: 265 89% 78%;
+    --accent-foreground: 240 20% 3%;
+  
+    /* Bright destructive for warnings */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+  
+    /* Subtle borders and inputs */
+    --border: 240 20% 12%;
+    --input: 240 20% 12%;
+    --ring: 265 89% 78%;
+  
+    /* Chart colors - vibrant and distinct */
+    --chart-1: 265 89% 78%;
+    --chart-2: 199 95% 74%;
+    --chart-3: 326 100% 74%;
+    --chart-4: 169 75% 52%;
+    --chart-5: 33 100% 63%;
+  
+    /* Sidebar with glass effect */
+    --sidebar-background: 240 20% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 265 89% 78%;
+    --sidebar-primary-foreground: 240 20% 3%;
+    --sidebar-accent: 240 20% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 20% 12%;
+    --sidebar-ring: 265 89% 78%;
+  }
+  
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground overscroll-none;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 5px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+}
+
+@layer utilities {
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute inline-flex h-9 w-9 items-center justify-center rounded-full border-4 border-background bg-muted text-center -indent-px font-mono text-base font-medium;
+    @apply ml-[-50px] mt-[-4px];
+    content: counter(step);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+}
+
+.lab-bg {
+  --mask-offset: 100px;
+  -webkit-mask: linear-gradient(
+      to bottom,
+      transparent,
+      #fff var(--mask-offset) calc(100% - var(--mask-offset)),
+      transparent
+    ),
+    linear-gradient(
+      to right,
+      transparent,
+      #fff var(--mask-offset) calc(100% - var(--mask-offset)),
+      transparent
+    );
+  mask: linear-gradient(
+      to bottom,
+      transparent,
+      #fff var(--mask-offset) calc(100% - var(--mask-offset)),
+      transparent
+    ),
+    linear-gradient(
+      to right,
+      transparent,
+      #fff var(--mask-offset) calc(100% - var(--mask-offset)),
+      transparent
+    );
+  /* -webkit-mask: radial-gradient(circle at 50% 50%,transparent 0,#fff calc(100% - var(--mask-offset)),transparent 100%); */
+  -webkit-mask-composite: source-in, xor;
+  mask-composite: intersect;
+}
