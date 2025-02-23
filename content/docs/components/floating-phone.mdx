@@ -1,0 +1,68 @@
+---
+title: Floating Phone
+date: 2025-02-22
+description: A floating phone component.
+author: antonio_kodheli
+published: true
+---
+
+
+<ComponentPreview name="floating-phone-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/floating-phone"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="floating-phone" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Examples
+
+<ComponentPreview name="floating-phone-demo-2" />
+
+
+<ComponentPreview name="floating-phone-demo-3" />
+
+
+## Props
+
+
+| Prop | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| `gradientStart` | `string` | `"#4F46E5"` | Starting color of the gradient background. Accepts any valid CSS color value |
+| `gradientEnd` | `string` | `"#9333EA"` | Ending color of the gradient background. Accepts any valid CSS color value |
+| `textColor` | `string` | `"#ffffff"` | Color of the text content. Used for default content and action button text |
+| `content` | `React.ReactNode` | `undefined` | Custom content to be displayed inside the phone. Overrides the default logo and title display |
+| `logo` | `React.ReactNode` | `undefined` | Custom logo component to be displayed when no content prop is provided |
+| `title` | `string` | `undefined` | Title text to be displayed below the logo when no content prop is provided |
+| `actionText` | `string` | `undefined` | Text to be displayed in the action button at the bottom of the phone |
+| `actionLink` | `string` | `"#"` | URL for the action button link |
+| `showStatusBar` | `boolean` | `true` | Controls the visibility of the status bar at the top of the phone |
+
+
+
+
+

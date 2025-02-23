@@ -1103,6 +1103,23 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
+  "floating-phone": {
+    name: "floating-phone",
+    description: "A floating phone component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/floating-phone.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/floating-phone.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/floating-phone.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
   "magic-card-demo": {
     name: "magic-card-demo",
     description: "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
@@ -3023,6 +3040,57 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/example/terminal-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "floating-phone-demo": {
+    name: "floating-phone-demo",
+    description: "Example showing a floating phone mockup.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/floating-phone"],
+    files: [{
+      path: "registry/example/floating-phone-demo.tsx",
+      type: "registry:example",
+      target: "components/floating-phone-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/floating-phone-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "floating-phone-demo-2": {
+    name: "floating-phone-demo-2",
+    description: "Second example showing a floating phone mockup.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/floating-phone"],
+    files: [{
+      path: "registry/example/floating-phone-demo-2.tsx",
+      type: "registry:example",
+      target: "components/floating-phone-demo-2.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/floating-phone-demo-2.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "floating-phone-demo-3": {
+    name: "floating-phone-demo-3",
+    description: "Third example showing a floating phone mockup.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/floating-phone"],
+    files: [{
+      path: "registry/example/floating-phone-demo-3.tsx",
+      type: "registry:example",
+      target: "components/floating-phone-demo-3.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/floating-phone-demo-3.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

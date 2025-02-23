@@ -1,6 +1,6 @@
 {
-  "name": "Pioneer UI",
-  "homepage": "https://pioneerui.com",
+  "name": "Magic UI",
+  "homepage": "https://magicui.design",
   "items": [
     {
       "name": "index",
@@ -1392,6 +1392,19 @@
           "path": "registry/magicui/terminal.tsx",
           "type": "registry:ui",
           "target": "components/magicui/terminal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "floating-phone",
+      "type": "registry:ui",
+      "title": "Floating Phone",
+      "description": "A floating phone component",
+      "files": [
+        {
+          "path": "registry/pioneerui/floating-phone.tsx",
+          "type": "registry:ui",
+          "target": "components/pioneerui/floating-phone.tsx"
         }
       ]
     },
@@ -3248,6 +3261,54 @@
           "path": "registry/example/terminal-demo.tsx",
           "type": "registry:example",
           "target": "components/terminal-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "floating-phone-demo",
+      "type": "registry:example",
+      "title": "Floating Phone Demo",
+      "description": "Example showing a floating phone mockup.",
+      "registryDependencies": [
+        "https://pioneerui.com/r/floating-phone"
+      ],
+      "files": [
+        {
+          "path": "registry/example/floating-phone-demo.tsx",
+          "type": "registry:example",
+          "target": "components/floating-phone-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "floating-phone-demo-2",
+      "type": "registry:example",
+      "title": "Floating Phone Demo 2",
+      "description": "Second example showing a floating phone mockup.",
+      "registryDependencies": [
+        "https://pioneerui.com/r/floating-phone"
+      ],
+      "files": [
+        {
+          "path": "registry/example/floating-phone-demo-2.tsx",
+          "type": "registry:example",
+          "target": "components/floating-phone-demo-2.tsx"
+        }
+      ]
+    },
+    {
+      "name": "floating-phone-demo-3",
+      "type": "registry:example",
+      "title": "Floating Phone Demo 3",
+      "description": "Third example showing a floating phone mockup.",
+      "registryDependencies": [
+        "https://pioneerui.com/r/floating-phone"
+      ],
+      "files": [
+        {
+          "path": "registry/example/floating-phone-demo-3.tsx",
+          "type": "registry:example",
+          "target": "components/floating-phone-demo-3.tsx"
         }
       ]
     },

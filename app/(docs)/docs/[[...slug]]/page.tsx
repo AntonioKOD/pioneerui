@@ -43,7 +43,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${doc.title} | Magic UI`,
+    title: `${doc.title} | Pioneer UI`,
     description: doc.description,
     openGraph: {
       title: doc.title,
@@ -63,7 +63,7 @@ export async function generateMetadata({
       title: doc.title,
       description: doc.description,
       images: [doc.image],
-      creator: "@dillionverma",
+      creator: "@antonio_kodheli",
     },
   };
 }

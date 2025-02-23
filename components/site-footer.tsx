@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export function SiteFooter() {
   return (
@@ -13,11 +14,14 @@ export function SiteFooter() {
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            dillion
+            codeWithToni
           </a>
           .
+         
         </p>
+        <Link href={'https//codewithtoni.com'} className="relative space-x-12 underline-offset-4 underline text-muted-foreground">Check my portfolio.</Link>
       </div>
+
     </footer>
   );
 }

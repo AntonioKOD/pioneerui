@@ -1269,4 +1269,17 @@ export const ui: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "floating-phone",
+    type: "registry:ui",
+    title: "Floating Phone",
+    description: "A floating phone component",
+    files: [
+      {
+          path: "registry/pioneerui/floating-phone.tsx",
+          type: "registry:ui",
+          target: "components/pioneerui/floating-phone.tsx",
+      }
+    ]
+  }
 ];

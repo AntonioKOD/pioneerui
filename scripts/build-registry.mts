@@ -4,7 +4,6 @@ import path from "path";
 import { rimraf } from "rimraf";
 import { registryItemSchema, type Registry } from "shadcn/registry";
 import { z } from "zod";
-
 import { examples } from "../registry/registry-examples";
 import { lib } from "../registry/registry-lib";
 import { ui } from "../registry/registry-ui";
@@ -12,9 +11,9 @@ import { ui } from "../registry/registry-ui";
 const DEPRECATED_ITEMS = ["toast"];
 
 const registry = {
-  name: "Pioneer UI",
-  homepage: "https://pioneerui.com",
-  items: z.array(registryItemSchema as unknown as z.ZodTypeAny).parse(
+  name: "Magic UI",
+  homepage: "https://magicui.design",
+  items: z.array(registryItemSchema).parse(
     [
       {
         name: "index",

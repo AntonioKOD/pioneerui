@@ -1625,4 +1625,46 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "floating-phone-demo",
+    type: "registry:example",
+    title: "Floating Phone Demo",
+    description: "Example showing a floating phone mockup.",
+    registryDependencies: ["https://pioneerui.com/r/floating-phone"],
+    files: [
+      {
+        path: "registry/example/floating-phone-demo.tsx",
+        type: "registry:example",
+        target: "components/floating-phone-demo.tsx",
+      }
+    ]
+  },
+  {
+    name: "floating-phone-demo-2",
+    type: "registry:example",
+    title: "Floating Phone Demo 2",
+    description: "Second example showing a floating phone mockup.",
+    registryDependencies: ["https://pioneerui.com/r/floating-phone"],
+    files: [
+      {
+        path: "registry/example/floating-phone-demo-2.tsx",
+        type: "registry:example",
+        target: "components/floating-phone-demo-2.tsx",
+      }
+    ]
+  },
+  {
+    name: "floating-phone-demo-3",
+    type: "registry:example",
+    title: "Floating Phone Demo 3",
+    description: "Third example showing a floating phone mockup.",
+    registryDependencies: ["https://pioneerui.com/r/floating-phone"],
+    files: [
+      {
+        path: "registry/example/floating-phone-demo-3.tsx",
+        type: "registry:example",
+        target: "components/floating-phone-demo-3.tsx",
+      }
+    ]
+  }
 ];

@@ -68,7 +68,7 @@ export default async function Hero() {
                       buttonVariants({
                         size: "lg",
                       }),
-                      "flex",
+                      "flex items-center justify-center",
                     )}
                   >
                     Browse Components

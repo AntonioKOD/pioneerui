@@ -69,7 +69,7 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
-    {
+    /*{
       title: "Templates",
       items: [
         {
@@ -113,7 +113,7 @@ export const docsConfig: DocsConfig = {
           event: "template_portfolio_clicked",
         },
       ],
-    },
+    },*/
     {
       title: "Components",
       items: [
@@ -244,6 +244,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "",
         },
+        {
+          title: "Floating Phone",
+          href: `/docs/components/floating-phone`,
+          items: [],
+          label: "",
+        }
       ],
     },
     {

@@ -55,8 +55,8 @@ export function absoluteUrl(path: string) {
 }
 
 export function constructMetadata({
-  title = "Magic UI - Modern React + Tailwind CSS components & Templates",
-  description = "Magic UI is a curated collection of the best landing page components built using React + Tailwind CSS + Motion",
+  title = "PioneerUI – Next.js & React Server Components for High-Performance Web Apps",
+  description = "PioneerUI is a modern, theme-aware component library for Next.js and React Server Components. Build accessible, scalable, and high-performance web apps with ease.",
   image = absoluteUrl("/og"),
   ...props
 }: {
@@ -75,6 +75,11 @@ export function constructMetadata({
       "Landing Page",
       "Components",
       "Next.js",
+      "Typescript",
+      "Pioneer UI",
+      "Component Library",
+      "UI Kit",
+
     ],
     openGraph: {
       title,
@@ -93,17 +98,17 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@dillionverma",
+      creator: "@antonio_kodheli",
     },
     icons: "/favicon.ico",
-    metadataBase: new URL("https://magicui.design"),
+    metadataBase: new URL("https://pioneerui.com"),
     authors: [
       {
         name: "dillionverma",
-        url: "https://twitter.com/dillionverma",
+        url: "https://twitter.com/antonio_kodheli",
       },
     ],
-    creator: "dillionverma",
+    creator: "antonio_kodheli",
     ...props,
   };
 }
