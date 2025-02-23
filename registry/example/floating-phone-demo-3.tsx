@@ -28,7 +28,7 @@ const MusicContent = () => {
         transition={{ delay: 0.2 }}
         className="text-center mb-8"
       >
-        <h2 className="text-2xl font-bold mb-2">Cosmic Dreams</h2>
+        <h2 className="text-2xl font-bold mb-2">Cosmic Dream</h2>
         <p className="text-violet-200/80">Stellar Soundscapes</p>
       </motion.div>
 
