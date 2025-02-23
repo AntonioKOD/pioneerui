@@ -161,6 +161,9 @@ importers:
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@18.3.1)
+      react-svg-favicon:
+        specifier: ^1.0.0
+        version: 1.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-tweet:
         specifier: ^3.2.1
         version: 3.2.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4619,6 +4622,12 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  react-svg-favicon@1.0.0:
+    resolution: {integrity: sha512-it+rGMBPHdC9AtVJeIxedg+KVMkRBo6u4RpJkc+TJPiMkQDnJ49NwT5iy7IoRDXt/OF6Av7FweCcT13wQ5cmeQ==}
+    peerDependencies:
+      react: ^17.0.2
+      react-dom: ^17.0.2
 
   react-tweet@3.2.1:
     resolution: {integrity: sha512-dktP3RMuwRB4pnSDocKpSsW5Hq1IXRW6fONkHhxT5EBIXsKZzdQuI70qtub1XN2dtZdkJWWxfBm/Q+kN+vRYFA==}
@@ -10476,6 +10485,11 @@ snapshots:
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 18.2.12
+
+  react-svg-favicon@1.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   react-tweet@3.2.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:

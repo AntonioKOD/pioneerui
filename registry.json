@@ -1409,6 +1409,19 @@
       ]
     },
     {
+      "name": "animated-drawer-dialog",
+      "type": "registry:ui",
+      "title": "Animated Drawer Dialog",
+      "description": "An animated drawer dialog component",
+      "files": [
+        {
+          "path": "registry/pioneerui/animated-drawer-dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/pioneerui/animated-drawer-dialog.tsx"
+        }
+      ]
+    },
+    {
       "name": "magic-card-demo",
       "type": "registry:example",
       "title": "Magic Card Demo",
@@ -3309,6 +3322,38 @@
           "path": "registry/example/floating-phone-demo-3.tsx",
           "type": "registry:example",
           "target": "components/floating-phone-demo-3.tsx"
+        }
+      ]
+    },
+    {
+      "name": "animated-drawer-demo",
+      "type": "registry:example",
+      "title": "Animated Drawer Demo",
+      "description": "Example showing an animated drawer component.",
+      "registryDependencies": [
+        "https://pioneerui.com/r/animated-drawer-dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/example/animated-drawer-demo.tsx",
+          "type": "registry:example",
+          "target": "components/animated-drawer-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "animated-drawer-demo-2",
+      "type": "registry:example",
+      "title": "Animated Drawer Demo 2",
+      "description": "Second example showing an animated drawer component.",
+      "registryDependencies": [
+        "https://pioneerui.com/r/animated-drawer-dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/example/animated-drawer-demo-2.tsx",
+          "type": "registry:example",
+          "target": "components/animated-drawer-demo-2.tsx"
         }
       ]
     },

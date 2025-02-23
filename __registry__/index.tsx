@@ -1120,6 +1120,23 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
+  "animated-drawer-dialog": {
+    name: "animated-drawer-dialog",
+    description: "An animated drawer dialog component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/animated-drawer-dialog.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/animated-drawer-dialog.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/animated-drawer-dialog.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
   "magic-card-demo": {
     name: "magic-card-demo",
     description: "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
@@ -3091,6 +3108,40 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/example/floating-phone-demo-3.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "animated-drawer-demo": {
+    name: "animated-drawer-demo",
+    description: "Example showing an animated drawer component.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/animated-drawer-dialog"],
+    files: [{
+      path: "registry/example/animated-drawer-demo.tsx",
+      type: "registry:example",
+      target: "components/animated-drawer-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/animated-drawer-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "animated-drawer-demo-2": {
+    name: "animated-drawer-demo-2",
+    description: "Second example showing an animated drawer component.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/animated-drawer-dialog"],
+    files: [{
+      path: "registry/example/animated-drawer-demo-2.tsx",
+      type: "registry:example",
+      target: "components/animated-drawer-demo-2.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/animated-drawer-demo-2.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
