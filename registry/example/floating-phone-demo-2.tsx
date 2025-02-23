@@ -13,7 +13,7 @@ const WeatherContent = () => {
         animate={{ y: 0, opacity: 1 }}
         className="text-center mb-8"
       >
-        <div className="flex justify-center mb-4 ">
+        <div className="flex justify-center mb-4">
           <motion.div
             animate={{
               y: [0, -10, 0],
