@@ -11,8 +11,8 @@ import { ui } from "../registry/registry-ui";
 const DEPRECATED_ITEMS = ["toast"];
 
 const registry = {
-  name: "Magic UI",
-  homepage: "https://magicui.design",
+  name: "Pioneer UI",
+  homepage: "https://pioneerui.com",
   items: z.array(registryItemSchema).parse(
     [
       {
