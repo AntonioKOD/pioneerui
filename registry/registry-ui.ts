@@ -1281,5 +1281,18 @@ export const ui: Registry["items"] = [
           target: "components/pioneerui/floating-phone.tsx",
       }
     ]
+  },
+  {
+    name: "animated-drawer-dialog",
+    type: "registry:ui",
+    title: "Animated Drawer Dialog",
+    description: "An animated drawer dialog component",
+    files: [
+      {
+        path: "registry/pioneerui/animated-drawer-dialog.tsx",
+        type: "registry:ui",
+        target: "components/pioneerui/animated-drawer-dialog.tsx",
+      }
+    ]
   }
 ];

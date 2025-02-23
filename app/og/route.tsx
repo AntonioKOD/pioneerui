@@ -77,11 +77,11 @@ export async function GET(request: Request) {
               <div tw="flex flex-row items-center justify-center space-x-4">
                 <Icons.logo width={48} height={48} />
                 <div tw="text-black flex text-[32px] font-semibold tracking-tight ml-2">
-                  Magic UI
+                  Pioneer UI
                 </div>
               </div>
               <div tw="text-black flex text-[80px] font-semibold tracking-tight">
-                Modern Next.js Templates
+                Modern Next.js Components
               </div>
               <div tw="text-gray-600 text-2xl flex">
                 <p>

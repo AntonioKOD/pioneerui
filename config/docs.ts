@@ -117,7 +117,7 @@ export const docsConfig: DocsConfig = {
     {
       title: "Components",
       items: [
-        {
+        /*{
           title: "Marquee",
           href: `/docs/components/marquee`,
           items: [],
@@ -145,12 +145,19 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+
           title: "Dock",
           href: `/docs/components/dock`,
           items: [],
           label: "",
-        },
+        },*/
         {
+          title: "Animated Drawer Dialog",
+          href: `/docs/components/animated-drawer-dialog`,
+          items: [],
+          label: "New",
+        },
+       /* {
           title: "Globe",
           href: `/docs/components/globe`,
           items: [],
@@ -220,13 +227,13 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/pointer`,
           items: [],
           label: "New",
-        },
+        },*/
       ],
     },
     {
       title: "Device Mocks",
       items: [
-        {
+       /* {
           title: "Safari",
           href: `/docs/components/safari`,
           items: [],
@@ -243,7 +250,7 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/android`,
           items: [],
           label: "",
-        },
+        },*/
         {
           title: "Floating Phone",
           href: `/docs/components/floating-phone`,
@@ -255,7 +262,7 @@ export const docsConfig: DocsConfig = {
     {
       title: "Special Effects",
       items: [
-        {
+       /* {
           title: "Animated Beam",
           href: `/docs/components/animated-beam`,
           items: [],
@@ -310,24 +317,24 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/scratch-to-reveal`,
           items: [],
           label: "",
-        },
+        },*/
       ],
     },
     {
       title: "Animations",
       items: [
-        {
+      /*  {
           title: "Blur Fade",
           href: `/docs/components/blur-fade`,
           items: [],
           label: "",
-        },
+        },*/
       ],
     },
     {
       title: "Text Animations",
       items: [
-        {
+      /*  {
           title: "Text Animate",
           href: `/docs/components/text-animate`,
           items: [],
@@ -420,13 +427,13 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/spinning-text`,
           items: [],
           label: "New",
-        },
+        },*/
       ],
     },
     {
       title: "Buttons",
       items: [
-        {
+      /*  {
           title: "Rainbow Button",
           href: `/docs/components/rainbow-button`,
           items: [],
@@ -466,13 +473,13 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/ripple-button",
           items: [],
           label: "",
-        },
+        },*/
       ],
     },
     {
       title: "Backgrounds",
       items: [
-        {
+       /* {
           title: "Warp Background",
           href: `/docs/components/warp-background`,
           items: [],
@@ -515,7 +522,7 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/interactive-grid-pattern`,
           items: [],
           label: "",
-        },
+        },*/
       ],
     },
   ],

@@ -1666,5 +1666,34 @@ export const examples: Registry["items"] = [
         target: "components/floating-phone-demo-3.tsx",
       }
     ]
+  },
+  {
+    name: "animated-drawer-demo",
+    type: "registry:example",
+    title: "Animated Drawer Demo",
+    description: "Example showing an animated drawer component.",
+    registryDependencies: ["https://pioneerui.com/r/animated-drawer-dialog"],
+
+    files: [
+      {
+        path: "registry/example/animated-drawer-demo.tsx",
+        type: "registry:example",
+        target: "components/animated-drawer-demo.tsx",
+        }
+      ]
+  },
+  {
+    name: "animated-drawer-demo-2",
+    type: "registry:example",
+    title: "Animated Drawer Demo 2",
+    description: "Second example showing an animated drawer component.",
+    registryDependencies: ["https://pioneerui.com/r/animated-drawer-dialog"],
+    files: [
+      {
+        path: "registry/example/animated-drawer-demo-2.tsx",
+        type: "registry:example",
+        target: "components/animated-drawer-demo-2.tsx",
+      }
+    ]
   }
 ];
