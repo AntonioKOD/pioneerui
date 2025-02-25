@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sidestagger-nav-demo",
+  "type": "registry:example",
+  "title": "Sidestagger Nav Demo",
+  "description": "Example showing a staggered navigation menu.",
+  "registryDependencies": [
+    "https://pioneerui.com/r/sidestagger-nav"
+  ],
+  "files": [
+    {
+      "path": "registry/example/sidestagger-nav-demo.tsx",
+      "content": "import { SideStaggerNav } from \"@/registry/pioneerui/sidestagger-nav\";\n\n\nexport default function SideStaggerNavDemo(){\n    return (\n        <SideStaggerNav items={[\n        {name: \"Home\", href: \"#\"},\n        {name: \"About\", href: \"#\"},\n        {name: \"Contact\", href: \"#\"},\n        {name: \"Blog\", href: \"#\"},\n        ]} />\n    )\n    }\n\n\n    ",
+      "type": "registry:example",
+      "target": "components/sidestagger-nav-demo.tsx"
+    }
+  ]
+}

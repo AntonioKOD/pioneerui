@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "draggable-nav-demo",
+  "type": "registry:example",
+  "title": "Draggable Nav Demo",
+  "description": "Example showing a draggable navigation menu.",
+  "files": [
+    {
+      "path": "registry/example/draggable-demo.tsx",
+      "content": "\nimport { Home, Settings, User, Bell, Github, Twitter, Linkedin } from 'lucide-react'\n\nimport { DraggableGlassNavbar } from '@/registry/pioneerui/draggable-navbar'\n\n\nconst navItems = [\n    { label: \"Home\", href: \"#\", icon: <Home /> },\n    { label: \"Settings\", href: \"#\", icon: <Settings /> },\n    { label: \"Profile\", href: \"#\", icon: <User /> },\n    { label: \"Notifications\", href: \"#\", icon: <Bell /> },\n  ]\n\n  \n\nexport default function DraggableNavbarDemo() {\n    return (\n        <DraggableGlassNavbar items={navItems} className=\"backdrop-blur-md\" />\n    )\n}\n\n",
+      "type": "registry:example",
+      "target": "components/draggable-demo.tsx"
+    }
+  ]
+}

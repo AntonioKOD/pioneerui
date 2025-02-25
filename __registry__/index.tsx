@@ -1120,18 +1120,69 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "animated-drawer-dialog": {
-    name: "animated-drawer-dialog",
-    description: "An animated drawer dialog component",
+  "link-reveal": {
+    name: "link-reveal",
+    description: "Link reveal effect",
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/pioneerui/animated-drawer-dialog.tsx",
+      path: "registry/pioneerui/link-reveal.tsx",
       type: "registry:ui",
-      target: "components/pioneerui/animated-drawer-dialog.tsx"
+      target: "components/pioneerui/link-reveal.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pioneerui/animated-drawer-dialog.tsx")
+      const mod = await import("@/registry/pioneerui/link-reveal.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "draggable-navbar": {
+    name: "draggable-navbar",
+    description: "A draggable Glass Nav component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/draggable-navbar.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/draggable-navbar.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/draggable-navbar.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "shimmer-button": {
+    name: "shimmer-button",
+    description: "A shimmering button component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/shimmer-button.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/shimmer-button.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/shimmer-button.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "sidestagger-nav": {
+    name: "sidestagger-nav",
+    description: "A sidestagger navigation component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/sidestagger-nav.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/sidestagger-nav.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/sidestagger-nav.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1736,7 +1787,7 @@ export const Index: Record<string, any> = {
     name: "shimmer-button-demo",
     description: "Example showing a button with a shimmering light effect.",
     type: "registry:example",
-    registryDependencies: ["https://magicui.design/r/shimmer-button"],
+    registryDependencies: ["https://pioneerui.com/r/shimmer-button"],
     files: [{
       path: "registry/example/shimmer-button-demo.tsx",
       type: "registry:example",
@@ -3113,35 +3164,52 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "animated-drawer-demo": {
-    name: "animated-drawer-demo",
-    description: "Example showing an animated drawer component.",
+  "link-demo": {
+    name: "link-demo",
+    description: "Example showing animated link hover effects.",
     type: "registry:example",
-    registryDependencies: ["https://pioneerui.com/r/animated-drawer-dialog"],
+    registryDependencies: undefined,
     files: [{
-      path: "registry/example/animated-drawer-demo.tsx",
+      path: "registry/example/link-demo.tsx",
       type: "registry:example",
-      target: "components/animated-drawer-demo.tsx"
+      target: "components/link-demo.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/example/animated-drawer-demo.tsx")
+      const mod = await import("@/registry/example/link-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
     meta: undefined,
   },
-  "animated-drawer-demo-2": {
-    name: "animated-drawer-demo-2",
-    description: "Second example showing an animated drawer component.",
+  "draggable-nav-demo": {
+    name: "draggable-nav-demo",
+    description: "Example showing a draggable navigation menu.",
     type: "registry:example",
-    registryDependencies: ["https://pioneerui.com/r/animated-drawer-dialog"],
+    registryDependencies: undefined,
     files: [{
-      path: "registry/example/animated-drawer-demo-2.tsx",
+      path: "registry/example/draggable-demo.tsx",
       type: "registry:example",
-      target: "components/animated-drawer-demo-2.tsx"
+      target: "components/draggable-demo.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/example/animated-drawer-demo-2.tsx")
+      const mod = await import("@/registry/example/draggable-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "sidestagger-nav-demo": {
+    name: "sidestagger-nav-demo",
+    description: "Example showing a staggered navigation menu.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/sidestagger-nav"],
+    files: [{
+      path: "registry/example/sidestagger-nav-demo.tsx",
+      type: "registry:example",
+      target: "components/sidestagger-nav-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/sidestagger-nav-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

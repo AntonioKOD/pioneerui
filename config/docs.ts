@@ -117,6 +117,11 @@ export const docsConfig: DocsConfig = {
     {
       title: "Components",
       items: [
+        {
+          title: "Side Stagger Nav",
+          href: `/docs/components/sidestagger-nav`,
+          items: [],
+        },
         /*{
           title: "Marquee",
           href: `/docs/components/marquee`,
@@ -152,8 +157,8 @@ export const docsConfig: DocsConfig = {
           label: "",
         },*/
         {
-          title: "Animated Drawer Dialog",
-          href: `/docs/components/animated-drawer-dialog`,
+          title: "Link Reveal",
+          href: `/docs/components/link-reveal`,
           items: [],
           label: "New",
         },
@@ -438,12 +443,13 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/rainbow-button`,
           items: [],
           label: "",
-        },
+        },*/
         {
           title: "Shimmer Button",
           href: `/docs/components/shimmer-button`,
           items: [],
         },
+        /*
         {
           title: "Shiny Button",
           href: `/docs/components/shiny-button`,

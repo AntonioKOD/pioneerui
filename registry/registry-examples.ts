@@ -501,7 +501,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Shimmer Button Demo",
     description: "Example showing a button with a shimmering light effect.",
-    registryDependencies: ["https://magicui.design/r/shimmer-button"],
+    registryDependencies: ["https://pioneerui.com/r/shimmer-button"],
     files: [
       {
         path: "registry/example/shimmer-button-demo.tsx",
@@ -1668,31 +1668,43 @@ export const examples: Registry["items"] = [
     ]
   },
   {
-    name: "animated-drawer-demo",
+    name: "link-demo",
     type: "registry:example",
-    title: "Animated Drawer Demo",
-    description: "Example showing an animated drawer component.",
-    registryDependencies: ["https://pioneerui.com/r/animated-drawer-dialog"],
-
+    title: "Link Demo",
+    description: "Example showing animated link hover effects.",
+    dependencies: ["framer-motion"],
     files: [
       {
-        path: "registry/example/animated-drawer-demo.tsx",
+        path: "registry/example/link-demo.tsx",
         type: "registry:example",
-        target: "components/animated-drawer-demo.tsx",
-        }
-      ]
+        target: "components/link-demo.tsx",
+      }
+    ]
   },
   {
-    name: "animated-drawer-demo-2",
+    name: "draggable-nav-demo",
     type: "registry:example",
-    title: "Animated Drawer Demo 2",
-    description: "Second example showing an animated drawer component.",
-    registryDependencies: ["https://pioneerui.com/r/animated-drawer-dialog"],
+    title: "Draggable Nav Demo",
+    description: "Example showing a draggable navigation menu.",
     files: [
       {
-        path: "registry/example/animated-drawer-demo-2.tsx",
+        path: "registry/example/draggable-demo.tsx",
         type: "registry:example",
-        target: "components/animated-drawer-demo-2.tsx",
+        target: "components/draggable-demo.tsx",
+      }
+    ]
+  },
+  {
+    name: "sidestagger-nav-demo",
+    type: "registry:example",
+    title: "Sidestagger Nav Demo",
+    description: "Example showing a staggered navigation menu.",
+    registryDependencies: ['https://pioneerui.com/r/sidestagger-nav'],
+    files: [
+      {
+        path: "registry/example/sidestagger-nav-demo.tsx",
+        type: "registry:example",
+        target: "components/sidestagger-nav-demo.tsx",
       }
     ]
   }

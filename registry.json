@@ -1409,15 +1409,66 @@
       ]
     },
     {
-      "name": "animated-drawer-dialog",
+      "name": "link-reveal",
       "type": "registry:ui",
-      "title": "Animated Drawer Dialog",
-      "description": "An animated drawer dialog component",
+      "title": "Link Reveal",
+      "description": "Link reveal effect",
+      "dependencies": [
+        "framer-motion"
+      ],
       "files": [
         {
-          "path": "registry/pioneerui/animated-drawer-dialog.tsx",
+          "path": "registry/pioneerui/link-reveal.tsx",
           "type": "registry:ui",
-          "target": "components/pioneerui/animated-drawer-dialog.tsx"
+          "target": "components/pioneerui/link-reveal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "draggable-navbar",
+      "type": "registry:ui",
+      "title": "Draggable Navbar",
+      "description": "A draggable Glass Nav component",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "registry/pioneerui/draggable-navbar.tsx",
+          "type": "registry:ui",
+          "target": "components/pioneerui/draggable-navbar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-button",
+      "type": "registry:ui",
+      "title": "Shimmer Button",
+      "description": "A shimmering button component",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "registry/pioneerui/shimmer-button.tsx",
+          "type": "registry:ui",
+          "target": "components/pioneerui/shimmer-button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidestagger-nav",
+      "type": "registry:ui",
+      "title": "Sidestagger Nav",
+      "description": "A sidestagger navigation component",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "registry/pioneerui/sidestagger-nav.tsx",
+          "type": "registry:ui",
+          "target": "components/pioneerui/sidestagger-nav.tsx"
         }
       ]
     },
@@ -1993,7 +2044,7 @@
       "title": "Shimmer Button Demo",
       "description": "Example showing a button with a shimmering light effect.",
       "registryDependencies": [
-        "https://magicui.design/r/shimmer-button"
+        "https://pioneerui.com/r/shimmer-button"
       ],
       "files": [
         {
@@ -3326,34 +3377,47 @@
       ]
     },
     {
-      "name": "animated-drawer-demo",
+      "name": "link-demo",
       "type": "registry:example",
-      "title": "Animated Drawer Demo",
-      "description": "Example showing an animated drawer component.",
-      "registryDependencies": [
-        "https://pioneerui.com/r/animated-drawer-dialog"
+      "title": "Link Demo",
+      "description": "Example showing animated link hover effects.",
+      "dependencies": [
+        "framer-motion"
       ],
       "files": [
         {
-          "path": "registry/example/animated-drawer-demo.tsx",
+          "path": "registry/example/link-demo.tsx",
           "type": "registry:example",
-          "target": "components/animated-drawer-demo.tsx"
+          "target": "components/link-demo.tsx"
         }
       ]
     },
     {
-      "name": "animated-drawer-demo-2",
+      "name": "draggable-nav-demo",
       "type": "registry:example",
-      "title": "Animated Drawer Demo 2",
-      "description": "Second example showing an animated drawer component.",
+      "title": "Draggable Nav Demo",
+      "description": "Example showing a draggable navigation menu.",
+      "files": [
+        {
+          "path": "registry/example/draggable-demo.tsx",
+          "type": "registry:example",
+          "target": "components/draggable-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidestagger-nav-demo",
+      "type": "registry:example",
+      "title": "Sidestagger Nav Demo",
+      "description": "Example showing a staggered navigation menu.",
       "registryDependencies": [
-        "https://pioneerui.com/r/animated-drawer-dialog"
+        "https://pioneerui.com/r/sidestagger-nav"
       ],
       "files": [
         {
-          "path": "registry/example/animated-drawer-demo-2.tsx",
+          "path": "registry/example/sidestagger-nav-demo.tsx",
           "type": "registry:example",
-          "target": "components/animated-drawer-demo-2.tsx"
+          "target": "components/sidestagger-nav-demo.tsx"
         }
       ]
     },

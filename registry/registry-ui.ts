@@ -1283,16 +1283,61 @@ export const ui: Registry["items"] = [
     ]
   },
   {
-    name: "animated-drawer-dialog",
+    name: "link-reveal",
     type: "registry:ui",
-    title: "Animated Drawer Dialog",
-    description: "An animated drawer dialog component",
+    title: "Link Reveal",
+    description: "Link reveal effect",
+    dependencies: ["framer-motion"],
     files: [
       {
-        path: "registry/pioneerui/animated-drawer-dialog.tsx",
+        path: "registry/pioneerui/link-reveal.tsx",
         type: "registry:ui",
-        target: "components/pioneerui/animated-drawer-dialog.tsx",
+        target: "components/pioneerui/link-reveal.tsx",
+      },
+    ]
+  },
+  {
+    name: 'draggable-navbar',
+    type: 'registry:ui',
+    title: 'Draggable Navbar',
+    description: 'A draggable Glass Nav component',
+    dependencies: ['framer-motion'],
+    files: [
+      {
+        path: 'registry/pioneerui/draggable-navbar.tsx',
+        type: 'registry:ui',
+        target: 'components/pioneerui/draggable-navbar.tsx',
+      },
+    ],
+
+  },
+  {
+    name: 'shimmer-button',
+    type: 'registry:ui',
+    title: 'Shimmer Button',
+    description: 'A shimmering button component',
+    dependencies: ['framer-motion'],
+    files: [
+      {
+        path: 'registry/pioneerui/shimmer-button.tsx',
+        type: 'registry:ui',
+        target: 'components/pioneerui/shimmer-button.tsx',
       }
     ]
+  },
+  {
+    name: "sidestagger-nav",
+    type: "registry:ui",
+    title: "Sidestagger Nav",
+    description: "A sidestagger navigation component",
+    dependencies: ["framer-motion"],
+    files: [
+      {
+        path: "registry/pioneerui/sidestagger-nav.tsx",
+        type: "registry:ui",
+        target: "components/pioneerui/sidestagger-nav.tsx",
+      },
+    ],  
+
   }
 ];

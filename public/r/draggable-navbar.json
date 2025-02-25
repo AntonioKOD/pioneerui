@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "draggable-navbar",
+  "type": "registry:ui",
+  "title": "Draggable Navbar",
+  "description": "A draggable Glass Nav component",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "registry/pioneerui/draggable-navbar.tsx",
+      "content": "'use client'\n\nimport type React from \"react\"\nimport { useState } from \"react\"\nimport { motion, useMotionValue, useTransform } from \"framer-motion\"\nimport { ChevronDown, ChevronUp, GripHorizontal } from \"lucide-react\"\n\ninterface NavItem {\n  label: string\n  href: string\n  icon: React.ReactNode\n}\n\ninterface DraggableGlassNavbarProps {\n  items: NavItem[]\n  className?: string\n}\n\nexport const DraggableGlassNavbar: React.FC<DraggableGlassNavbarProps> = ({ items, className = \"\" }) => {\n  const [isExpanded, setIsExpanded] = useState(false)\n  const x = useMotionValue(0)\n  const y = useMotionValue(0)\n  const opacity = useTransform(y, [-100, 0, 100], [0.5, 1, 0.5])\n\n  return (\n    <motion.nav\n      drag\n      dragMomentum={false}\n      style={{ x, y, opacity }}\n      className={`fixed top-4 left-4 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg ${className}`}\n    >\n      <div className=\"flex items-center space-x-2\">\n        <motion.div className=\"text-white p-2 cursor-move\" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>\n          <GripHorizontal size={20} />\n        </motion.div>\n        {items.map((item) => (\n          <NavLink key={item.href} href={item.href} icon={item.icon} label={item.label} />\n        ))}\n        <motion.button\n          whileHover={{ scale: 1.05 }}\n          whileTap={{ scale: 0.95 }}\n          onClick={() => setIsExpanded(!isExpanded)}\n          className=\"text-white p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors\"\n          aria-label=\"Toggle navigation labels\"\n        >\n          {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}\n        </motion.button>\n      </div>\n      <motion.div\n        initial={false}\n        animate={isExpanded ? \"expanded\" : \"collapsed\"}\n        variants={{\n          expanded: { opacity: 1, height: \"auto\", marginTop: 8 },\n          collapsed: { opacity: 0, height: 0, marginTop: 0 },\n        }}\n        transition={{ duration: 0.2 }}\n        className=\"flex space-x-2 overflow-hidden\"\n      >\n        {items.map((item, index) => (\n          <motion.div\n            key={item.href}\n            variants={{\n              expanded: { opacity: 1, y: 0 },\n              collapsed: { opacity: 0, y: -10 },\n            }}\n            transition={{ duration: 0.2, delay: index * 0.05 }}\n            className=\"text-white text-sm\"\n          >\n            {item.label}\n          </motion.div>\n        ))}\n      </motion.div>\n    </motion.nav>\n  )\n}\n\ninterface NavLinkProps {\n  href: string\n  icon: React.ReactNode\n  label: string\n}\n\nconst NavLink: React.FC<NavLinkProps> = ({ href, icon, label }) => {\n  return (\n    <motion.a\n      href={href}\n      className=\"block p-2 text-white hover:bg-white/20 rounded-full transition-colors\"\n      whileHover={{ scale: 1.05 }}\n      whileTap={{ scale: 0.95 }}\n      title={label}\n    >\n      {icon}\n    </motion.a>\n  )\n}\n\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/draggable-navbar.tsx"
+    }
+  ]
+}
