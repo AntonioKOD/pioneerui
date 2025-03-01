@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-button-demo",
+  "type": "registry:example",
+  "title": "Hover Button Demo",
+  "description": "Example showing a button with hover effects.",
+  "files": [
+    {
+      "path": "registry/example/hover-button-demo.tsx",
+      "content": "import ButtonHover from \"../pioneerui/hover-button\";\n\n\nexport default function HoverButtonDemo() {\n    return (\n        <div>\n        <ButtonHover children={\"Click Here\"}/>\n        </div>\n    );\n    }\n\n",
+      "type": "registry:example",
+      "target": "components/hover-button-demo.tsx"
+    }
+  ]
+}

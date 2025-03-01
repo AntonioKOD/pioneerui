@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "count-up-stats",
+  "type": "registry:ui",
+  "title": "Count Up Stats",
+  "description": "A count up stats component",
+  "dependencies": [
+    "@number-flow/react"
+  ],
+  "files": [
+    {
+      "path": "registry/pioneerui/countup-stats.tsx",
+      "content": "\"use client\"\n\nimport type React from \"react\"\nimport CountUpLib from \"react-countup\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface CountUpProps extends React.HTMLAttributes<HTMLDivElement> {\n  start?: number\n  end: number\n  duration?: number\n  delay?: number\n  decimals?: number\n  prefix?: string\n  suffix?: string\n  separator?: string\n  decimal?: string\n  useEasing?: boolean\n  easingFn?: (t: number, b: number, c: number, d: number) => number\n  formattingFn?: (value: number) => string\n  enableScrollSpy?: boolean\n  scrollSpyDelay?: number\n  scrollSpyOnce?: boolean\n  size?: \"sm\" | \"md\" | \"lg\" | \"xl\" | \"2xl\"\n  variant?: \"default\" | \"success\" | \"info\" | \"warning\" | \"danger\"\n}\n\nexport function CountUp({\n  start = 0,\n  end,\n  duration = 2.5,\n  delay = 0,\n  decimals = 0,\n  prefix = \"\",\n  suffix = \"\",\n  separator = \",\",\n  decimal = \".\",\n  useEasing = true,\n  easingFn,\n  formattingFn,\n  enableScrollSpy = false,\n  scrollSpyDelay = 0,\n  scrollSpyOnce = true,\n  size = \"lg\",\n  variant = \"default\",\n  className,\n  ...props\n}: CountUpProps) {\n  const sizeClasses = {\n    sm: \"text-lg font-medium\",\n    md: \"text-xl font-medium\",\n    lg: \"text-2xl font-bold\",\n    xl: \"text-3xl font-bold\",\n    \"2xl\": \"text-4xl font-bold\",\n  }\n\n  const variantClasses = {\n    default: \"text-primary\",\n    success: \"text-green-600 dark:text-green-500\",\n    info: \"text-blue-600 dark:text-blue-500\",\n    warning: \"text-amber-600 dark:text-amber-500\",\n    danger: \"text-red-600 dark:text-red-500\",\n  }\n\n  return (\n    <div\n      className={cn(\"flex items-center justify-center\", sizeClasses[size], variantClasses[variant], className)}\n      {...props}\n    >\n      <CountUpLib\n        start={start}\n        end={end}\n        duration={duration}\n        delay={delay}\n        decimals={decimals}\n        prefix={prefix}\n        suffix={suffix}\n        separator={separator}\n        decimal={decimal}\n        useEasing={useEasing}\n        easingFn={easingFn}\n        formattingFn={formattingFn}\n        enableScrollSpy={enableScrollSpy}\n        scrollSpyDelay={scrollSpyDelay}\n        scrollSpyOnce={scrollSpyOnce}\n      />\n    </div>\n  )\n}\n\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/countup-stats.tsx"
+    }
+  ]
+}

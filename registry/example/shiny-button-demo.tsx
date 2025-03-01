@@ -1,5 +1,13 @@
-import { ShinyButton } from "@/registry/magicui/shiny-button";
+import { ShinyButton } from "../pioneerui/shiny-button";
+
 
 export default function ShinyButtonDemo() {
-  return <ShinyButton>Shiny Button</ShinyButton>;
-}
+    return (
+        <div>
+        <ShinyButton children={"Click me"}/>
+        </div>
+    );
+    }
+
+
+

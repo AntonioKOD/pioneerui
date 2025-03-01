@@ -3,14 +3,14 @@
   "name": "spinning-text-demo",
   "type": "registry:example",
   "title": "Spinning Text Demo",
-  "description": "Example showing spinning text animation.",
-  "registryDependencies": [
-    "https://magicui.design/r/spinning-text"
+  "description": "Example showing spinning text effect.",
+  "dependencies": [
+    "framer-motion"
   ],
   "files": [
     {
       "path": "registry/example/spinning-text-demo.tsx",
-      "content": "import { SpinningText } from \"@/components/magicui/spinning-text\";\n\nexport default function SpinningTextBasic() {\n  return <SpinningText>learn more • earn more • grow more •</SpinningText>;\n}\n",
+      "content": "import { SpinningText } from \"../pioneerui/spinning-text\";\n\n\nexport function SpinningTextDemo() {\n  return (\n    <SpinningText\n    variants={{\n      container: {\n        visible: { rotate: 360, scale: [1, 1.1, 1] },\n      },\n    }}\n    duration={10}\n    style={{ fontSize: \"3rem\" }}\n    radius={4}\n  >\n    Pioneer UI\n  </SpinningText>\n  );\n}\n\n\n",
       "type": "registry:example",
       "target": "components/spinning-text-demo.tsx"
     }

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-selector-demo",
+  "type": "registry:example",
+  "title": "Date Selector Demo",
+  "description": "Example showing a simple date selector component.",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "registry/example/date-selector-demo.tsx",
+      "content": "import { ModernFlipCalendar } from \"../pioneerui/simple-date-selector\";\n\n\n\nexport default function DateSelectorDemo() {\n    return (\n        <div>\n        <ModernFlipCalendar/>\n        </div>\n    );\n    }\n",
+      "type": "registry:example",
+      "target": "components/date-selector-demo.tsx"
+    }
+  ]
+}

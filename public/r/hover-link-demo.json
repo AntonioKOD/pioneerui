@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-link-demo",
+  "type": "registry:example",
+  "title": "Hover Link Demo",
+  "description": "Example showing a collection of links with hover effects.",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "registry/example/hover-link-demo.tsx",
+      "content": "import { HoverImageLinks } from \"../pioneerui/hover-links\";\n\n\nexport default function HoverLinkDemo() {\n    return (\n        <HoverImageLinks\n        links={[\n            {\n            heading: \"Pioneer UI\",\n            imgSrc: \"https://images.unsplash.com/photo-1612839510306-7c7a6d3d0f7b\",\n            subheading: \"A collection of UI components for React.\",\n            href: \"https://pioneerui.com\",\n            },\n            {\n            heading: \"Pioneer UI\",\n            imgSrc: \"https://images.unsplash.com/photo-1612839510306-7c7a6d3d0f7b\",\n            subheading: \"A collection of UI components for React.\",\n            href: \"https://pioneerui.com\",\n            },\n            {\n            heading: \"Pioneer UI\",\n            imgSrc: \"https://images.unsplash.com/photo-1612839510306-7c7a6d3d0f7b\",\n            subheading: \"A collection of UI components for React.\",\n            href: \"https://pioneerui.com\",\n            },\n        ]}\n        />\n    );\n    }\n",
+      "type": "registry:example",
+      "target": "components/hover-link-demo.tsx"
+    }
+  ]
+}

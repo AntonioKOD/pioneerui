@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "neu-button-demo",
+  "type": "registry:example",
+  "title": "Neu Button Demo",
+  "description": "Example showing a button with a neumorphic effect.",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "registry/example/neu-button-demo.tsx",
+      "content": "import { NeuFollowButton } from \"../pioneerui/neu-button\";\n\n\nexport default function NeuButtonDemo() {\n    return (\n        <div>\n        <NeuFollowButton/>\n        </div>\n    );\n    }\n",
+      "type": "registry:example",
+      "target": "components/neu-button-demo.tsx"
+    }
+  ]
+}

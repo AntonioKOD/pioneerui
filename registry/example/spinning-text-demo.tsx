@@ -1,5 +1,21 @@
-import { SpinningText } from "@/registry/magicui/spinning-text";
+import { SpinningText } from "../pioneerui/spinning-text";
 
-export default function SpinningTextBasic() {
-  return <SpinningText>learn more • earn more • grow more •</SpinningText>;
+
+export function SpinningTextDemo() {
+  return (
+    <SpinningText
+    variants={{
+      container: {
+        visible: { rotate: 360, scale: [1, 1.1, 1] },
+      },
+    }}
+    duration={10}
+    style={{ fontSize: "3rem" }}
+    radius={4}
+  >
+    Pioneer UI
+  </SpinningText>
+  );
 }
+
+

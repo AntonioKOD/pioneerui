@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/example/shimmer-button-demo.tsx",
-      "content": "import { ShimmerButton } from \"../pioneerui/shimmer-button\";\n\n\nexport default function ShimmerButtonDemo(){\n  return (\n    <ShimmerButton>\n      Click me\n    </ShimmerButton>\n  )\n}\n\n",
+      "content": "import { ShimmerButton } from \"../pioneerui/shimmer-button\";\n\n\nexport default function ShimmerButtonDemo(){\n  return (\n    <ShimmerButton>\n      Click me\n    </ShimmerButton>\n  )\n}\n",
       "type": "registry:example",
       "target": "components/shimmer-button-demo.tsx"
     }

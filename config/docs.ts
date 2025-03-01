@@ -117,11 +117,6 @@ export const docsConfig: DocsConfig = {
     {
       title: "Components",
       items: [
-        {
-          title: "Side Stagger Nav",
-          href: `/docs/components/sidestagger-nav`,
-          items: [],
-        },
         /*{
           title: "Marquee",
           href: `/docs/components/marquee`,
@@ -162,6 +157,11 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Count Up Stats",
+          href: `/docs/components/count-up-stats`,
+
+        }
        /* {
           title: "Globe",
           href: `/docs/components/globe`,
@@ -326,209 +326,48 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Animations",
-      items: [
-      /*  {
-          title: "Blur Fade",
-          href: `/docs/components/blur-fade`,
-          items: [],
-          label: "",
-        },*/
-      ],
-    },
-    {
       title: "Text Animations",
       items: [
-      /*  {
-          title: "Text Animate",
-          href: `/docs/components/text-animate`,
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Line Shadow Text",
-          href: `/docs/components/line-shadow-text`,
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Aurora Text",
-          href: `/docs/components/aurora-text`,
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Number Ticker",
-          href: `/docs/components/number-ticker`,
-          items: [],
-        },
-        {
-          title: "Animated Shiny Text",
-          href: `/docs/components/animated-shiny-text`,
-          items: [],
-        },
-        {
-          title: "Animated Gradient Text",
-          href: `/docs/components/animated-gradient-text`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Text Reveal",
-          href: `/docs/components/text-reveal`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Hyper Text",
-          href: `/docs/components/hyper-text`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Word Rotate",
-          href: `/docs/components/word-rotate`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Typing Animation",
-          href: `/docs/components/typing-animation`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Scroll Based Velocity",
-          href: `/docs/components/scroll-based-velocity`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Flip Text",
-          href: `/docs/components/flip-text`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Box Reveal",
-          href: `/docs/components/box-reveal`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Sparkles Text",
-          href: `/docs/components/sparkles-text`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Morphing Text",
-          href: `/docs/components/morphing-text`,
-          items: [],
-          label: "",
-        },
         {
           title: "Spinning Text",
           href: `/docs/components/spinning-text`,
-          items: [],
-          label: "New",
-        },*/
+        },
+        {
+          title: "Typewriter Effect",
+          href: `/docs/components/typewriter-effect`,
+
+        },
+        {
+          title: "Text Scramble",
+          href: `/docs/components/text-scramble`,
+        }
       ],
     },
     {
       title: "Buttons",
       items: [
-      /*  {
-          title: "Rainbow Button",
-          href: `/docs/components/rainbow-button`,
-          items: [],
-          label: "",
-        },*/
         {
           title: "Shimmer Button",
           href: `/docs/components/shimmer-button`,
           items: [],
         },
-        /*
         {
-          title: "Shiny Button",
-          href: `/docs/components/shiny-button`,
-          items: [],
-          label: "",
+          title: "Neu Follow Button",
+          href: `/docs/components/neu-button`,
         },
         {
-          title: "Interactive Hover Button",
-          href: `/docs/components/interactive-hover-button`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Animated Subscribe Button",
-          href: `/docs/components/animated-subscribe-button`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Pulsating Button",
-          href: "/docs/components/pulsating-button",
-          items: [],
-          label: "",
-        },
-        {
-          title: "Ripple Button",
-          href: "/docs/components/ripple-button",
-          items: [],
-          label: "",
-        },*/
+          title: "Hover Button",
+          href: `/docs/components/hover-button`,
+        }
       ],
     },
     {
       title: "Backgrounds",
       items: [
-       /* {
-          title: "Warp Background",
-          href: `/docs/components/warp-background`,
-          items: [],
-          label: "",
-        },
         {
-          title: "Flickering Grid",
-          href: `/docs/components/flickering-grid`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Animated Grid Pattern",
-          href: `/docs/components/animated-grid-pattern`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Retro Grid",
-          href: `/docs/components/retro-grid`,
-          items: [],
-        },
-        {
-          title: "Ripple",
-          href: `/docs/components/ripple`,
-          items: [],
-        },
-        {
-          title: "Dot Pattern",
-          href: `/docs/components/dot-pattern`,
-          items: [],
-        },
-        {
-          title: "Grid Pattern",
-          href: `/docs/components/grid-pattern`,
-          items: [],
-        },
-        {
-          title: "Interactive Grid Pattern",
-          href: `/docs/components/interactive-grid-pattern`,
-          items: [],
-          label: "",
-        },*/
+          title: "Particle Background",
+          href: `/docs/components/particle-background`,
+        }
       ],
     },
   ],

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "countup-stats-demo",
+  "type": "registry:example",
+  "title": "Countup Stats Demo",
+  "description": "Example showing animated counting numbers.",
+  "dependencies": [
+    "framer-motion",
+    "@number-flow/react"
+  ],
+  "files": [
+    {
+      "path": "registry/example/countup-stats-demo.tsx",
+      "content": "import { CountUp } from \"../pioneerui/countup-stats\";\n\n\nexport default function CountUpStatsDemo() {\n    return (\n        <div>\n            <CountUp start={3} end={2300} duration={5} delay={1} decimals={2} prefix=\"$\"/>\n        </div>\n    );\n    }\n",
+      "type": "registry:example",
+      "target": "components/countup-stats-demo.tsx"
+    }
+  ]
+}

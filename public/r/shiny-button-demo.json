@@ -2,15 +2,15 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "shiny-button-demo",
   "type": "registry:example",
-  "title": "Shiny Button Demo",
-  "description": "Example showing a shiny button with dynamic styles.",
-  "registryDependencies": [
-    "https://magicui.design/r/shiny-button"
+  "title": "Shine Button Demo",
+  "description": "Example showing a button with a shine effect.",
+  "dependencies": [
+    "framer-motion"
   ],
   "files": [
     {
       "path": "registry/example/shiny-button-demo.tsx",
-      "content": "import { ShinyButton } from \"@/components/magicui/shiny-button\";\n\nexport default function ShinyButtonDemo() {\n  return <ShinyButton>Shiny Button</ShinyButton>;\n}\n",
+      "content": "import { ShinyButton } from \"../pioneerui/shiny-button\";\n\n\nexport default function ShinyButtonDemo() {\n    return (\n        <div>\n        <ShinyButton children={\"Click me\"}/>\n        </div>\n    );\n    }\n\n\n\n",
       "type": "registry:example",
       "target": "components/shiny-button-demo.tsx"
     }

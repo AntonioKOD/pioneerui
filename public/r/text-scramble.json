@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-scramble",
+  "type": "registry:ui",
+  "title": "Text Scramble",
+  "description": "A text scramble effect component",
+  "files": [
+    {
+      "path": "registry/pioneerui/text-scramble.tsx",
+      "content": "\"use client\"\n\nimport React from \"react\"\nimport { useRef, useState, useCallback } from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface TextScrambleProps {\n  text: string\n  className?: string\n  cyclesPerLetter?: number\n  shuffleTime?: number\n  characters?: string\n  hover?: boolean\n  preserveSpaces?: boolean\n  onComplete?: () => void\n}\n\nexport function TextScramble({\n  text,\n  className,\n  cyclesPerLetter = 2,\n  shuffleTime = 50,\n  characters = \"!@#$%^&*():{};|,.<>/?\",\n  hover = false,\n  preserveSpaces = true,\n  onComplete,\n}: TextScrambleProps) {\n  const intervalRef = useRef<NodeJS.Timeout | null>(null)\n  const [displayText, setDisplayText] = useState(text)\n  const isScrambling = useRef(false)\n\n  const stopScramble = useCallback(() => {\n    if (intervalRef.current) {\n      clearInterval(intervalRef.current)\n      intervalRef.current = null\n    }\n    setDisplayText(text)\n    isScrambling.current = false\n    onComplete?.()\n  }, [text, onComplete])\n\n  const scramble = useCallback(() => {\n    if (isScrambling.current) return\n\n    isScrambling.current = true\n    let pos = 0\n\n    if (intervalRef.current) {\n      clearInterval(intervalRef.current)\n    }\n\n    intervalRef.current = setInterval(() => {\n      const scrambled = text\n        .split(\"\")\n        .map((char, index) => {\n          if (preserveSpaces && char === \" \") {\n            return \" \"\n          }\n\n          if (pos / cyclesPerLetter > index) {\n            return char\n          }\n\n          const randomCharIndex = Math.floor(Math.random() * characters.length)\n          const randomChar = characters[randomCharIndex]\n\n          return randomChar\n        })\n        .join(\"\")\n\n      setDisplayText(scrambled)\n      pos++\n\n      if (pos >= text.length * cyclesPerLetter) {\n        stopScramble()\n      }\n    }, shuffleTime)\n  }, [text, characters, cyclesPerLetter, preserveSpaces, shuffleTime, stopScramble])\n\n  // Cleanup on unmount\n  React.useEffect(() => {\n    return () => {\n      if (intervalRef.current) {\n        clearInterval(intervalRef.current)\n      }\n    }\n  }, [])\n\n  // Update display text when text prop changes\n  React.useEffect(() => {\n    setDisplayText(text)\n  }, [text])\n\n  return (\n    <span\n      className={cn(\"inline-block font-mono\", className)}\n      onMouseEnter={() => hover && scramble()}\n      onMouseLeave={() => hover && stopScramble()}\n    >\n      {displayText}\n    </span>\n  )\n}\n\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/text-scramble.tsx"
+    }
+  ]
+}

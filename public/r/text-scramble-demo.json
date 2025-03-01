@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-scramble-demo",
+  "type": "registry:example",
+  "title": "Text Scramble Demo",
+  "description": "Example showing a text scramble effect.",
+  "files": [
+    {
+      "path": "registry/example/text-scramble-demo.tsx",
+      "content": "import { TextScramble } from \"../pioneerui/text-scramble\";\n\n\nexport function TextScrambleDemo() {\n  return (\n    <TextScramble text=\"Binary Mode\" className=\"text-2xl text-green-400 cursor-pointer\" characters=\"01\" hover />\n\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/text-scramble-demo.tsx"
+    }
+  ]
+}

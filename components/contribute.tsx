@@ -10,8 +10,8 @@ export function Contribute({ doc }: { doc: Doc }) {
       text: "Report an issue",
       icon: BugIcon,
       href: getGitHubIssueUrl({
-        owner: "magicuidesign",
-        repo: "magicui",
+        owner: "AntonioKOD",
+        repo: "pioneerui",
         title: `[bug]: ${doc.slug}`,
         labels: ["bug", "documentation"],
         template: "bug_report.md",
@@ -21,8 +21,8 @@ export function Contribute({ doc }: { doc: Doc }) {
       text: "Request a feature",
       icon: LightbulbIcon,
       href: getGitHubIssueUrl({
-        owner: "magicuidesign",
-        repo: "magicui",
+        owner: "AntonioKOD",
+        repo: "pioneerui",
         title: `[feat]: ${doc.slug}`,
         labels: ["enhancement"],
         template: "feature_request.md",

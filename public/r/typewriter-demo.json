@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typewriter-demo",
+  "type": "registry:example",
+  "title": "Typewriter Demo",
+  "description": "Example showing a typewriter effect.",
+  "files": [
+    {
+      "path": "registry/example/typewriter-demo.tsx",
+      "content": "import { Typewriter } from \"../pioneerui/typewriter\";\n\nexport default function TypewriterDemo() {\n    return (\n        <div>\n            <Typewriter\n                text=\"Hello, World!\"\n                delay={100}\n                className=\"text-3xl\"\n                typingStyle=\"mechanical\"\n            />\n        </div>\n    );\n}\n\n",
+      "type": "registry:example",
+      "target": "components/typewriter-demo.tsx"
+    }
+  ]
+}

@@ -12,7 +12,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Event } from "@/lib/events";
 import { cn } from "@/lib/utils";
-import { TweetCard } from "@/registry/magicui/tweet-card";
 import { useMDXComponent } from "@content-collections/mdx/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,7 +47,6 @@ const components = {
   RepoDownload,
   TemplatePreview,
   Image,
-  Tweet: ({ id }: { id: string }) => <TweetCard id={id} className="mx-auto" />,
   ComponentPreview,
   ComponentSource: (props: any) => <ComponentSource {...props} />,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (

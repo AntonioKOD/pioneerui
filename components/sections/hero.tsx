@@ -63,7 +63,7 @@ export default async function Hero() {
               <div className="mx-0 flex w-full max-w-full flex-col gap-4 py-1 sm:max-w-lg sm:flex-row md:mx-auto ">
                 <div className="flex w-full flex-col gap-2 sm:flex-row sm:gap-4 items-center justify-center">
                   <Link
-                    href="/components"
+                    href="/docs"
                     className={cn(
                       buttonVariants({
                         size: "lg",
