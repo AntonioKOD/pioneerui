@@ -264,9 +264,9 @@ export const docsConfig: DocsConfig = {
         }
       ],
     },
-    {
-      title: "Special Effects",
-      items: [
+    //{
+      //title: "Special Effects",
+      //items: [
        /* {
           title: "Animated Beam",
           href: `/docs/components/animated-beam`,
@@ -323,8 +323,8 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "",
         },*/
-      ],
-    },
+    //  ],
+   // },
     {
       title: "Text Animations",
       items: [
