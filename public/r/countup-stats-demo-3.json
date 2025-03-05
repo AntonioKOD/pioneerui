@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "countup-stats-demo-3",
+  "type": "registry:example",
+  "title": "Countup Stats Demo 3",
+  "description": "Example showing animated counting numbers.",
+  "files": [
+    {
+      "path": "registry/example/countup-stats-demo-3.tsx",
+      "content": "\"use client\";\n\nimport { CountUp } from \"@/registry/pioneerui/countup-stats\";\n\nexport default function AdvancedCountUp() {\n  const formatValue = (value: number) => `${value.toFixed(2)}%`;\n\n  return (\n    <CountUp\n      start={0}\n      end={75}\n      duration={4}\n      decimals={2}\n      suffix=\"%\"\n      formattingFn={formatValue}\n      variant=\"info\"\n      size=\"xl\"\n    />\n  );\n}",
+      "type": "registry:example",
+      "target": "components/countup-stats-demo-3.tsx"
+    }
+  ]
+}

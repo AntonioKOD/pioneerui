@@ -1,4 +1,4 @@
-import { ParticleBackground } from "../pioneerui/particle-background";
+import { ParticleBackground } from "@/registry/pioneerui/particle-background";
 
 
 export default function ParticleBackgroundDemo() {

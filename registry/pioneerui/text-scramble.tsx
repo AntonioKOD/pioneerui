@@ -1,7 +1,6 @@
 "use client"
 
-import React from "react"
-import { useRef, useState, useCallback } from "react"
+import React, { useEffect, useState, useCallback, useRef } from "react"
 import { cn } from "@/lib/utils"
 
 export interface TextScrambleProps {
@@ -11,6 +10,7 @@ export interface TextScrambleProps {
   shuffleTime?: number
   characters?: string
   hover?: boolean
+  auto?: boolean
   preserveSpaces?: boolean
   onComplete?: () => void
 }
@@ -22,6 +22,7 @@ export function TextScramble({
   shuffleTime = 50,
   characters = "!@#$%^&*():{};|,.<>/?",
   hover = false,
+  auto = false,
   preserveSpaces = true,
   onComplete,
 }: TextScrambleProps) {
@@ -57,14 +58,14 @@ export function TextScramble({
             return " "
           }
 
+          // Once enough cycles have passed for a character, show the original
           if (pos / cyclesPerLetter > index) {
             return char
           }
 
+          // Otherwise, use a random character from the given set
           const randomCharIndex = Math.floor(Math.random() * characters.length)
-          const randomChar = characters[randomCharIndex]
-
-          return randomChar
+          return characters[randomCharIndex]
         })
         .join("")
 
@@ -77,8 +78,15 @@ export function TextScramble({
     }, shuffleTime)
   }, [text, characters, cyclesPerLetter, preserveSpaces, shuffleTime, stopScramble])
 
+  // Auto trigger scramble on mount if auto prop is true
+  useEffect(() => {
+    if (auto) {
+      scramble()
+    }
+  }, [auto, scramble])
+
   // Cleanup on unmount
-  React.useEffect(() => {
+  useEffect(() => {
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current)
@@ -87,18 +95,22 @@ export function TextScramble({
   }, [])
 
   // Update display text when text prop changes
-  React.useEffect(() => {
+  useEffect(() => {
     setDisplayText(text)
   }, [text])
 
   return (
     <span
       className={cn("inline-block font-mono", className)}
-      onMouseEnter={() => hover && scramble()}
-      onMouseLeave={() => hover && stopScramble()}
+      // Only attach hover events if hover prop is true
+      {...(hover
+        ? {
+            onMouseEnter: scramble,
+            onMouseLeave: stopScramble,
+          }
+        : {})}
     >
       {displayText}
     </span>
   )
 }
-

@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "count-up-stats",
+  "name": "countup-stats",
   "type": "registry:ui",
   "title": "Count Up Stats",
   "description": "A count up stats component",

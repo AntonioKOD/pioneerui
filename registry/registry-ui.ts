@@ -176,11 +176,11 @@ export const ui: Registry["items"] = [
     ]
   },
   {
-    name: 'count-up-stats',
+    name: 'countup-stats',
     type: 'registry:ui',
     title: 'Count Up Stats',
     description: 'A count up stats component',
-    dependencies: ['@number-flow/react'],
+    dependencies: ['react-countup'],
     files: [
       {
         path: 'registry/pioneerui/countup-stats.tsx',

@@ -212,12 +212,12 @@
       ]
     },
     {
-      "name": "count-up-stats",
+      "name": "countup-stats",
       "type": "registry:ui",
       "title": "Count Up Stats",
       "description": "A count up stats component",
       "dependencies": [
-        "@number-flow/react"
+        "react-countup"
       ],
       "files": [
         {
@@ -600,6 +600,32 @@
           "path": "registry/example/dock-demo.tsx",
           "type": "registry:example",
           "target": "components/dock-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "countup-stats-demo-2",
+      "type": "registry:example",
+      "title": "Countup Stats Demo 2",
+      "description": "Example showing animated counting numbers.",
+      "files": [
+        {
+          "path": "registry/example/countup-stats-demo-2.tsx",
+          "type": "registry:example",
+          "target": "components/countup-stats-demo-2.tsx"
+        }
+      ]
+    },
+    {
+      "name": "countup-stats-demo-3",
+      "type": "registry:example",
+      "title": "Countup Stats Demo 3",
+      "description": "Example showing animated counting numbers.",
+      "files": [
+        {
+          "path": "registry/example/countup-stats-demo-3.tsx",
+          "type": "registry:example",
+          "target": "components/countup-stats-demo-3.tsx"
         }
       ]
     },

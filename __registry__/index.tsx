@@ -202,8 +202,8 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "count-up-stats": {
-    name: "count-up-stats",
+  "countup-stats": {
+    name: "countup-stats",
     description: "A count up stats component",
     type: "registry:ui",
     registryDependencies: undefined,
@@ -639,6 +639,40 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/example/dock-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "countup-stats-demo-2": {
+    name: "countup-stats-demo-2",
+    description: "Example showing animated counting numbers.",
+    type: "registry:example",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/example/countup-stats-demo-2.tsx",
+      type: "registry:example",
+      target: "components/countup-stats-demo-2.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/countup-stats-demo-2.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "countup-stats-demo-3": {
+    name: "countup-stats-demo-3",
+    description: "Example showing animated counting numbers.",
+    type: "registry:example",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/example/countup-stats-demo-3.tsx",
+      type: "registry:example",
+      target: "components/countup-stats-demo-3.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/countup-stats-demo-3.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

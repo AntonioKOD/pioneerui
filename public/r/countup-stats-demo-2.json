@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "countup-stats-demo-2",
+  "type": "registry:example",
+  "title": "Countup Stats Demo 2",
+  "description": "Example showing animated counting numbers.",
+  "files": [
+    {
+      "path": "registry/example/countup-stats-demo-2.tsx",
+      "content": "\"use client\";\n\nimport { CountUp } from \"@/registry/pioneerui/countup-stats\";\n\nexport default function BasicCountUp() {\n  return <CountUp end={500} />;\n}",
+      "type": "registry:example",
+      "target": "components/countup-stats-demo-2.tsx"
+    }
+  ]
+}

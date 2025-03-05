@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/example/particle-background-demo.tsx",
-      "content": "import { ParticleBackground } from \"../pioneerui/particle-background\";\n\n\nexport default function ParticleBackgroundDemo() {\n    return (\n        <div className=\"relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-[#0D001A]\">\n        <span className=\"pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-br from-[#00FFE1] via-[#00FF85] to-[#60EFFF] bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent\">\n          Particle Bacgkround\n        </span>\n        <ParticleBackground\n          particleCount={100}\n          preset=\"links\"\n          color=\"#00FFE1\"\n          speed={2}\n        />\n      </div>\n    );\n    }\n\n",
+      "content": "import { ParticleBackground } from \"@/registry/pioneerui/particle-background\";\n\n\nexport default function ParticleBackgroundDemo() {\n    return (\n        <div className=\"relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-[#0D001A]\">\n        <span className=\"pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-br from-[#00FFE1] via-[#00FF85] to-[#60EFFF] bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent\">\n          Particle Bacgkround\n        </span>\n        <ParticleBackground\n          particleCount={100}\n          preset=\"links\"\n          color=\"#00FFE1\"\n          speed={2}\n        />\n      </div>\n    );\n    }\n\n",
       "type": "registry:example",
       "target": "components/particle-background-demo.tsx"
     }

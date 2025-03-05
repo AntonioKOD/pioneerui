@@ -8,3 +8,49 @@ published: true
 
 <ComponentPreview name="spinning-text-demo" />
 
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/spinning-text"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name='spinning-text' />
+
+<Step>Update the import path to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props 
+
+| Prop       | Type                                                        | Default | Description                                                                                                                                                    |
+| ---------- | ----------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children` | `string \| string[]`                                        | —       | The text content to display. If an array is provided, all strings are joined into one before rendering.                                                         |
+| `style`    | `React.CSSProperties`                                       | —       | Inline CSS styles applied to the outer container.                                                                                                            |
+| `duration` | `number`                                                    | `10`    | Duration (in seconds) for one full rotation of the spinning animation.                                                                                        |
+| `className`| `string`                                                    | `""`    | Additional CSS classes for the container.                                                                                                                    |
+| `reverse`  | `boolean`                                                   | `false` | If set to true, the text spins in the reverse (counter-clockwise) direction.                                                                                   |
+| `fontSize` | `number`                                                    | —       | (Optional) Font size for the text. *(Note: This prop is defined in the type but not actively used in the current implementation.)*                              |
+| `radius`   | `number`                                                    | `5`     | The radius (in pixels) used for calculating the circular path for each letter's position.                                                                       |
+| `transition`| `Transition`                                               | —       | Custom transition configuration (from Framer Motion) to override the default infinite linear animation.                                                         |
+| `variants` | `{ container?: Variants; item?: Variants }`                 | —       | Custom animation variants for the container and individual letters, which will be merged with default variants to control visibility and rotation behavior.  |
+

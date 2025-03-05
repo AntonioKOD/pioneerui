@@ -275,5 +275,31 @@ export const examples: Registry["items"] = [
       target: "components/dock-demo.tsx",
     }
   ]
-}
+},
+{
+  name: "countup-stats-demo-2",
+  type: "registry:example",
+  title: "Countup Stats Demo 2",
+  description: "Example showing animated counting numbers.",
+  files: [
+    {
+      path: "registry/example/countup-stats-demo-2.tsx",
+      type: "registry:example",
+      target: "components/countup-stats-demo-2.tsx",
+    }
+  ]
+},
+{
+  name: "countup-stats-demo-3",
+  type: "registry:example",
+  title: "Countup Stats Demo 3",
+  description: "Example showing animated counting numbers.",
+  files: [
+    {
+      path: "registry/example/countup-stats-demo-3.tsx",
+      type: "registry:example",
+      target: "components/countup-stats-demo-3.tsx",
+    }
+  ]
+},
 ];

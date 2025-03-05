@@ -4,3 +4,50 @@ description: A text animation that scrambles text and give the result after anim
 ---
 
 <ComponentPreview name="text-scramble-demo" />
+
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/text-scramble"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name='text-scramble' />
+
+<Step>Update the import path to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop              | Type                                          | Default                 | Description                                                                                         |
+| ----------------- | --------------------------------------------- | ----------------------- | --------------------------------------------------------------------------------------------------- |
+| `text`            | `string`                                      | —                       | The text to be scrambled.                                                                           |
+| `className`       | `string`                                      | `""`                    | Additional CSS classes for styling the scramble container.                                         |
+| `cyclesPerLetter` | `number`                                      | `2`                     | Number of scramble cycles per letter before revealing the original character.                      |
+| `shuffleTime`     | `number`                                      | `50`                    | Interval in milliseconds between each scramble update.                                             |
+| `characters`      | `string`                                      | `"!@#$%^&*():{};,./?"` | A string of characters used for the scramble effect.                                               |
+| `hover`           | `boolean`                                     | `false`                 | If true, the scramble effect will trigger on mouse hover.                                           |
+| `auto`            | `boolean`                                     | `false`                 | If true, the scramble effect will automatically start when the component mounts.                  |
+| `preserveSpaces`  | `boolean`                                     | `true`                  | Whether spaces in the text should remain unchanged during scrambling.                               |
+| `onComplete`      | `() => void`                                  | —                       | Callback function invoked when the scramble animation completes.                                   |

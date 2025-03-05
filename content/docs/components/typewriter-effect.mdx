@@ -7,3 +7,53 @@ author: pioneerui
 ---
 
 <ComponentPreview name="typewriter-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/typewriter"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name='typewriter' />
+
+<Step>Update the import path to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop              | Type                                         | Default        | Description                                                                                                  |
+| ----------------- | -------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------ |
+| `text`            | `string \| string[]`                         | —              | The text or array of texts to be animated by the typewriter effect.                                          |
+| `className`       | `string`                                     | `""`           | Additional CSS classes to style the typewriter container.                                                  |
+| `speed`           | `number`                                     | `50`           | Typing speed in milliseconds for each character (used in "mechanical" typing style).                         |
+| `delay`           | `number`                                     | `1000`         | Delay in milliseconds before starting the typing animation or retyping after deletion.                       |
+| `cursor`          | `boolean`                                    | `true`         | Whether to display the blinking cursor.                                                                      |
+| `cursorStyle`     | `string`                                     | `"|"`         | The character used as the cursor.                                                                            |
+| `cursorBlinkSpeed`| `number`                                     | `500`          | Blink speed in milliseconds for the cursor.                                                                  |
+| `deleteSpeed`     | `number`                                     | `25`           | Speed in milliseconds for deleting characters.                                                               |
+| `deleteDelay`     | `number`                                     | `2000`         | Delay in milliseconds before starting the deletion process once typing is complete.                            |
+| `loop`            | `boolean`                                    | `false`        | Determines whether the typewriter effect should loop continuously.                                           |
+| `onComplete`      | `() => void`                                 | —              | Callback function executed when typing is complete and no looping occurs.                                     |
+| `onLoop`          | `() => void`                                 | —              | Callback function executed at the start of a new loop cycle.                                                   |
+| `typingStyle`     | `"mechanical" \| "natural"`                  | `"mechanical"` | Defines the typing style; "mechanical" uses a fixed speed, while "natural" introduces random delays for a realistic effect. |

@@ -1,6 +1,67 @@
 ---
 title: Count Up Stats
-description: NumberFlow Component 
+description: React Count Up Component to use on your website to showcase analytics
 ---
 
 <ComponentPreview name="countup-stats-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/countup-stats"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name='countup-stats' />
+
+<Step>Update the import path to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+
+
+## Examples
+
+<ComponentPreview name="countup-stats-demo-2" />
+
+
+<ComponentPreview name="countup-stats-demo-3" />
+
+## Props
+
+| Prop            | Type                                                                           | Default          | Description                                                    |
+| --------------- | ------------------------------------------------------------------------------ | ---------------- | -------------------------------------------------------------- |
+| `links`         | `Array<{ text: string; href: string; color?: string }>`                        | `[]`             | Array of link objects with text, href, and optional gradient color |
+| `variant`       | `"slide" \| "flip" \| "fade" \| "perspective" \| "split" \| "creative"`          | `"slide"`        | Animation variant for the reveal effect                        |
+| `direction`     | `"up" \| "down" \| "left" \| "right"`                                           | `"up"`           | Direction of the slide animation                               |
+| `duration`      | `number`                                                                       | `0.3`            | Duration of the animation in seconds                           |
+| `stagger`       | `number`                                                                       | `0.02`           | Delay between each character animation                         |
+| `showUnderline` | `boolean`                                                                      | `true`           | Whether to show the underline effect                           |
+| `fontSize`      | `number`                                                                       | `16`             | Font size in pixels                                            |
+| `fontWeight`    | `string`                                                                       | `"normal"`       | Font weight of the text                                        |
+| `letterSpacing` | `string`                                                                       | `"normal"`       | Letter spacing of the text                                     |
+| `textTransform` | `"none" \| "uppercase" \| "lowercase" \| "capitalize"`                         | `"none"`         | Text transformation style                                      |
+| `textColor`     | `string`                                                                       | `"currentColor"` | Color of the text                                              |
+| `underlineColor`| `string`                                                                       | `"currentColor"` | Color of the underline                                         |
+| `underlineHeight`| `number`                                                                      | `2`              | Height of the underline in pixels                              |
+| `className`     | `string`                                                                       | `""`             | Additional CSS classes                                         |
+| `style`         | `React.CSSProperties`                                                          | `{}`             | Additional inline styles                                       |

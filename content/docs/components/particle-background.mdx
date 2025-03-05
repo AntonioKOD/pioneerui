@@ -4,3 +4,49 @@ description: A Particle Background Component great for your landing page
 ---
 
 <ComponentPreview name="particle-background-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/particle-background"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name='particle-background' />
+
+<Step>Update the import path to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+
+## Props 
+
+| Prop            | Type                                     | Default        | Description                                                                                                    |
+| --------------- | ---------------------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------- |
+| `className`     | `string`                                 | `""`           | Additional CSS classes to style the particles container.                                                     |
+| `preset`        | `"default" \| "links" \| "bubbles" \| "snow" \| "stars" \| "fireflies" \| "floating" \| "confetti"` | `"default"`    | Preset configuration for the particle effect. Choose a preset to apply predefined behavior and appearance.     |
+| `color`         | `string`                                 | `"#5B21B6"`    | Primary color for the particles.                                                                             |
+| `particleCount` | `number`                                 | `50`           | The number of particles to display.                                                                          |
+| `speed`         | `number`                                 | `3`            | Speed of the particle movement.                                                                              |
+| `interactive`   | `boolean`                                | `true`         | Enables interactivity (particles react to click and hover events).                                             |
+| `zIndex`        | `number`                                 | `0`            | CSS z-index value for the particles container.                                                                 |
+| `containerId`   | `string`                                 | `"tsparticles"`| The ID assigned to the particles container.                                                                  |

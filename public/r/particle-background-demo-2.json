@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "particle-background-demo-2",
+  "type": "registry:example",
+  "title": "Particle Background Demo 2",
+  "description": "Second example showing a particle background effect.",
+  "files": [
+    {
+      "path": "registry/example/particle-background-demo-2.tsx",
+      "content": "\"use client\"\n\nimport { ParticleBackground } from \"../pioneerui/particle-background\";\n\nexport default function ParticleDefaultDemo() {\n  return (\n    <div className=\"relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-[#0D001A]\">\n      <span className=\"pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-br from-[#00FFE1] via-[#00FF85] to-[#60EFFF] bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent\">\n        Particle Background - Default\n      </span>\n      <ParticleBackground\n        particleCount={80}\n        preset=\"default\"\n        color=\"#00FFE1\"\n        speed={3}\n      />\n    </div>\n  );\n}",
+      "type": "registry:example",
+      "target": "components/particle-background-demo-2.tsx"
+    }
+  ]
+}

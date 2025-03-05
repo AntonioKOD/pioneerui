@@ -8,4 +8,48 @@ author: pioneerui
 
 <ComponentPreview name="hover-button-demo" />
 
+## Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/hover-button"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="hover-button" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props 
+
+| Prop               | Type                  | Default                                 | Description                                                                                          |
+| ------------------ | --------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `children`         | `React.ReactNode`     | —                                       | The content to display inside the button (typically text or an element).                             |
+| `onClick`          | `() => void`          | —                                       | Callback function executed when the button is clicked.                                             |
+| `className`        | `string`              | `""`                                    | Additional CSS classes to apply to the button.                                                     |
+| `defaultSize`      | `string`              | `"h-12 w-12"`                           | Tailwind CSS classes for the button's default size.                                                |
+| `hoverWidth`       | `string`              | `"hover:w-32"`                          | Tailwind CSS classes for the button's width when hovered.                                          |
+| `gradientFrom`     | `string`              | `"from-[#6a11cb]"`                       | Tailwind CSS class for the start color of the gradient background.                                 |
+| `gradientTo`       | `string`              | `"to-[#2575fc]"`                         | Tailwind CSS class for the end color of the gradient background.                                   |
+| `darkGradientFrom` | `string`              | `"dark:from-[#070e41]"`                   | Tailwind CSS class for the start color of the gradient background in dark mode.                    |
+| `darkGradientTo`   | `string`              | `"dark:to-[#891421]"`                     | Tailwind CSS class for the end color of the gradient background in dark mode.                      |
+| `borderColor`      | `string`              | `"border-[#656fe2]"`                      | Tailwind CSS class for the button's border color.                                                  |
+| `textColor`        | `string`              | `"text-neutral-200"`                     | Tailwind CSS class for the button's text color.                                                    |

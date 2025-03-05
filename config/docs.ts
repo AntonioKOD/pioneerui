@@ -9,7 +9,7 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Components",
-      href: "/components",
+      href: "/docs",
     },
   ],
   sidebarNav: [
