@@ -221,17 +221,6 @@ export function Hero3D() {
             </Link>
           </div>
 
-          {/* Social proof — avatar stack */}
-          <div className="flex items-center gap-2.5">
-            <div className="flex -space-x-2">
-              {["bg-violet-400", "bg-cyan-400", "bg-violet-300", "bg-cyan-300"].map((c, i) => (
-                <div key={i} className={`size-6 rounded-full border-2 border-zinc-950 ${c} opacity-90`} />
-              ))}
-            </div>
-            <p className="text-sm text-zinc-500">
-              Free forever · MIT License · Open source
-            </p>
-          </div>
         </div>
 
         {/* Right — Three.js canvas */}
