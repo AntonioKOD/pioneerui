@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "noise-texture-demo",
+  "title": "Noise Texture Demo",
+  "description": "Example showing an SVG fractal noise grain overlay.",
+  "registryDependencies": [
+    "https://pioneerui.com/r/noise-texture"
+  ],
+  "files": [
+    {
+      "path": "registry/example/noise-texture-demo.tsx",
+      "content": "import { NoiseTexture } from \"../pioneerui/noise-texture\"\n\nexport default function NoiseTextureDemo() {\n  return (\n    <NoiseTexture className=\"rounded-xl min-h-[320px] bg-gradient-to-br from-violet-900 to-indigo-900\">\n      <div className=\"text-center space-y-2\">\n        <h2 className=\"text-3xl font-bold text-white\">Noise Texture</h2>\n        <p className=\"text-white/60\">SVG fractal noise grain overlay</p>\n      </div>\n    </NoiseTexture>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/noise-texture-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-card-demo",
+  "title": "Pricing Card Demo",
+  "description": "Example showing pricing tier cards with highlighted variant.",
+  "registryDependencies": [
+    "https://pioneerui.com/r/pricing-card"
+  ],
+  "files": [
+    {
+      "path": "registry/example/pricing-card-demo.tsx",
+      "content": "import { PricingCard } from \"../pioneerui/pricing-card\"\n\nconst features = [\n  { text: \"Up to 5 projects\", included: true },\n  { text: \"Basic analytics\", included: true },\n  { text: \"Email support\", included: true },\n  { text: \"Custom domains\", included: false },\n  { text: \"Team collaboration\", included: false },\n]\n\nconst proFeatures = [\n  { text: \"Unlimited projects\", included: true },\n  { text: \"Advanced analytics\", included: true },\n  { text: \"Priority support\", included: true },\n  { text: \"Custom domains\", included: true },\n  { text: \"Team collaboration\", included: true },\n]\n\nexport default function PricingCardDemo() {\n  return (\n    <div className=\"flex flex-wrap items-start justify-center gap-4 p-6\">\n      <PricingCard\n        name=\"Starter\"\n        description=\"Perfect for side projects\"\n        price={0}\n        period=\"/month\"\n        features={features}\n        cta=\"Get started free\"\n        className=\"w-64\"\n      />\n      <PricingCard\n        name=\"Pro\"\n        description=\"For growing teams\"\n        price={29}\n        period=\"/month\"\n        features={proFeatures}\n        cta=\"Start free trial\"\n        highlighted\n        badge=\"Most popular\"\n        className=\"w-64\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/pricing-card-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

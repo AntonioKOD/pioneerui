@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "spinning-text",
-  "type": "registry:ui",
   "title": "Spinning Text",
   "description": "A spinning text component",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:ui",
       "target": "components/pioneerui/spinning-text.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

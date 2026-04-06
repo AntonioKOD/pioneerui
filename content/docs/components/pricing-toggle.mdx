@@ -1,0 +1,85 @@
+---
+title: Pricing Toggle
+description: Monthly/annual billing toggle with animated price swap using Framer Motion.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="pricing-toggle-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/pricing-toggle"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="pricing-toggle" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+"use client"
+
+import { useState } from "react"
+import { PricingToggle, AnimatedPrice } from "@/components/pioneerui/pricing-toggle"
+
+export default function Pricing() {
+  const [isAnnual, setIsAnnual] = useState(false)
+
+  return (
+    <>
+      <PricingToggle onChange={setIsAnnual} discount="Save 20%" />
+      <AnimatedPrice monthly={29} annual={23} isAnnual={isAnnual} />
+    </>
+  )
+}
+```
+
+## Props — `PricingToggle`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `monthlyLabel` | `string` | `Monthly` | Monthly option label |
+| `annualLabel` | `string` | `Annual` | Annual option label |
+| `discount` | `string` | `Save 20%` | Discount badge text |
+| `defaultAnnual` | `boolean` | `false` | Default selected state |
+| `onChange` | `(isAnnual: boolean) => void` | `undefined` | Change callback |
+
+## Props — `AnimatedPrice`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `monthly` | `string \| number` | — | Monthly price (required) |
+| `annual` | `string \| number` | — | Annual price (required) |
+| `isAnnual` | `boolean` | — | Current billing period (required) |
+| `currency` | `string` | `$` | Currency symbol |

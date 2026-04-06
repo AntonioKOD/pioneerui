@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-variants-demo",
+  "title": "Spinner Variants Demo",
+  "description": "Example showing ring, dots, pulse, and bars loading spinners.",
+  "registryDependencies": [
+    "https://pioneerui.com/r/spinner-variants"
+  ],
+  "files": [
+    {
+      "path": "registry/example/spinner-variants-demo.tsx",
+      "content": "import { SpinnerRing, SpinnerDots, SpinnerPulse, SpinnerBars } from \"../pioneerui/spinner-variants\"\n\nexport default function SpinnerVariantsDemo() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-10 p-10\">\n      <div className=\"flex flex-col items-center gap-3\">\n        <SpinnerRing size={32} className=\"text-primary\" />\n        <span className=\"text-xs text-muted-foreground\">Ring</span>\n      </div>\n      <div className=\"flex flex-col items-center gap-3\">\n        <SpinnerDots size={48} className=\"text-primary\" />\n        <span className=\"text-xs text-muted-foreground\">Dots</span>\n      </div>\n      <div className=\"flex flex-col items-center gap-3\">\n        <SpinnerPulse size={32} className=\"text-primary\" />\n        <span className=\"text-xs text-muted-foreground\">Pulse</span>\n      </div>\n      <div className=\"flex flex-col items-center gap-3\">\n        <SpinnerBars size={36} className=\"text-primary\" />\n        <span className=\"text-xs text-muted-foreground\">Bars</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/spinner-variants-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

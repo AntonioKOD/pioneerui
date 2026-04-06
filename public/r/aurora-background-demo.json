@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aurora-background-demo",
+  "title": "Aurora Background Demo",
+  "description": "Example showing an animated aurora gradient backdrop.",
+  "registryDependencies": [
+    "https://pioneerui.com/r/aurora-background"
+  ],
+  "files": [
+    {
+      "path": "registry/example/aurora-background-demo.tsx",
+      "content": "import { AuroraBackground } from \"../pioneerui/aurora-background\"\n\nexport default function AuroraBackgroundDemo() {\n  return (\n    <AuroraBackground className=\"rounded-xl min-h-[320px]\">\n      <div className=\"text-center\">\n        <h2 className=\"text-3xl font-bold text-foreground\">Aurora Background</h2>\n        <p className=\"mt-2 text-muted-foreground\">A beautiful animated aurora gradient backdrop</p>\n      </div>\n    </AuroraBackground>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/aurora-background-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

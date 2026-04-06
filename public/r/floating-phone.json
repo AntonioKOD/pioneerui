@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "floating-phone",
-  "type": "registry:ui",
   "title": "Floating Phone",
   "description": "A floating phone component",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:ui",
       "target": "components/pioneerui/floating-phone.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

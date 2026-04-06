@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hover-button-demo",
-  "type": "registry:example",
   "title": "Hover Button Demo",
   "description": "Example showing a button with hover effects.",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:example",
       "target": "components/hover-button-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

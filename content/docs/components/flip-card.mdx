@@ -1,0 +1,63 @@
+---
+title: Flip Card
+description: Smooth 3D CSS flip card revealing a back face on hover or click, built with Framer Motion.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="flip-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/flip-card"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="flip-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { FlipCard } from "@/components/pioneerui/flip-card"
+
+const Front = () => <div className="h-full bg-violet-600 flex items-center justify-center text-white font-bold">Front</div>
+const Back = () => <div className="h-full bg-zinc-900 flex items-center justify-center text-white">Back</div>
+
+export default function Page() {
+  return <FlipCard front={<Front />} back={<Back />} trigger="hover" />
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `front` | `ReactNode` | — | Content shown on the front face |
+| `back` | `ReactNode` | — | Content revealed on flip |
+| `trigger` | `"hover" \| "click"` | `"hover"` | What triggers the flip |
+| `width` | `number \| string` | `280` | Card width |
+| `height` | `number \| string` | `340` | Card height |

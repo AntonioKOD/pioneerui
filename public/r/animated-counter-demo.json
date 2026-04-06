@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "animated-counter-demo",
+  "title": "Animated Counter Demo",
+  "description": "Example showing a stat card with scroll-triggered animated counters.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/animated-counter"
+  ],
+  "files": [
+    {
+      "path": "registry/example/animated-counter-demo.tsx",
+      "content": "import { StatCard } from \"../pioneerui/animated-counter\"\n\nexport default function AnimatedCounterDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <StatCard\n        className=\"w-full max-w-2xl\"\n        stats={[\n          { label: \"Components\", value: 45, suffix: \"+\" },\n          { label: \"GitHub Stars\", value: 3200, suffix: \"+\" },\n          { label: \"Downloads\", value: 18500, suffix: \"+\" },\n          { label: \"Contributors\", value: 94, suffix: \"+\" },\n        ]}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/animated-counter-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

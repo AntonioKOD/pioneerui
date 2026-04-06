@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "neu-button-demo",
-  "type": "registry:example",
   "title": "Neu Button Demo",
   "description": "Example showing a button with a neumorphic effect.",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:example",
       "target": "components/neu-button-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "spinning-text-demo",
-  "type": "registry:example",
   "title": "Spinning Text Demo",
   "description": "Example showing spinning text effect.",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:example",
       "target": "components/spinning-text-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

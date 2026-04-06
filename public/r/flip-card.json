@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "flip-card",
+  "title": "Flip Card",
+  "description": "3D CSS flip card that reveals a back face on hover or click.",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/pioneerui/flip-card.tsx",
+      "content": "\"use client\"\n\nimport React, { useState } from \"react\"\nimport { motion } from \"motion/react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface FlipCardProps {\n  front: React.ReactNode\n  back: React.ReactNode\n  className?: string\n  /** \"hover\" flips on mouse enter, \"click\" flips on click */\n  trigger?: \"hover\" | \"click\"\n  width?: number | string\n  height?: number | string\n}\n\nexport function FlipCard({\n  front,\n  back,\n  className,\n  trigger = \"hover\",\n  width = 280,\n  height = 340,\n}: FlipCardProps) {\n  const [flipped, setFlipped] = useState(false)\n\n  const isFlipped = trigger === \"hover\" ? flipped : flipped\n\n  const hoverProps =\n    trigger === \"hover\"\n      ? {\n          onMouseEnter: () => setFlipped(true),\n          onMouseLeave: () => setFlipped(false),\n        }\n      : {\n          onClick: () => setFlipped((f) => !f),\n        }\n\n  return (\n    <div\n      className={cn(\"relative cursor-pointer select-none\", className)}\n      style={{ width, height, perspective: \"1200px\" }}\n      {...hoverProps}\n    >\n      <motion.div\n        className=\"relative h-full w-full\"\n        animate={{ rotateY: isFlipped ? 180 : 0 }}\n        transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}\n        style={{ transformStyle: \"preserve-3d\" }}\n      >\n        {/* Front */}\n        <div\n          className=\"absolute inset-0 overflow-hidden rounded-2xl [backface-visibility:hidden]\"\n        >\n          {front}\n        </div>\n        {/* Back */}\n        <div\n          className=\"absolute inset-0 overflow-hidden rounded-2xl [backface-visibility:hidden] [transform:rotateY(180deg)]\"\n        >\n          {back}\n        </div>\n      </motion.div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/flip-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

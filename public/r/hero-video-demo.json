@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-video-demo",
+  "title": "Hero Video Demo",
+  "description": "Example showing a video thumbnail with modal player.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/hero-video"
+  ],
+  "files": [
+    {
+      "path": "registry/example/hero-video-demo.tsx",
+      "content": "import { HeroVideo } from \"../pioneerui/hero-video\"\n\nexport default function HeroVideoDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-6\">\n      <HeroVideo\n        videoSrc=\"https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1\"\n        thumbnailSrc=\"https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800&q=80\"\n        thumbnailAlt=\"Product demo video\"\n        buttonText=\"Watch demo\"\n        animationStyle=\"from-center\"\n        className=\"max-w-2xl w-full aspect-video\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/hero-video-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

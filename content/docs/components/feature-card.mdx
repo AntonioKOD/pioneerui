@@ -1,0 +1,75 @@
+---
+title: Feature Card
+description: Icon, title, and description layout with hover lift and optional highlighted variant.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="feature-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/feature-card"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="feature-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { FeatureCard, FeatureGrid } from "@/components/pioneerui/feature-card"
+
+export default function Features() {
+  return (
+    <FeatureGrid columns={3}>
+      <FeatureCard
+        icon={<ZapIcon />}
+        title="Fast"
+        description="Zero runtime overhead."
+        highlighted
+      />
+      <FeatureCard icon={<ShieldIcon />} title="Safe" description="Type safe by default." />
+    </FeatureGrid>
+  )
+}
+```
+
+## Props — `FeatureCard`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `icon` | `React.ReactNode` | `undefined` | Icon element |
+| `title` | `string` | — | Card title (required) |
+| `description` | `string` | — | Card description (required) |
+| `highlighted` | `boolean` | `false` | Accent border and background |
+
+## Props — `FeatureGrid`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `columns` | `2 \| 3 \| 4` | `3` | Number of columns |

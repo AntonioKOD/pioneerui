@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "announcement-banner-demo",
+  "title": "Announcement Banner Demo",
+  "description": "Example showing dismissable announcement banners.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/announcement-banner"
+  ],
+  "files": [
+    {
+      "path": "registry/example/announcement-banner-demo.tsx",
+      "content": "import { AnnouncementBanner } from \"../pioneerui/announcement-banner\"\n\nconst SparkleIcon = () => (\n  <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" className=\"h-4 w-4\">\n    <path d=\"M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z\"/>\n  </svg>\n)\n\nexport default function AnnouncementBannerDemo() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      <AnnouncementBanner\n        message=\"PioneerUI v2.0 is here with 25+ new components!\"\n        href=\"/docs\"\n        cta=\"See what's new\"\n        variant=\"default\"\n        dismissible\n      />\n      <AnnouncementBanner\n        message=\"🎉 PioneerUI Pro is now available — one-time purchase, lifetime access.\"\n        href=\"/pricing\"\n        cta=\"Learn more\"\n        variant=\"primary\"\n        dismissible\n        icon={<SparkleIcon />}\n      />\n      <AnnouncementBanner\n        message=\"Maintenance scheduled for Sunday 2AM UTC.\"\n        variant=\"warning\"\n        dismissible={false}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/announcement-banner-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

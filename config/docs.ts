@@ -9,7 +9,19 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Components",
+      href: "/docs/components",
+    },
+    {
+      title: "Docs",
       href: "/docs",
+    },
+    {
+      title: "Community",
+      href: "/community",
+    },
+    {
+      title: "Blog",
+      href: "/blog",
     },
   ],
   sidebarNav: [
@@ -67,6 +79,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/cli",
           items: [],
         },
+        {
+          title: "Contributing",
+          href: "/docs/contributing",
+          items: [],
+          label: "New",
+        },
       ],
     },
     /*{
@@ -117,230 +135,283 @@ export const docsConfig: DocsConfig = {
     {
       title: "Components",
       items: [
-        /*{
-          title: "Marquee",
-          href: `/docs/components/marquee`,
+        {
+          title: "Link Reveal",
+          href: `/docs/components/link-reveal`,
           items: [],
         },
         {
-          title: "Terminal",
-          href: `/docs/components/terminal`,
+          title: "Count Up Stats",
+          href: `/docs/components/count-up-stats`,
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Hero Sections",
+      items: [
+        {
+          title: "Hero Gradient",
+          href: `/docs/components/hero-gradient`,
           items: [],
           label: "New",
         },
         {
-          title: "Hero Video Dialog",
-          href: `/docs/components/hero-video-dialog`,
+          title: "Hero Video",
+          href: `/docs/components/hero-video`,
           items: [],
-          label: "",
+          label: "New",
+        },
+        {
+          title: "Announcement Banner",
+          href: `/docs/components/announcement-banner`,
+          items: [],
+          label: "New",
+        },
+      ],
+    },
+    {
+      title: "Backgrounds",
+      items: [
+        {
+          title: "Particle Background",
+          href: `/docs/components/particle-background`,
+          items: [],
+        },
+        {
+          title: "Aurora Background",
+          href: `/docs/components/aurora-background`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Dot Pattern",
+          href: `/docs/components/dot-pattern`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Grid Pattern",
+          href: `/docs/components/grid-pattern`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Beam Background",
+          href: `/docs/components/beam-background`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Noise Texture",
+          href: `/docs/components/noise-texture`,
+          items: [],
+          label: "New",
+        },
+      ],
+    },
+    {
+      title: "Cards",
+      items: [
+        {
+          title: "Glow Card",
+          href: `/docs/components/glow-card`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Tilt Card",
+          href: `/docs/components/tilt-card`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Feature Card",
+          href: `/docs/components/feature-card`,
+          items: [],
+          label: "New",
         },
         {
           title: "Bento Grid",
           href: `/docs/components/bento-grid`,
           items: [],
-        },
-        {
-          title: "Animated List",
-          href: `/docs/components/animated-list`,
-          items: [],
-        },
-        {
-
-          title: "Dock",
-          href: `/docs/components/dock`,
-          items: [],
-          label: "",
-        },*/
-        {
-          title: "Link Reveal",
-          href: `/docs/components/link-reveal`,
-          items: [],
           label: "New",
         },
-        {
-          title: "Count Up Stats",
-          href: `/docs/components/count-up-stats`,
-
-        }
-       /* {
-          title: "Globe",
-          href: `/docs/components/globe`,
-          items: [],
-        },
-        {
-          title: "Tweet Card",
-          href: `/docs/components/tweet-card`,
-          items: [],
-        },
-        {
-          title: "Orbiting Circles",
-          href: `/docs/components/orbiting-circles`,
-          items: [],
-          label: "",
-        },
-
-        {
-          title: "Avatar Circles",
-          href: `/docs/components/avatar-circles`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Icon Cloud",
-          href: `/docs/components/icon-cloud`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Animated Circular Progress Bar",
-          href: `/docs/components/animated-circular-progress-bar`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "File Tree",
-          href: `/docs/components/file-tree`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Code Comparison",
-          href: `/docs/components/code-comparison`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Script Copy Button",
-          href: `/docs/components/script-copy-btn`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Scroll Progress",
-          href: `/docs/components/scroll-progress`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Lens",
-          href: `/docs/components/lens`,
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Pointer",
-          href: `/docs/components/pointer`,
-          items: [],
-          label: "New",
-        },*/
       ],
     },
     {
-      title: "Device Mocks",
+      title: "Special Effects",
       items: [
-       /* {
-          title: "Safari",
-          href: `/docs/components/safari`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "iPhone 15 Pro",
-          href: `/docs/components/iphone-15-pro`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Android",
-          href: `/docs/components/android`,
-          items: [],
-          label: "",
-        },*/
-        {
-          title: "Floating Phone",
-          href: `/docs/components/floating-phone`,
-          items: [],
-          label: "",
-        }
-      ],
-    },
-    //{
-      //title: "Special Effects",
-      //items: [
-       /* {
-          title: "Animated Beam",
-          href: `/docs/components/animated-beam`,
-          items: [],
-        },
         {
           title: "Border Beam",
           href: `/docs/components/border-beam`,
           items: [],
+          label: "New",
         },
         {
-          title: "Shine Border",
-          href: `/docs/components/shine-border`,
+          title: "Magnetic Button",
+          href: `/docs/components/magnetic-button`,
           items: [],
-          label: "",
-        },
-        {
-          title: "Magic Card",
-          href: `/docs/components/magic-card`,
-          items: [],
+          label: "New",
         },
         {
           title: "Meteors",
           href: `/docs/components/meteors`,
           items: [],
+          label: "New",
         },
         {
-          title: "Neon Gradient Card",
-          href: `/docs/components/neon-gradient-card`,
+          title: "Neon Button",
+          href: `/docs/components/neon-button`,
           items: [],
-          label: "",
+          label: "New",
         },
         {
-          title: "Confetti",
-          href: `/docs/components/confetti`,
+          title: "Ripple Button",
+          href: `/docs/components/ripple-button`,
           items: [],
-          label: "",
+          label: "New",
         },
         {
-          title: "Particles",
-          href: `/docs/components/particles`,
+          title: "Flip Card",
+          href: `/docs/components/flip-card`,
           items: [],
-          label: "",
+          label: "New",
         },
         {
-          title: "Cool Mode",
-          href: `/docs/components/cool-mode`,
+          title: "Glass Card",
+          href: `/docs/components/glass-card`,
           items: [],
-          label: "",
+          label: "New",
         },
         {
-          title: "Scratch To Reveal",
-          href: `/docs/components/scratch-to-reveal`,
+          title: "Animated Counter",
+          href: `/docs/components/animated-counter`,
           items: [],
-          label: "",
-        },*/
-    //  ],
-   // },
+          label: "New",
+        },
+      ],
+    },
+    {
+      title: "Loaders",
+      items: [
+        {
+          title: "Skeleton Card",
+          href: `/docs/components/skeleton-card`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Spinner Variants",
+          href: `/docs/components/spinner-variants`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Progress Bar",
+          href: `/docs/components/progress-bar`,
+          items: [],
+          label: "New",
+        },
+      ],
+    },
+    {
+      title: "Testimonials",
+      items: [
+        {
+          title: "Testimonial Card",
+          href: `/docs/components/testimonial-card`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Marquee Testimonials",
+          href: `/docs/components/marquee-testimonials`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Testimonial Grid",
+          href: `/docs/components/testimonial-grid`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Animated Testimonials",
+          href: `/docs/components/animated-testimonials`,
+          items: [],
+          label: "New",
+        },
+      ],
+    },
+    {
+      title: "Pricing",
+      items: [
+        {
+          title: "Pricing Card",
+          href: `/docs/components/pricing-card`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Pricing Toggle",
+          href: `/docs/components/pricing-toggle`,
+          items: [],
+          label: "New",
+        },
+      ],
+    },
+    {
+      title: "Navigation",
+      items: [
+        {
+          title: "Fluid Tabs",
+          href: `/docs/components/fluid-tabs`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Pill Nav",
+          href: `/docs/components/pill-nav`,
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Breadcrumb Animated",
+          href: `/docs/components/breadcrumb-animated`,
+          items: [],
+          label: "New",
+        },
+      ],
+    },
+    {
+      title: "Device Mocks",
+      items: [
+        {
+          title: "Floating Phone",
+          href: `/docs/components/floating-phone`,
+          items: [],
+        },
+      ],
+    },
     {
       title: "Text Animations",
       items: [
         {
           title: "Spinning Text",
           href: `/docs/components/spinning-text`,
+          items: [],
         },
         {
           title: "Typewriter Effect",
           href: `/docs/components/typewriter-effect`,
-
+          items: [],
         },
         {
           title: "Text Scramble",
           href: `/docs/components/text-scramble`,
-        }
+          items: [],
+        },
       ],
     },
     {
@@ -354,20 +425,13 @@ export const docsConfig: DocsConfig = {
         {
           title: "Neu Follow Button",
           href: `/docs/components/neu-button`,
+          items: [],
         },
         {
           title: "Hover Button",
           href: `/docs/components/hover-button`,
-        }
-      ],
-    },
-    {
-      title: "Backgrounds",
-      items: [
-        {
-          title: "Particle Background",
-          href: `/docs/components/particle-background`,
-        }
+          items: [],
+        },
       ],
     },
   ],

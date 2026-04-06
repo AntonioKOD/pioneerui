@@ -11,8 +11,8 @@ import { HttpsProxyAgent } from "https-proxy-agent";
 import fetch from "node-fetch";
 import { z } from "zod";
 
-const baseUrl = process.env.COMPONENTS_REGISTRY_URL ?? "https://magicui.design";
-const proBaseUrl = process.env.PRO_REGISTRY_URL ?? "https://pro.magicui.design";
+const baseUrl = process.env.COMPONENTS_REGISTRY_URL ?? "https://pioneerui.com";
+const proBaseUrl = process.env.PRO_REGISTRY_URL ?? "https://pioneerui.com";
 const shadcnBaseUrl = "https://ui.shadcn.com";
 
 type theTree = z.infer<typeof registryIndexSchema>;

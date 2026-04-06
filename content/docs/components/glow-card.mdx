@@ -1,0 +1,64 @@
+---
+title: Glow Card
+description: Card with a mouse-tracking radial glow effect using CSS custom properties.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="glow-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/glow-card"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="glow-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { GlowCard } from "@/components/pioneerui/glow-card"
+
+export default function Feature() {
+  return (
+    <GlowCard glowColor="rgba(99,102,241,0.15)">
+      <h3>Feature title</h3>
+      <p>Feature description</p>
+    </GlowCard>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `glowColor` | `string` | `rgba(99,102,241,0.15)` | Glow radial gradient color |
+| `glowSize` | `number` | `300` | Glow circle size in pixels |
+| `children` | `React.ReactNode` | `undefined` | Card content |
+| `className` | `string` | `undefined` | Additional CSS classes |

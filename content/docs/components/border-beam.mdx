@@ -1,0 +1,80 @@
+---
+title: Border Beam
+description: Animated rotating gradient border that highlights any card or container.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="border-beam-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/border-beam"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="border-beam" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { BorderBeamCard, BorderBeam } from "@/components/pioneerui/border-beam"
+
+// Pre-built card wrapper
+export default function Card() {
+  return (
+    <BorderBeamCard>
+      <h3>Your card content</h3>
+    </BorderBeamCard>
+  )
+}
+
+// Or add BorderBeam to any existing container
+function CustomCard() {
+  return (
+    <div className="relative rounded-xl p-6">
+      Content here
+      <BorderBeam colorFrom="#6366f1" colorTo="#ec4899" duration={8} />
+    </div>
+  )
+}
+```
+
+## Props — `BorderBeam`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `size` | `number` | `50` | Beam head size in pixels |
+| `duration` | `number` | `6` | Animation duration in seconds |
+| `delay` | `number` | `0` | Animation start delay in seconds |
+| `colorFrom` | `string` | `#ffaa40` | Gradient start color |
+| `colorTo` | `string` | `#9c40ff` | Gradient end color |
+| `borderWidth` | `number` | `1.5` | Border width in pixels |
+| `reverse` | `boolean` | `false` | Reverse animation direction |
+| `initialOffset` | `number` | `0` | Starting position (0–100%) |

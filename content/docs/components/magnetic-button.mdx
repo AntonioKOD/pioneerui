@@ -1,0 +1,69 @@
+---
+title: Magnetic Button
+description: Button that tracks the cursor with elastic spring physics using Framer Motion.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="magnetic-button-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/magnetic-button"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="magnetic-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { MagneticButton } from "@/components/pioneerui/magnetic-button"
+
+export default function CTA() {
+  return (
+    <MagneticButton strength={0.4}>
+      Get started
+    </MagneticButton>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `strength` | `number` | `0.4` | Magnetic pull strength (0–1) |
+| `radius` | `number` | `150` | Detection radius in pixels |
+| `children` | `React.ReactNode` | `undefined` | Button content |
+| `className` | `string` | `undefined` | Additional CSS classes |

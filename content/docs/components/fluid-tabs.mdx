@@ -1,0 +1,72 @@
+---
+title: Fluid Tabs
+description: Tabs with Framer Motion layout-animated underline or pill indicator.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="fluid-tabs-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/fluid-tabs"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="fluid-tabs" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { FluidTabs } from "@/components/pioneerui/fluid-tabs"
+
+const tabs = [
+  { value: "overview", label: "Overview", content: <div>Overview content</div> },
+  { value: "settings", label: "Settings", content: <div>Settings content</div> },
+]
+
+export default function Dashboard() {
+  return <FluidTabs tabs={tabs} defaultValue="overview" variant="underline" />
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `tabs` | `FluidTabItem[]` | — | Array of tab objects (required) |
+| `defaultValue` | `string` | first tab | Initially selected tab |
+| `variant` | `underline \| pill` | `underline` | Indicator style |
+| `onChange` | `(value: string) => void` | `undefined` | Change callback |
+| `listClassName` | `string` | `undefined` | Additional class for tab list |
+| `contentClassName` | `string` | `undefined` | Additional class for content area |

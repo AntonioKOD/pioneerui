@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "magnetic-button",
+  "title": "Magnetic Button",
+  "description": "Button that tracks cursor with elastic spring physics",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/pioneerui/magnetic-button.tsx",
+      "content": "\"use client\"\n\nimport React, { useRef, useState } from \"react\"\nimport { motion, useSpring, type HTMLMotionProps } from \"motion/react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface MagneticButtonProps extends Omit<HTMLMotionProps<\"button\">, \"ref\"> {\n  children?: React.ReactNode\n  strength?: number\n  radius?: number\n}\n\nexport function MagneticButton({\n  children,\n  className,\n  strength = 0.4,\n  radius = 150,\n  ...props\n}: MagneticButtonProps) {\n  const ref = useRef<HTMLButtonElement | null>(null)\n  const [isHovered, setIsHovered] = useState(false)\n\n  const x = useSpring(0, { stiffness: 200, damping: 15, mass: 0.5 })\n  const y = useSpring(0, { stiffness: 200, damping: 15, mass: 0.5 })\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {\n    if (!ref.current) return\n    const rect = ref.current.getBoundingClientRect()\n    const centerX = rect.left + rect.width / 2\n    const centerY = rect.top + rect.height / 2\n    const distX = e.clientX - centerX\n    const distY = e.clientY - centerY\n    const dist = Math.sqrt(distX ** 2 + distY ** 2)\n\n    if (dist < radius) {\n      x.set(distX * strength)\n      y.set(distY * strength)\n    }\n  }\n\n  const handleMouseLeave = () => {\n    x.set(0)\n    y.set(0)\n    setIsHovered(false)\n  }\n\n  return (\n    <motion.button\n      ref={ref}\n      style={{ x, y }}\n      onMouseMove={handleMouseMove}\n      onMouseEnter={() => setIsHovered(true)}\n      onMouseLeave={handleMouseLeave}\n      className={cn(\n        \"relative cursor-pointer rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-shadow duration-200\",\n        isHovered && \"shadow-lg shadow-primary/30\",\n        className,\n      )}\n      {...props}\n    >\n      {children}\n    </motion.button>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/magnetic-button.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

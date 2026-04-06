@@ -1,0 +1,79 @@
+---
+title: Announcement Banner
+description: Dismissable top-of-page animated banner with default, primary, warning, and success variants.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="announcement-banner-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/announcement-banner"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="announcement-banner" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { AnnouncementBanner } from "@/components/pioneerui/announcement-banner"
+
+export default function Layout({ children }) {
+  return (
+    <>
+      <AnnouncementBanner
+        message="PioneerUI v2.0 is here!"
+        href="/docs"
+        cta="See what's new"
+        variant="primary"
+        dismissible
+      />
+      {children}
+    </>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `message` | `string` | — | Banner message text (required) |
+| `href` | `string` | `undefined` | CTA link URL |
+| `cta` | `string` | `undefined` | CTA link text |
+| `variant` | `default \| primary \| warning \| success` | `default` | Color scheme |
+| `dismissible` | `boolean` | `true` | Show dismiss button |
+| `icon` | `React.ReactNode` | `undefined` | Leading icon element |
+| `onDismiss` | `() => void` | `undefined` | Callback when dismissed |

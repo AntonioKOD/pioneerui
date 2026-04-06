@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-card",
+  "title": "Glass Card",
+  "description": "Frosted glass card with a mouse-following radial glow and shimmer border top.",
+  "files": [
+    {
+      "path": "registry/pioneerui/glass-card.tsx",
+      "content": "\"use client\"\n\nimport React, { useRef, type CSSProperties } from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface GlassCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  /** Show a dynamic glowing orb that follows the mouse */\n  glowFollow?: boolean\n  /** Border tint color (CSS color) */\n  tint?: string\n}\n\nexport function GlassCard({\n  children,\n  className,\n  glowFollow = true,\n  tint = \"rgba(139,92,246,0.3)\",\n  style,\n  ...props\n}: GlassCardProps) {\n  const cardRef = useRef<HTMLDivElement>(null)\n  const glowRef = useRef<HTMLDivElement>(null)\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\n    if (!glowFollow || !cardRef.current || !glowRef.current) return\n    const rect = cardRef.current.getBoundingClientRect()\n    const x = e.clientX - rect.left\n    const y = e.clientY - rect.top\n    glowRef.current.style.left = `${x}px`\n    glowRef.current.style.top = `${y}px`\n    glowRef.current.style.opacity = \"1\"\n  }\n\n  const handleMouseLeave = () => {\n    if (glowRef.current) glowRef.current.style.opacity = \"0\"\n  }\n\n  return (\n    <div\n      ref={cardRef}\n      onMouseMove={handleMouseMove}\n      onMouseLeave={handleMouseLeave}\n      className={cn(\n        \"group relative overflow-hidden rounded-2xl border p-6\",\n        \"border-white/10 bg-white/5 backdrop-blur-md\",\n        \"shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)]\",\n        \"transition-shadow duration-300 hover:shadow-lg\",\n        className,\n      )}\n      style={\n        {\n          \"--tint\": tint,\n          ...style,\n        } as CSSProperties\n      }\n      {...props}\n    >\n      {/* Mouse-follow glow */}\n      {glowFollow && (\n        <div\n          ref={glowRef}\n          aria-hidden\n          className=\"pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 transition-opacity duration-300\"\n          style={{\n            width: 200,\n            height: 200,\n            background: `radial-gradient(circle at center, ${tint} 0%, transparent 70%)`,\n          }}\n        />\n      )}\n      {/* Shimmer border top */}\n      <div\n        className=\"pointer-events-none absolute inset-x-0 top-0 h-px opacity-50\"\n        style={{\n          background: `linear-gradient(90deg, transparent, ${tint}, transparent)`,\n        }}\n      />\n      <div className=\"relative z-10\">{children}</div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/glass-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

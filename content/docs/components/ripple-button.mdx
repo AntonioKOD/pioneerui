@@ -1,0 +1,65 @@
+---
+title: Ripple Button
+description: Button with a Material Design-style expanding ripple animation on click, available in three variants.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="ripple-button-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/ripple-button"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="ripple-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { RippleButton } from "@/components/pioneerui/ripple-button"
+
+export default function Page() {
+  return (
+    <>
+      <RippleButton variant="default">Get Started</RippleButton>
+      <RippleButton variant="outline" rippleColor="rgba(139,92,246,0.3)">
+        Learn More
+      </RippleButton>
+    </>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `variant` | `"default" \| "outline" \| "ghost"` | `"default"` | Visual style |
+| `rippleColor` | `string` | `"rgba(255,255,255,0.35)"` | Color of the ripple circle |
+| `children` | `ReactNode` | — | Button label |

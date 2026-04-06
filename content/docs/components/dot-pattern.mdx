@@ -1,0 +1,68 @@
+---
+title: Dot Pattern
+description: Repeating radial-dot SVG background pattern with a radial gradient fade mask.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="dot-pattern-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/dot-pattern"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="dot-pattern" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { DotPatternBackground, DotPattern } from "@/components/pioneerui/dot-pattern"
+
+// Convenience wrapper
+export default function Page() {
+  return (
+    <DotPatternBackground>
+      <h1>Your content</h1>
+    </DotPatternBackground>
+  )
+}
+
+// Or use DotPattern directly as an SVG overlay
+```
+
+## Props — `DotPattern`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `width` | `number` | `16` | Pattern cell width |
+| `height` | `number` | `16` | Pattern cell height |
+| `cr` | `number` | `1` | Dot radius |
+| `gapX` | `number` | `undefined` | Extra horizontal gap |
+| `gapY` | `number` | `undefined` | Extra vertical gap |
+| `className` | `string` | `undefined` | SVG class (use for mask, color) |

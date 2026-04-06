@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-animated-demo",
+  "title": "Breadcrumb Animated Demo",
+  "description": "Example showing staggered breadcrumb reveal animation.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/breadcrumb-animated"
+  ],
+  "files": [
+    {
+      "path": "registry/example/breadcrumb-animated-demo.tsx",
+      "content": "import { BreadcrumbAnimated } from \"../pioneerui/breadcrumb-animated\"\n\nexport default function BreadcrumbAnimatedDemo() {\n  return (\n    <div className=\"flex flex-col gap-6 p-8\">\n      <BreadcrumbAnimated\n        items={[\n          { label: \"Home\", href: \"/\" },\n          { label: \"Components\", href: \"/docs/components\" },\n          { label: \"Breadcrumb Animated\" },\n        ]}\n      />\n      <BreadcrumbAnimated\n        items={[\n          { label: \"Docs\", href: \"/docs\" },\n          { label: \"Installation\", href: \"/docs/installation\" },\n          { label: \"Next.js\", href: \"/docs/installation/next\" },\n          { label: \"App Router\" },\n        ]}\n        maxVisible={3}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/breadcrumb-animated-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

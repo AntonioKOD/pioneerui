@@ -1,0 +1,65 @@
+---
+title: Glass Card
+description: Frosted glass card with a mouse-tracking radial glow and a shimmer border highlight.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="glass-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/glass-card"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="glass-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { GlassCard } from "@/components/pioneerui/glass-card"
+
+export default function Page() {
+  return (
+    <div className="bg-gradient-to-br from-violet-950 to-zinc-950 p-8">
+      <GlassCard tint="rgba(139,92,246,0.4)">
+        <h3 className="text-white font-bold">Feature Title</h3>
+        <p className="text-white/60 text-sm mt-1">Your content here.</p>
+      </GlassCard>
+    </div>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `glowFollow` | `boolean` | `true` | Enable mouse-tracking glow orb |
+| `tint` | `string` | `"rgba(139,92,246,0.3)"` | Glow and shimmer border color |
+| `children` | `ReactNode` | — | Card content |

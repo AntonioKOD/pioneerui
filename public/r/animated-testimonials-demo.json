@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "animated-testimonials-demo",
+  "title": "Animated Testimonials Demo",
+  "description": "Example showing stacked testimonial cards with blur reveal.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/animated-testimonials"
+  ],
+  "files": [
+    {
+      "path": "registry/example/animated-testimonials-demo.tsx",
+      "content": "import { AnimatedTestimonials } from \"../pioneerui/animated-testimonials\"\n\nconst testimonials = [\n  {\n    quote:\n      \"PioneerUI completely transformed how we build interfaces. The animated components just work out of the box — our team ships twice as fast now.\",\n    name: \"Sarah Chen\",\n    designation: \"Head of Design at Vercel\",\n    src: \"https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&h=400&fit=crop\",\n  },\n  {\n    quote:\n      \"The CLI install workflow is genius. One command and the component lands in our codebase ready to customize. No fighting with dependencies.\",\n    name: \"Marcus Webb\",\n    designation: \"Senior Engineer at Linear\",\n    src: \"https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop\",\n  },\n  {\n    quote:\n      \"Every component is thoughtfully designed with dark mode, accessibility, and animation quality in mind. It's the component library I've always wanted.\",\n    name: \"Aisha Patel\",\n    designation: \"Product Lead at Loom\",\n    src: \"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop\",\n  },\n]\n\nexport default function AnimatedTestimonialsDemo() {\n  return <AnimatedTestimonials testimonials={testimonials} autoplay />\n}\n",
+      "type": "registry:example",
+      "target": "components/animated-testimonials-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

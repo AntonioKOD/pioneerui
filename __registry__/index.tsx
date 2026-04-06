@@ -304,6 +304,550 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
+  "aurora-background": {
+    name: "aurora-background",
+    description: "Animated aurora-style gradient backdrop using CSS keyframes",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/aurora-background.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/aurora-background.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/aurora-background.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "dot-pattern": {
+    name: "dot-pattern",
+    description: "Repeating radial-dot SVG background pattern with radial fade mask",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/dot-pattern.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/dot-pattern.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/dot-pattern.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "grid-pattern": {
+    name: "grid-pattern",
+    description: "Subtle SVG grid lines background with optional highlighted squares",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/grid-pattern.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/grid-pattern.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/grid-pattern.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "beam-background": {
+    name: "beam-background",
+    description: "Canvas-based animated light beam sweeps for dark hero sections",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/beam-background.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/beam-background.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/beam-background.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "noise-texture": {
+    name: "noise-texture",
+    description: "SVG fractal noise grain overlay with blend modes",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/noise-texture.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/noise-texture.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/noise-texture.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "border-beam": {
+    name: "border-beam",
+    description: "Animated rotating gradient border that highlights any card or container",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/border-beam.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/border-beam.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/border-beam.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "magnetic-button": {
+    name: "magnetic-button",
+    description: "Button that tracks cursor with elastic spring physics",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/magnetic-button.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/magnetic-button.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/magnetic-button.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "glow-card": {
+    name: "glow-card",
+    description: "Card with mouse-tracking radial glow via CSS custom properties",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/glow-card.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/glow-card.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/glow-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "tilt-card": {
+    name: "tilt-card",
+    description: "3D perspective tilt on mousemove using Framer Motion spring physics",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/tilt-card.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/tilt-card.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/tilt-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "feature-card": {
+    name: "feature-card",
+    description: "Icon, title, and description layout with optional highlighted variant",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/feature-card.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/feature-card.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/feature-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "bento-grid": {
+    name: "bento-grid",
+    description: "CSS Grid bento layout with variable column/row spanning slots",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/bento-grid.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/bento-grid.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/bento-grid.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "skeleton-card": {
+    name: "skeleton-card",
+    description: "Shimmer-animated skeleton placeholder components",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/skeleton-card.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/skeleton-card.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/skeleton-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "spinner-variants": {
+    name: "spinner-variants",
+    description: "Collection of loading spinners: ring, dots, pulse, and bars",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/spinner-variants.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/spinner-variants.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/spinner-variants.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "progress-bar": {
+    name: "progress-bar",
+    description: "Animated progress bar with default, gradient, and striped variants",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/progress-bar.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/progress-bar.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/progress-bar.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "testimonial-card": {
+    name: "testimonial-card",
+    description: "Quote card with avatar, name, role, company and star rating",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/testimonial-card.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/testimonial-card.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/testimonial-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "marquee-testimonials": {
+    name: "marquee-testimonials",
+    description: "Infinite-scroll horizontal testimonial strip with optional double row",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/marquee-testimonials.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/marquee-testimonials.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/marquee-testimonials.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "testimonial-grid": {
+    name: "testimonial-grid",
+    description: "Masonry-style testimonial grid with staggered entrance animations",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/testimonial-grid.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/testimonial-grid.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/testimonial-grid.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "pricing-card": {
+    name: "pricing-card",
+    description: "Feature list + CTA pricing tier card with highlighted variant",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/pricing-card.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/pricing-card.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/pricing-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "pricing-toggle": {
+    name: "pricing-toggle",
+    description: "Monthly/annual toggle with animated price swap using Framer Motion",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/pricing-toggle.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/pricing-toggle.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/pricing-toggle.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "fluid-tabs": {
+    name: "fluid-tabs",
+    description: "Tabs with Framer Motion layout-animated underline or pill indicator",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/fluid-tabs.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/fluid-tabs.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/fluid-tabs.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "pill-nav": {
+    name: "pill-nav",
+    description: "Horizontal navigation with animated pill indicator and badge support",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/pill-nav.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/pill-nav.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/pill-nav.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "breadcrumb-animated": {
+    name: "breadcrumb-animated",
+    description: "Staggered breadcrumb reveal animation with overflow truncation",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/breadcrumb-animated.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/breadcrumb-animated.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/breadcrumb-animated.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "hero-gradient": {
+    name: "hero-gradient",
+    description: "Full-bleed gradient hero with animated word-by-word headline reveal",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/hero-gradient.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/hero-gradient.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/hero-gradient.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "hero-video": {
+    name: "hero-video",
+    description: "Video thumbnail with play button that opens a modal player",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/hero-video.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/hero-video.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/hero-video.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "announcement-banner": {
+    name: "announcement-banner",
+    description: "Dismissable top-of-page animated banner with multiple color variants",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/announcement-banner.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/announcement-banner.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/announcement-banner.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "meteors": {
+    name: "meteors",
+    description: "Shooting meteor effect that flies across cards or backgrounds.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/meteors.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/meteors.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/meteors.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "animated-testimonials": {
+    name: "animated-testimonials",
+    description: "Stacked card testimonial carousel with word-by-word blur reveal animation.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/animated-testimonials.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/animated-testimonials.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/animated-testimonials.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "neon-button": {
+    name: "neon-button",
+    description: "Glowing neon-bordered button with corner accent animations and multiple color themes.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/neon-button.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/neon-button.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/neon-button.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "glass-card": {
+    name: "glass-card",
+    description: "Frosted glass card with a mouse-following radial glow and shimmer border top.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/glass-card.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/glass-card.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/glass-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "flip-card": {
+    name: "flip-card",
+    description: "3D CSS flip card that reveals a back face on hover or click.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/flip-card.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/flip-card.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/flip-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "ripple-button": {
+    name: "ripple-button",
+    description: "Button with an expanding ripple animation on click, in three variants.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/ripple-button.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/ripple-button.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/ripple-button.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "animated-counter": {
+    name: "animated-counter",
+    description: "Number counter that animates into view with easing, supporting prefix, suffix, and decimals.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/pioneerui/animated-counter.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/animated-counter.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pioneerui/animated-counter.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
   "shimmer-button-demo": {
     name: "shimmer-button-demo",
     description: "Example showing a button with a shimmering light effect.",
@@ -673,6 +1217,550 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/example/countup-stats-demo-3.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "aurora-background-demo": {
+    name: "aurora-background-demo",
+    description: "Example showing an animated aurora gradient backdrop.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/aurora-background"],
+    files: [{
+      path: "registry/example/aurora-background-demo.tsx",
+      type: "registry:example",
+      target: "components/aurora-background-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/aurora-background-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "dot-pattern-demo": {
+    name: "dot-pattern-demo",
+    description: "Example showing a repeating radial dot pattern background.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/dot-pattern"],
+    files: [{
+      path: "registry/example/dot-pattern-demo.tsx",
+      type: "registry:example",
+      target: "components/dot-pattern-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/dot-pattern-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "grid-pattern-demo": {
+    name: "grid-pattern-demo",
+    description: "Example showing a subtle SVG grid background.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/grid-pattern"],
+    files: [{
+      path: "registry/example/grid-pattern-demo.tsx",
+      type: "registry:example",
+      target: "components/grid-pattern-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/grid-pattern-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "beam-background-demo": {
+    name: "beam-background-demo",
+    description: "Example showing canvas-based animated light beams.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/beam-background"],
+    files: [{
+      path: "registry/example/beam-background-demo.tsx",
+      type: "registry:example",
+      target: "components/beam-background-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/beam-background-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "noise-texture-demo": {
+    name: "noise-texture-demo",
+    description: "Example showing an SVG fractal noise grain overlay.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/noise-texture"],
+    files: [{
+      path: "registry/example/noise-texture-demo.tsx",
+      type: "registry:example",
+      target: "components/noise-texture-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/noise-texture-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "border-beam-demo": {
+    name: "border-beam-demo",
+    description: "Example showing an animated rotating gradient border.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/border-beam"],
+    files: [{
+      path: "registry/example/border-beam-demo.tsx",
+      type: "registry:example",
+      target: "components/border-beam-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/border-beam-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "magnetic-button-demo": {
+    name: "magnetic-button-demo",
+    description: "Example showing a button with magnetic cursor tracking.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/magnetic-button"],
+    files: [{
+      path: "registry/example/magnetic-button-demo.tsx",
+      type: "registry:example",
+      target: "components/magnetic-button-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/magnetic-button-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "glow-card-demo": {
+    name: "glow-card-demo",
+    description: "Example showing cards with mouse-tracking radial glow.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/glow-card"],
+    files: [{
+      path: "registry/example/glow-card-demo.tsx",
+      type: "registry:example",
+      target: "components/glow-card-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/glow-card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "tilt-card-demo": {
+    name: "tilt-card-demo",
+    description: "Example showing a card with 3D perspective tilt effect.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/tilt-card"],
+    files: [{
+      path: "registry/example/tilt-card-demo.tsx",
+      type: "registry:example",
+      target: "components/tilt-card-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/tilt-card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "feature-card-demo": {
+    name: "feature-card-demo",
+    description: "Example showing feature cards with icon, title, and description.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/feature-card"],
+    files: [{
+      path: "registry/example/feature-card-demo.tsx",
+      type: "registry:example",
+      target: "components/feature-card-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/feature-card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "bento-grid-demo": {
+    name: "bento-grid-demo",
+    description: "Example showing a bento grid layout with variable spanning.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/bento-grid"],
+    files: [{
+      path: "registry/example/bento-grid-demo.tsx",
+      type: "registry:example",
+      target: "components/bento-grid-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/bento-grid-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "skeleton-card-demo": {
+    name: "skeleton-card-demo",
+    description: "Example showing shimmer skeleton loading placeholders.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/skeleton-card"],
+    files: [{
+      path: "registry/example/skeleton-card-demo.tsx",
+      type: "registry:example",
+      target: "components/skeleton-card-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/skeleton-card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "spinner-variants-demo": {
+    name: "spinner-variants-demo",
+    description: "Example showing ring, dots, pulse, and bars loading spinners.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/spinner-variants"],
+    files: [{
+      path: "registry/example/spinner-variants-demo.tsx",
+      type: "registry:example",
+      target: "components/spinner-variants-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/spinner-variants-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "progress-bar-demo": {
+    name: "progress-bar-demo",
+    description: "Example showing animated progress bars with multiple variants.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/progress-bar"],
+    files: [{
+      path: "registry/example/progress-bar-demo.tsx",
+      type: "registry:example",
+      target: "components/progress-bar-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/progress-bar-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "testimonial-card-demo": {
+    name: "testimonial-card-demo",
+    description: "Example showing testimonial cards with three style variants.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/testimonial-card"],
+    files: [{
+      path: "registry/example/testimonial-card-demo.tsx",
+      type: "registry:example",
+      target: "components/testimonial-card-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/testimonial-card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "marquee-testimonials-demo": {
+    name: "marquee-testimonials-demo",
+    description: "Example showing an infinite-scroll testimonial marquee.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/marquee-testimonials"],
+    files: [{
+      path: "registry/example/marquee-testimonials-demo.tsx",
+      type: "registry:example",
+      target: "components/marquee-testimonials-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/marquee-testimonials-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "testimonial-grid-demo": {
+    name: "testimonial-grid-demo",
+    description: "Example showing a testimonial grid with stagger animations.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/testimonial-grid"],
+    files: [{
+      path: "registry/example/testimonial-grid-demo.tsx",
+      type: "registry:example",
+      target: "components/testimonial-grid-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/testimonial-grid-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "pricing-card-demo": {
+    name: "pricing-card-demo",
+    description: "Example showing pricing tier cards with highlighted variant.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/pricing-card"],
+    files: [{
+      path: "registry/example/pricing-card-demo.tsx",
+      type: "registry:example",
+      target: "components/pricing-card-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/pricing-card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "pricing-toggle-demo": {
+    name: "pricing-toggle-demo",
+    description: "Example showing monthly/annual pricing toggle with animated prices.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/pricing-toggle"],
+    files: [{
+      path: "registry/example/pricing-toggle-demo.tsx",
+      type: "registry:example",
+      target: "components/pricing-toggle-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/pricing-toggle-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "fluid-tabs-demo": {
+    name: "fluid-tabs-demo",
+    description: "Example showing tabs with animated underline and pill indicators.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/fluid-tabs"],
+    files: [{
+      path: "registry/example/fluid-tabs-demo.tsx",
+      type: "registry:example",
+      target: "components/fluid-tabs-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/fluid-tabs-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "pill-nav-demo": {
+    name: "pill-nav-demo",
+    description: "Example showing a pill navigation with animated indicator.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/pill-nav"],
+    files: [{
+      path: "registry/example/pill-nav-demo.tsx",
+      type: "registry:example",
+      target: "components/pill-nav-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/pill-nav-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "breadcrumb-animated-demo": {
+    name: "breadcrumb-animated-demo",
+    description: "Example showing staggered breadcrumb reveal animation.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/breadcrumb-animated"],
+    files: [{
+      path: "registry/example/breadcrumb-animated-demo.tsx",
+      type: "registry:example",
+      target: "components/breadcrumb-animated-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/breadcrumb-animated-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "hero-gradient-demo": {
+    name: "hero-gradient-demo",
+    description: "Example showing a full-bleed gradient hero section.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/hero-gradient"],
+    files: [{
+      path: "registry/example/hero-gradient-demo.tsx",
+      type: "registry:example",
+      target: "components/hero-gradient-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/hero-gradient-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "hero-video-demo": {
+    name: "hero-video-demo",
+    description: "Example showing a video thumbnail with modal player.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/hero-video"],
+    files: [{
+      path: "registry/example/hero-video-demo.tsx",
+      type: "registry:example",
+      target: "components/hero-video-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/hero-video-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "announcement-banner-demo": {
+    name: "announcement-banner-demo",
+    description: "Example showing dismissable announcement banners.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/announcement-banner"],
+    files: [{
+      path: "registry/example/announcement-banner-demo.tsx",
+      type: "registry:example",
+      target: "components/announcement-banner-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/announcement-banner-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "meteors-demo": {
+    name: "meteors-demo",
+    description: "Example showing the meteor shooting effect on a card.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/meteors"],
+    files: [{
+      path: "registry/example/meteors-demo.tsx",
+      type: "registry:example",
+      target: "components/meteors-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/meteors-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "animated-testimonials-demo": {
+    name: "animated-testimonials-demo",
+    description: "Example showing stacked testimonial cards with blur reveal.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/animated-testimonials"],
+    files: [{
+      path: "registry/example/animated-testimonials-demo.tsx",
+      type: "registry:example",
+      target: "components/animated-testimonials-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/animated-testimonials-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "neon-button-demo": {
+    name: "neon-button-demo",
+    description: "Example showing neon glowing buttons in five color themes.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/neon-button"],
+    files: [{
+      path: "registry/example/neon-button-demo.tsx",
+      type: "registry:example",
+      target: "components/neon-button-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/neon-button-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "glass-card-demo": {
+    name: "glass-card-demo",
+    description: "Example showing a frosted glass card with mouse-following glow.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/glass-card"],
+    files: [{
+      path: "registry/example/glass-card-demo.tsx",
+      type: "registry:example",
+      target: "components/glass-card-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/glass-card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "flip-card-demo": {
+    name: "flip-card-demo",
+    description: "Example showing hover and click 3D flip card.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/flip-card"],
+    files: [{
+      path: "registry/example/flip-card-demo.tsx",
+      type: "registry:example",
+      target: "components/flip-card-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/flip-card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "ripple-button-demo": {
+    name: "ripple-button-demo",
+    description: "Example showing click ripple effect across three button variants.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/ripple-button"],
+    files: [{
+      path: "registry/example/ripple-button-demo.tsx",
+      type: "registry:example",
+      target: "components/ripple-button-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/ripple-button-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "animated-counter-demo": {
+    name: "animated-counter-demo",
+    description: "Example showing a stat card with scroll-triggered animated counters.",
+    type: "registry:example",
+    registryDependencies: ["https://pioneerui.com/r/animated-counter"],
+    files: [{
+      path: "registry/example/animated-counter-demo.tsx",
+      type: "registry:example",
+      target: "components/animated-counter-demo.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/animated-counter-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

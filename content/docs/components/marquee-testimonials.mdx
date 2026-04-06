@@ -1,0 +1,65 @@
+---
+title: Marquee Testimonials
+description: Infinite-scroll horizontal testimonial strip with optional double row.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="marquee-testimonials-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/marquee-testimonials"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="marquee-testimonials" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { MarqueeTestimonials } from "@/components/pioneerui/marquee-testimonials"
+
+const testimonials = [
+  { quote: "Amazing library!", name: "Jane Doe", role: "Engineer", company: "Acme" },
+  // ...more items
+]
+
+export default function SocialProof() {
+  return <MarqueeTestimonials items={testimonials} rows={2} />
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `items` | `MarqueeTestimonialItem[]` | — | Array of testimonial objects (required) |
+| `speed` | `number` | `30` | Scroll speed (higher = faster) |
+| `pauseOnHover` | `boolean` | `true` | Pause animation on hover |
+| `reverse` | `boolean` | `false` | Reverse scroll direction of first row |
+| `rows` | `1 \| 2` | `1` | Number of marquee rows |

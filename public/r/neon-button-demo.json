@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "neon-button-demo",
+  "title": "Neon Button Demo",
+  "description": "Example showing neon glowing buttons in five color themes.",
+  "registryDependencies": [
+    "https://pioneerui.com/r/neon-button"
+  ],
+  "files": [
+    {
+      "path": "registry/example/neon-button-demo.tsx",
+      "content": "import { NeonButton } from \"../pioneerui/neon-button\"\n\nexport default function NeonButtonDemo() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-6 p-8 bg-zinc-950 rounded-xl\">\n      <NeonButton color=\"purple\">Launch</NeonButton>\n      <NeonButton color=\"cyan\">Connect</NeonButton>\n      <NeonButton color=\"green\">Deploy</NeonButton>\n      <NeonButton color=\"pink\">Subscribe</NeonButton>\n      <NeonButton color=\"orange\">Ignite</NeonButton>\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/neon-button-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

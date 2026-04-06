@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "typewriter",
-  "type": "registry:ui",
   "title": "Typewriter",
   "description": "A typewriter effect component",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:ui",
       "target": "components/pioneerui/typewriter.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

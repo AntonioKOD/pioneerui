@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "animated-shiny-text",
-  "type": "registry:ui",
   "title": "Animated Shiny Text",
   "description": "A light glare effect which pans across text making it appear as if it is shimmering.",
   "files": [
@@ -32,5 +31,6 @@
         }
       }
     }
-  }
+  },
+  "type": "registry:ui"
 }

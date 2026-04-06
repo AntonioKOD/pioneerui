@@ -1,0 +1,86 @@
+---
+title: Animated Counter
+description: Number counter that animates into view with easing when it enters the viewport. Supports prefix, suffix, thousands separators, and decimals.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="animated-counter-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/animated-counter"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="animated-counter" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { AnimatedCounter, StatCard } from "@/components/pioneerui/animated-counter"
+
+// Single counter inline
+export function Headline() {
+  return (
+    <h2 className="text-4xl font-bold">
+      <AnimatedCounter to={10000} suffix="+" duration={2} /> users
+    </h2>
+  )
+}
+
+// Pre-built stats row
+export function Stats() {
+  return (
+    <StatCard
+      stats={[
+        { label: "Components", value: 50, suffix: "+" },
+        { label: "Stars", value: 3200 },
+        { label: "Downloads", value: 18500, suffix: "+" },
+        { label: "Contributors", value: 94 },
+      ]}
+    />
+  )
+}
+```
+
+## Props — `AnimatedCounter`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `to` | `number` | — | Target number |
+| `from` | `number` | `0` | Starting number |
+| `duration` | `number` | `2` | Animation duration in seconds |
+| `prefix` | `string` | `""` | Shown before the number (e.g. `"$"`) |
+| `suffix` | `string` | `""` | Shown after the number (e.g. `"+"`) |
+| `decimals` | `number` | `0` | Decimal places |
+
+## Props — `StatCard`
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| `stats` | `Array<{ label, value, prefix?, suffix?, decimals? }>` | Array of stat items |

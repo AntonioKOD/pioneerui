@@ -1,37 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "ripple-button",
-  "type": "registry:ui",
   "title": "Ripple Button",
-  "description": "An animated button with ripple useful for user engagement.",
+  "description": "Button with an expanding ripple animation on click, in three variants.",
+  "dependencies": [
+    "motion"
+  ],
   "files": [
     {
-      "path": "registry/magicui/ripple-button.tsx",
-      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\nimport React, { MouseEvent, useEffect, useState } from \"react\";\n\ninterface RippleButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  rippleColor?: string;\n  duration?: string;\n}\n\nexport const RippleButton = React.forwardRef<\n  HTMLButtonElement,\n  RippleButtonProps\n>(\n  (\n    {\n      className,\n      children,\n      rippleColor = \"#ffffff\",\n      duration = \"600ms\",\n      onClick,\n      ...props\n    },\n    ref,\n  ) => {\n    const [buttonRipples, setButtonRipples] = useState<\n      Array<{ x: number; y: number; size: number; key: number }>\n    >([]);\n\n    const handleClick = (event: MouseEvent<HTMLButtonElement>) => {\n      createRipple(event);\n      onClick?.(event);\n    };\n\n    const createRipple = (event: MouseEvent<HTMLButtonElement>) => {\n      const button = event.currentTarget;\n      const rect = button.getBoundingClientRect();\n      const size = Math.max(rect.width, rect.height);\n      const x = event.clientX - rect.left - size / 2;\n      const y = event.clientY - rect.top - size / 2;\n\n      const newRipple = { x, y, size, key: Date.now() };\n      setButtonRipples((prevRipples) => [...prevRipples, newRipple]);\n    };\n\n    useEffect(() => {\n      if (buttonRipples.length > 0) {\n        const lastRipple = buttonRipples[buttonRipples.length - 1];\n        const timeout = setTimeout(() => {\n          setButtonRipples((prevRipples) =>\n            prevRipples.filter((ripple) => ripple.key !== lastRipple.key),\n          );\n        }, parseInt(duration));\n        return () => clearTimeout(timeout);\n      }\n    }, [buttonRipples, duration]);\n\n    return (\n      <button\n        className={cn(\n          \"relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 bg-background px-4 py-2 text-center text-primary\",\n          className,\n        )}\n        onClick={handleClick}\n        ref={ref}\n        {...props}\n      >\n        <div className=\"relative z-10\">{children}</div>\n        <span className=\"pointer-events-none absolute inset-0\">\n          {buttonRipples.map((ripple) => (\n            <span\n              className=\"absolute animate-rippling rounded-full bg-background opacity-30\"\n              key={ripple.key}\n              style={{\n                width: `${ripple.size}px`,\n                height: `${ripple.size}px`,\n                top: `${ripple.y}px`,\n                left: `${ripple.x}px`,\n                backgroundColor: rippleColor,\n                transform: `scale(0)`,\n              }}\n            />\n          ))}\n        </span>\n      </button>\n    );\n  },\n);\n\nRippleButton.displayName = \"RippleButton\";\n",
+      "path": "registry/pioneerui/ripple-button.tsx",
+      "content": "\"use client\"\n\nimport React, { useRef, useState } from \"react\"\nimport { AnimatePresence, motion } from \"motion/react\"\nimport { cn } from \"@/lib/utils\"\n\ninterface RipplePoint {\n  id: number\n  x: number\n  y: number\n}\n\nexport interface RippleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  children?: React.ReactNode\n  rippleColor?: string\n  variant?: \"default\" | \"outline\" | \"ghost\"\n}\n\nconst variantClasses = {\n  default: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n  outline: \"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n  ghost: \"hover:bg-accent hover:text-accent-foreground\",\n}\n\nexport function RippleButton({\n  children,\n  className,\n  rippleColor = \"rgba(255,255,255,0.35)\",\n  variant = \"default\",\n  onClick,\n  ...props\n}: RippleButtonProps) {\n  const [ripples, setRipples] = useState<RipplePoint[]>([])\n  const btnRef = useRef<HTMLButtonElement>(null)\n  const nextId = useRef(0)\n\n  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {\n    if (!btnRef.current) return\n    const rect = btnRef.current.getBoundingClientRect()\n    const x = e.clientX - rect.left\n    const y = e.clientY - rect.top\n    const id = nextId.current++\n    setRipples((prev) => [...prev, { id, x, y }])\n    setTimeout(() => {\n      setRipples((prev) => prev.filter((r) => r.id !== id))\n    }, 700)\n    onClick?.(e)\n  }\n\n  return (\n    <button\n      ref={btnRef}\n      onClick={handleClick}\n      className={cn(\n        \"relative inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-lg px-6 py-2.5 text-sm font-semibold transition-colors\",\n        variantClasses[variant],\n        className,\n      )}\n      {...props}\n    >\n      <AnimatePresence>\n        {ripples.map((r) => (\n          <motion.span\n            key={r.id}\n            className=\"pointer-events-none absolute rounded-full\"\n            style={{\n              left: r.x,\n              top: r.y,\n              x: \"-50%\",\n              y: \"-50%\",\n              background: rippleColor,\n            }}\n            initial={{ width: 0, height: 0, opacity: 1 }}\n            animate={{ width: 400, height: 400, opacity: 0 }}\n            exit={{ opacity: 0 }}\n            transition={{ duration: 0.6, ease: \"easeOut\" }}\n          />\n        ))}\n      </AnimatePresence>\n      <span className=\"relative z-10\">{children}</span>\n    </button>\n  )\n}\n",
       "type": "registry:ui",
-      "target": "components/magicui/ripple-button.tsx"
+      "target": "components/pioneerui/ripple-button.tsx"
     }
   ],
-  "tailwind": {
-    "config": {
-      "theme": {
-        "extend": {
-          "animation": {
-            "rippling": "rippling var(--duration) ease-out"
-          },
-          "keyframes": {
-            "rippling": {
-              "0%": {
-                "opacity": "1"
-              },
-              "100%": {
-                "transform": "scale(2)",
-                "opacity": "0"
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  "type": "registry:ui"
 }

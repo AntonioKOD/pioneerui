@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "date-selector-demo",
-  "type": "registry:example",
   "title": "Date Selector Demo",
   "description": "Example showing a simple date selector component.",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:example",
       "target": "components/date-selector-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

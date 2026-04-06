@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "link-reveal",
-  "type": "registry:ui",
   "title": "Link Reveal",
   "description": "Link reveal effect",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:ui",
       "target": "components/pioneerui/link-reveal.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

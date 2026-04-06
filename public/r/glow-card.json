@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glow-card",
+  "title": "Glow Card",
+  "description": "Card with mouse-tracking radial glow via CSS custom properties",
+  "files": [
+    {
+      "path": "registry/pioneerui/glow-card.tsx",
+      "content": "\"use client\"\n\nimport React, { useRef, type MouseEvent } from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface GlowCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  glowColor?: string\n  glowSize?: number\n}\n\nexport function GlowCard({\n  children,\n  className,\n  glowColor = \"rgba(99,102,241,0.15)\",\n  glowSize = 300,\n  ...props\n}: GlowCardProps) {\n  const ref = useRef<HTMLDivElement>(null)\n\n  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {\n    if (!ref.current) return\n    const rect = ref.current.getBoundingClientRect()\n    const x = e.clientX - rect.left\n    const y = e.clientY - rect.top\n    ref.current.style.setProperty(\"--glow-x\", `${x}px`)\n    ref.current.style.setProperty(\"--glow-y\", `${y}px`)\n    ref.current.style.setProperty(\"--glow-opacity\", \"1\")\n  }\n\n  const handleMouseLeave = () => {\n    if (!ref.current) return\n    ref.current.style.setProperty(\"--glow-opacity\", \"0\")\n  }\n\n  return (\n    <div\n      ref={ref}\n      onMouseMove={handleMouseMove}\n      onMouseLeave={handleMouseLeave}\n      style={\n        {\n          \"--glow-x\": \"50%\",\n          \"--glow-y\": \"50%\",\n          \"--glow-opacity\": \"0\",\n          \"--glow-color\": glowColor,\n          \"--glow-size\": `${glowSize}px`,\n        } as React.CSSProperties\n      }\n      className={cn(\n        \"group relative overflow-hidden rounded-xl border bg-card p-6 text-card-foreground shadow-sm transition-shadow duration-200\",\n        \"before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit]\",\n        \"before:bg-[radial-gradient(var(--glow-size)_circle_at_var(--glow-x)_var(--glow-y),var(--glow-color),transparent_70%)]\",\n        \"before:opacity-[var(--glow-opacity)] before:transition-opacity before:duration-500\",\n        className,\n      )}\n      {...props}\n    >\n      {children}\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/glow-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

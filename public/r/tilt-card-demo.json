@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tilt-card-demo",
+  "title": "Tilt Card Demo",
+  "description": "Example showing a card with 3D perspective tilt effect.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/tilt-card"
+  ],
+  "files": [
+    {
+      "path": "registry/example/tilt-card-demo.tsx",
+      "content": "import { TiltCard } from \"../pioneerui/tilt-card\"\n\nexport default function TiltCardDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-12\">\n      <TiltCard className=\"max-w-xs w-full\">\n        <div className=\"space-y-3\">\n          <div className=\"h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"white\" strokeWidth={2} className=\"h-5 w-5\">\n              <path d=\"M13 2L3 14h9l-1 8 10-12h-9l1-8z\"/>\n            </svg>\n          </div>\n          <h3 className=\"text-base font-semibold text-foreground\">Tilt Effect</h3>\n          <p className=\"text-sm text-muted-foreground\">\n            Hover to see a smooth 3D perspective tilt powered by Framer Motion.\n          </p>\n        </div>\n      </TiltCard>\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/tilt-card-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

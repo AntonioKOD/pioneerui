@@ -94,20 +94,33 @@ export function CommandMenu({ ...props }: DialogProps) {
           </CommandGroup>
           {docsConfig.sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
-              {group.items?.map((navItem) => (
-                <CommandItem
-                  key={navItem.href}
-                  value={navItem.title}
-                  onSelect={() => {
-                    runCommand(() => router.push(navItem.href as string));
-                  }}
-                >
-                  <div className="mr-2 flex size-4 items-center justify-center">
-                    <CircleIcon className="size-3" />
-                  </div>
-                  {navItem.title}
-                </CommandItem>
-              ))}
+              {group.items?.map((navItem) => {
+                // Include the href slug as part of the search value so users can
+                // search by keyword e.g. "aurora" finds "Aurora Background"
+                const hrefSlug = navItem.href
+                  ? navItem.href.split("/").pop()?.replace(/-/g, " ") ?? ""
+                  : "";
+                const searchValue = `${navItem.title} ${hrefSlug}`;
+                return (
+                  <CommandItem
+                    key={navItem.href}
+                    value={searchValue}
+                    onSelect={() => {
+                      runCommand(() => router.push(navItem.href as string));
+                    }}
+                  >
+                    <div className="mr-2 flex size-4 items-center justify-center">
+                      <CircleIcon className="size-3" />
+                    </div>
+                    {navItem.title}
+                    {group.title !== "Getting Started" && (
+                      <span className="ml-auto text-xs text-muted-foreground">
+                        {group.title}
+                      </span>
+                    )}
+                  </CommandItem>
+                );
+              })}
             </CommandGroup>
           ))}
           <CommandSeparator />

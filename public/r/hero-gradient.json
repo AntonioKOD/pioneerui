@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-gradient",
+  "title": "Hero Gradient",
+  "description": "Full-bleed gradient hero with animated word-by-word headline reveal",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/pioneerui/hero-gradient.tsx",
+      "content": "\"use client\"\n\nimport React from \"react\"\nimport { motion } from \"motion/react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface HeroGradientProps extends React.HTMLAttributes<HTMLElement> {\n  headline: string\n  subheadline?: string\n  cta?: React.ReactNode\n  badge?: string\n  gradientFrom?: string\n  gradientTo?: string\n}\n\nexport function HeroGradient({\n  headline,\n  subheadline,\n  cta,\n  badge,\n  className,\n  gradientFrom = \"from-indigo-500\",\n  gradientTo = \"to-purple-500\",\n  ...props\n}: HeroGradientProps) {\n  return (\n    <section\n      className={cn(\n        \"relative flex min-h-[560px] w-full flex-col items-center justify-center overflow-hidden bg-background px-6 py-24 text-center\",\n        className,\n      )}\n      {...props}\n    >\n      {/* Radial glow */}\n      <div\n        className={cn(\n          \"pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full opacity-20 blur-3xl\",\n          `bg-gradient-to-br ${gradientFrom} ${gradientTo}`,\n        )}\n      />\n\n      <motion.div\n        initial={{ opacity: 0, y: 20 }}\n        animate={{ opacity: 1, y: 0 }}\n        transition={{ duration: 0.5 }}\n        className=\"relative z-10 flex max-w-3xl flex-col items-center gap-6\"\n      >\n        {badge && (\n          <motion.div\n            initial={{ opacity: 0, scale: 0.9 }}\n            animate={{ opacity: 1, scale: 1 }}\n            transition={{ duration: 0.4 }}\n            className=\"inline-flex items-center rounded-full border bg-background/80 px-4 py-1.5 text-xs font-medium backdrop-blur-sm\"\n          >\n            <span\n              className={cn(\n                \"mr-2 h-1.5 w-1.5 rounded-full bg-gradient-to-r\",\n                gradientFrom,\n                gradientTo,\n              )}\n            />\n            {badge}\n          </motion.div>\n        )}\n\n        <h1 className=\"text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl\">\n          {headline.split(\" \").map((word, i) => (\n            <motion.span\n              key={i}\n              initial={{ opacity: 0, y: 12 }}\n              animate={{ opacity: 1, y: 0 }}\n              transition={{ duration: 0.4, delay: 0.1 + i * 0.04 }}\n              className=\"inline-block mr-[0.25em] last:mr-0\"\n            >\n              {word}\n            </motion.span>\n          ))}\n        </h1>\n\n        {subheadline && (\n          <motion.p\n            initial={{ opacity: 0, y: 8 }}\n            animate={{ opacity: 1, y: 0 }}\n            transition={{ duration: 0.4, delay: 0.3 }}\n            className=\"max-w-lg text-base text-muted-foreground sm:text-lg\"\n          >\n            {subheadline}\n          </motion.p>\n        )}\n\n        {cta && (\n          <motion.div\n            initial={{ opacity: 0, y: 8 }}\n            animate={{ opacity: 1, y: 0 }}\n            transition={{ duration: 0.4, delay: 0.4 }}\n          >\n            {cta}\n          </motion.div>\n        )}\n      </motion.div>\n    </section>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/hero-gradient.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

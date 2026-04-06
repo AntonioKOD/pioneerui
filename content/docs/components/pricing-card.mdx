@@ -1,0 +1,77 @@
+---
+title: Pricing Card
+description: Feature list and CTA pricing tier card with highlighted variant for the recommended plan.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="pricing-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/pricing-card"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="pricing-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { PricingCard } from "@/components/pioneerui/pricing-card"
+
+const features = [
+  { text: "5 projects", included: true },
+  { text: "Custom domain", included: false },
+]
+
+export default function Pricing() {
+  return (
+    <PricingCard
+      name="Pro"
+      price={29}
+      features={features}
+      highlighted
+      badge="Most popular"
+    />
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `name` | `string` | — | Plan name (required) |
+| `price` | `string \| number` | — | Price to display (required) |
+| `features` | `PricingFeature[]` | — | Feature list (required) |
+| `description` | `string` | `undefined` | Plan description |
+| `period` | `string` | `/month` | Period suffix |
+| `cta` | `string` | `Get started` | CTA button text |
+| `onCtaClick` | `() => void` | `undefined` | CTA click handler |
+| `highlighted` | `boolean` | `false` | Use primary color scheme |
+| `badge` | `string` | `undefined` | Badge label above card |

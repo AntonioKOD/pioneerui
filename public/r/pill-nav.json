@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pill-nav",
+  "title": "Pill Nav",
+  "description": "Horizontal navigation with animated pill indicator and badge support",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/pioneerui/pill-nav.tsx",
+      "content": "\"use client\"\n\nimport React, { useState } from \"react\"\nimport { motion } from \"motion/react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface PillNavItem {\n  value: string\n  label: string\n  href?: string\n  icon?: React.ReactNode\n  badge?: string | number\n}\n\nexport interface PillNavProps {\n  items: PillNavItem[]\n  defaultValue?: string\n  onChange?: (value: string) => void\n  className?: string\n  size?: \"sm\" | \"md\" | \"lg\"\n}\n\nexport function PillNav({\n  items,\n  defaultValue,\n  onChange,\n  className,\n  size = \"md\",\n}: PillNavProps) {\n  const [active, setActive] = useState(defaultValue ?? items[0]?.value ?? \"\")\n\n  const sizeClass = {\n    sm: \"gap-0.5 p-0.5 text-xs\",\n    md: \"gap-1 p-1 text-sm\",\n    lg: \"gap-1.5 p-1.5 text-base\",\n  }[size]\n\n  const itemSizeClass = {\n    sm: \"px-2.5 py-1\",\n    md: \"px-3.5 py-1.5\",\n    lg: \"px-5 py-2\",\n  }[size]\n\n  return (\n    <nav\n      className={cn(\n        \"inline-flex items-center rounded-full border bg-muted\",\n        sizeClass,\n        className,\n      )}\n      aria-label=\"Navigation\"\n    >\n      {items.map((item) => (\n        <button\n          key={item.value}\n          onClick={() => {\n            setActive(item.value)\n            onChange?.(item.value)\n          }}\n          className={cn(\n            \"relative flex items-center gap-1.5 rounded-full font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1\",\n            itemSizeClass,\n            active === item.value\n              ? \"text-foreground\"\n              : \"text-muted-foreground hover:text-foreground\",\n          )}\n        >\n          {active === item.value && (\n            <motion.span\n              layoutId=\"pill-nav-indicator\"\n              className=\"absolute inset-0 rounded-full bg-background shadow-sm\"\n              transition={{ type: \"spring\", stiffness: 500, damping: 35 }}\n            />\n          )}\n          {item.icon && <span className=\"relative z-10\">{item.icon}</span>}\n          <span className=\"relative z-10\">{item.label}</span>\n          {item.badge !== undefined && (\n            <span className=\"relative z-10 flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-primary px-1 text-[10px] font-semibold text-primary-foreground\">\n              {item.badge}\n            </span>\n          )}\n        </button>\n      ))}\n    </nav>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/pill-nav.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

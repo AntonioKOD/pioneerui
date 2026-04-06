@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-bar-demo",
+  "title": "Progress Bar Demo",
+  "description": "Example showing animated progress bars with multiple variants.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/progress-bar"
+  ],
+  "files": [
+    {
+      "path": "registry/example/progress-bar-demo.tsx",
+      "content": "import { ProgressBar, MultiProgressBar } from \"../pioneerui/progress-bar\"\n\nexport default function ProgressBarDemo() {\n  return (\n    <div className=\"flex flex-col gap-6 p-8 max-w-md mx-auto\">\n      <ProgressBar value={65} label=\"Default\" showValue />\n      <ProgressBar value={80} variant=\"gradient\" label=\"Gradient\" showValue />\n      <ProgressBar value={45} variant=\"striped\" label=\"Striped\" showValue size=\"lg\" />\n      <MultiProgressBar\n        segments={[\n          { value: 45, color: \"#6366f1\", label: \"React\" },\n          { value: 30, color: \"#a855f7\", label: \"Vue\" },\n          { value: 25, color: \"#ec4899\", label: \"Svelte\" },\n        ]}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/progress-bar-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

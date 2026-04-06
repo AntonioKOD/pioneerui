@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "flip-card-demo",
+  "title": "Flip Card Demo",
+  "description": "Example showing hover and click 3D flip card.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/flip-card"
+  ],
+  "files": [
+    {
+      "path": "registry/example/flip-card-demo.tsx",
+      "content": "import { FlipCard } from \"../pioneerui/flip-card\"\n\nconst Front = () => (\n  <div className=\"flex h-full w-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-violet-600 to-indigo-600 p-6 text-white\">\n    <div className=\"flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20\">\n      <svg className=\"h-8 w-8\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" strokeWidth={1.5}>\n        <path strokeLinecap=\"round\" strokeLinejoin=\"round\" d=\"M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3\" />\n      </svg>\n    </div>\n    <p className=\"text-lg font-bold\">PioneerUI</p>\n    <p className=\"text-center text-sm text-white/70\">Hover to reveal</p>\n  </div>\n)\n\nconst Back = () => (\n  <div className=\"flex h-full w-full flex-col items-center justify-center gap-3 bg-zinc-900 p-6 text-white\">\n    <p className=\"text-sm font-semibold text-violet-400\">What you get</p>\n    <ul className=\"space-y-2 text-sm text-zinc-300\">\n      <li className=\"flex items-center gap-2\">\n        <span className=\"text-green-400\">✓</span> 40+ animated components\n      </li>\n      <li className=\"flex items-center gap-2\">\n        <span className=\"text-green-400\">✓</span> CLI install in one command\n      </li>\n      <li className=\"flex items-center gap-2\">\n        <span className=\"text-green-400\">✓</span> Dark mode out of the box\n      </li>\n      <li className=\"flex items-center gap-2\">\n        <span className=\"text-green-400\">✓</span> Full TypeScript support\n      </li>\n    </ul>\n  </div>\n)\n\nexport default function FlipCardDemo() {\n  return (\n    <div className=\"flex items-center justify-center gap-8 p-8 flex-wrap\">\n      <FlipCard front={<Front />} back={<Back />} trigger=\"hover\" />\n      <FlipCard front={<Front />} back={<Back />} trigger=\"click\" />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/flip-card-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

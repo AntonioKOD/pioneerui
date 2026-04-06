@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "typewriter-demo",
-  "type": "registry:example",
   "title": "Typewriter Demo",
   "description": "Example showing a typewriter effect.",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:example",
       "target": "components/typewriter-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

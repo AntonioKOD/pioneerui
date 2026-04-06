@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "noise-texture",
+  "title": "Noise Texture",
+  "description": "SVG fractal noise grain overlay with blend modes",
+  "files": [
+    {
+      "path": "registry/pioneerui/noise-texture.tsx",
+      "content": "import React, { useId } from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface NoiseTextureProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  opacity?: number\n  baseFrequency?: number\n  numOctaves?: number\n}\n\nexport function NoiseTexture({\n  children,\n  className,\n  opacity = 0.15,\n  baseFrequency = 0.65,\n  numOctaves = 3,\n  ...props\n}: NoiseTextureProps) {\n  const id = useId()\n  const filterId = `noise-${id.replace(/:/g, \"\")}`\n\n  return (\n    <div\n      className={cn(\n        \"relative flex min-h-[400px] w-full items-center justify-center overflow-hidden rounded-lg bg-background\",\n        className,\n      )}\n      {...props}\n    >\n      <svg\n        className=\"pointer-events-none absolute inset-0 h-full w-full\"\n        aria-hidden=\"true\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <filter id={filterId}>\n          <feTurbulence\n            type=\"fractalNoise\"\n            baseFrequency={baseFrequency}\n            numOctaves={numOctaves}\n            stitchTiles=\"stitch\"\n          />\n          <feColorMatrix type=\"saturate\" values=\"0\" />\n        </filter>\n        <rect\n          width=\"100%\"\n          height=\"100%\"\n          filter={`url(#${filterId})`}\n          style={{ opacity }}\n        />\n      </svg>\n      <div className=\"relative z-10\">{children}</div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/noise-texture.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

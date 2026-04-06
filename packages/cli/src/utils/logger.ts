@@ -85,25 +85,25 @@ export const ASCII_LOGO = printer.multiline(LOGO);
 export const ASCII_PRO = printer.multiline(PRO);
 
 export const tryPro = `
-Try Magic UI Pro for ready-made templates and more.
- → https://pro.magicui.design
+Try PioneerUI Pro for ready-made templates and more.
+ → https://pioneerui.com/pro
 `;
 
 export const hasPro = `
 
 Authenticated ✅
 
-You are using Magic UI Pro. Welcome ❤︎
+You are using PioneerUI Pro. Welcome ❤︎
  → use '--pro' option with add command to view the premium components & blocks.
- → https://pro.magicui.design
+ → https://pioneerui.com/pro
 
 `;
 
 export const authMessage = `
 
-Go to Magic UI Pro website for auth secrets.
-  → https://pro.magicui.design
-  → npx magicui-cli auth --login <secret-env>
+Go to PioneerUI website for auth secrets.
+  → https://pioneerui.com/pro
+  → npx pioneerui-cli auth --login <secret-env>
 
 `;
 

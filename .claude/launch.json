@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "PioneerUI (Next.js)",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": [".claude/start-dev.sh"],
+      "port": 3000,
+      "autoPort": false
+    },
+    {
+      "name": "CLI Watch (tsup)",
+      "runtimeExecutable": "/opt/homebrew/bin/pnpm",
+      "runtimeArgs": ["dev:cli"],
+      "port": 3001
+    }
+  ]
+}

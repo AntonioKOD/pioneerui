@@ -1,0 +1,75 @@
+---
+title: Pill Nav
+description: Horizontal navigation with an animated pill indicator and optional badge support.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="pill-nav-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/pill-nav"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="pill-nav" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { PillNav } from "@/components/pioneerui/pill-nav"
+
+export default function Nav() {
+  return (
+    <PillNav
+      items={[
+        { value: "home", label: "Home" },
+        { value: "explore", label: "Explore" },
+        { value: "notifications", label: "Alerts", badge: 3 },
+      ]}
+      defaultValue="home"
+      onChange={(value) => console.log(value)}
+    />
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `items` | `PillNavItem[]` | — | Navigation items (required) |
+| `defaultValue` | `string` | first item | Initially active item |
+| `onChange` | `(value: string) => void` | `undefined` | Change callback |
+| `size` | `sm \| md \| lg` | `md` | Nav size |

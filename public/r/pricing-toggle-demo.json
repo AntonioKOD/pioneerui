@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-toggle-demo",
+  "title": "Pricing Toggle Demo",
+  "description": "Example showing monthly/annual pricing toggle with animated prices.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/pricing-toggle"
+  ],
+  "files": [
+    {
+      "path": "registry/example/pricing-toggle-demo.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { PricingToggle, AnimatedPrice } from \"../pioneerui/pricing-toggle\"\n\nexport default function PricingToggleDemo() {\n  const [isAnnual, setIsAnnual] = useState(false)\n\n  return (\n    <div className=\"flex flex-col items-center gap-8 p-8\">\n      <PricingToggle\n        defaultAnnual={false}\n        onChange={setIsAnnual}\n        discount=\"Save 20%\"\n      />\n      <div className=\"flex gap-8\">\n        <div className=\"text-center\">\n          <p className=\"mb-2 text-sm font-medium text-muted-foreground\">Starter</p>\n          <AnimatedPrice monthly={9} annual={7} isAnnual={isAnnual} />\n        </div>\n        <div className=\"text-center\">\n          <p className=\"mb-2 text-sm font-medium text-muted-foreground\">Pro</p>\n          <AnimatedPrice monthly={29} annual={23} isAnnual={isAnnual} />\n        </div>\n        <div className=\"text-center\">\n          <p className=\"mb-2 text-sm font-medium text-muted-foreground\">Enterprise</p>\n          <AnimatedPrice monthly={99} annual={79} isAnnual={isAnnual} />\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/pricing-toggle-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

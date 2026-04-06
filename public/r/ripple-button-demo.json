@@ -1,18 +1,21 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "ripple-button-demo",
-  "type": "registry:example",
   "title": "Ripple Button Demo",
-  "description": "Example showing an animated button with ripple effect.",
+  "description": "Example showing click ripple effect across three button variants.",
+  "dependencies": [
+    "motion"
+  ],
   "registryDependencies": [
-    "https://magicui.design/r/ripple-button"
+    "https://pioneerui.com/r/ripple-button"
   ],
   "files": [
     {
       "path": "registry/example/ripple-button-demo.tsx",
-      "content": "import { RippleButton } from \"@/components/magicui/ripple-button\";\n\nexport default function RippleButtonDemo() {\n  return <RippleButton rippleColor=\"#ADD8E6\">Click me</RippleButton>;\n}\n",
+      "content": "import { RippleButton } from \"../pioneerui/ripple-button\"\n\nexport default function RippleButtonDemo() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-4 p-8\">\n      <RippleButton variant=\"default\">Click me</RippleButton>\n      <RippleButton variant=\"outline\" rippleColor=\"rgba(139,92,246,0.3)\">\n        Outline\n      </RippleButton>\n      <RippleButton variant=\"ghost\" rippleColor=\"rgba(99,102,241,0.25)\">\n        Ghost\n      </RippleButton>\n    </div>\n  )\n}\n",
       "type": "registry:example",
       "target": "components/ripple-button-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

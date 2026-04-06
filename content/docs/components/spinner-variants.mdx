@@ -1,0 +1,66 @@
+---
+title: Spinner Variants
+description: A collection of CSS and SVG loading spinners — ring, dots, pulse, and bars.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="spinner-variants-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/spinner-variants"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="spinner-variants" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { SpinnerRing, SpinnerDots, SpinnerPulse, SpinnerBars } from "@/components/pioneerui/spinner-variants"
+
+export default function Loading() {
+  return <SpinnerRing size={24} className="text-primary" />
+}
+```
+
+## Props (all spinners)
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `size` | `number` | `24–40` | Width/height in pixels |
+| `className` | `string` | `undefined` | Use for color via `text-*` |
+
+## Variants
+
+| Component | Style |
+| --- | --- |
+| `SpinnerRing` | SVG arc rotating animation |
+| `SpinnerDots` | Three pulsing dots |
+| `SpinnerPulse` | Single pulsing circle |
+| `SpinnerBars` | Four bars with wave animation |

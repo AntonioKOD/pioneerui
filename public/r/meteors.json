@@ -1,41 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "meteors",
-  "type": "registry:ui",
   "title": "Meteors",
-  "description": "A meteor shower effect.",
+  "description": "Shooting meteor effect that flies across cards or backgrounds.",
+  "dependencies": [],
   "files": [
     {
-      "path": "registry/magicui/meteors.tsx",
-      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\nimport React, { useEffect, useState } from \"react\";\n\ninterface MeteorsProps {\n  number?: number;\n  minDelay?: number;\n  maxDelay?: number;\n  minDuration?: number;\n  maxDuration?: number;\n  angle?: number;\n  className?: string;\n}\n\nexport const Meteors = ({\n  number = 20,\n  minDelay = 0.2,\n  maxDelay = 1.2,\n  minDuration = 2,\n  maxDuration = 10,\n  angle = 215,\n  className,\n}: MeteorsProps) => {\n  const [meteorStyles, setMeteorStyles] = useState<Array<React.CSSProperties>>(\n    [],\n  );\n\n  useEffect(() => {\n    const styles = [...new Array(number)].map(() => ({\n      \"--angle\": angle + \"deg\",\n      top: -5,\n      left: `calc(-50% + ${Math.floor(Math.random() * window.innerWidth)}px)`,\n      animationDelay: Math.random() * (maxDelay - minDelay) + minDelay + \"s\",\n      animationDuration:\n        Math.floor(Math.random() * (maxDuration - minDuration) + minDuration) +\n        \"s\",\n    }));\n    setMeteorStyles(styles);\n  }, [number, minDelay, maxDelay, minDuration, maxDuration, angle]);\n\n  return (\n    <>\n      {[...meteorStyles].map((style, idx) => (\n        // Meteor Head\n        <span\n          key={idx}\n          style={{ ...style }}\n          className={cn(\n            \"pointer-events-none absolute size-0.5 rotate-[var(--angle)] animate-meteor rounded-full bg-zinc-500 shadow-[0_0_0_1px_#ffffff10]\",\n            className,\n          )}\n        >\n          {/* Meteor Tail */}\n          <div className=\"pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-zinc-500 to-transparent\" />\n        </span>\n      ))}\n    </>\n  );\n};\n",
+      "path": "registry/pioneerui/meteors.tsx",
+      "content": "\"use client\"\n\nimport React, { useEffect, useState, type CSSProperties } from \"react\"\nimport { cn } from \"@/lib/utils\"\n\ninterface MeteorStyle extends CSSProperties {\n  \"--angle\": string\n}\n\nexport interface MeteorsProps {\n  number?: number\n  className?: string\n}\n\nexport function Meteors({ number = 20, className }: MeteorsProps) {\n  const [meteorStyles, setMeteorStyles] = useState<MeteorStyle[]>([])\n\n  useEffect(() => {\n    const styles: MeteorStyle[] = Array.from({ length: number }, () => ({\n      \"--angle\": \"215deg\",\n      top: \"-5%\",\n      left: `${Math.floor(Math.random() * 800) - 200}px`,\n      animationDelay: `${(Math.random() * 0.9 + 0.2).toFixed(2)}s`,\n      animationDuration: `${Math.floor(Math.random() * 8 + 4)}s`,\n    }))\n    setMeteorStyles(styles)\n  }, [number])\n\n  return (\n    <>\n      {meteorStyles.map((style, idx) => (\n        <span\n          key={idx}\n          style={style}\n          className={cn(\n            \"animate-meteor pointer-events-none absolute h-0.5 w-0.5 rounded-full bg-zinc-300 shadow-[0_0_0_1px_#ffffff20]\",\n            \"before:absolute before:top-1/2 before:h-[1px] before:w-[60px]\",\n            \"before:-translate-y-1/2 before:translate-x-[1px]\",\n            \"before:bg-gradient-to-r before:from-zinc-300 before:to-transparent before:content-['']\",\n            className,\n          )}\n        />\n      ))}\n    </>\n  )\n}\n\nexport interface MeteorsCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  meteorCount?: number\n}\n\nexport function MeteorsCard({\n  children,\n  className,\n  meteorCount = 20,\n  ...props\n}: MeteorsCardProps) {\n  return (\n    <div\n      className={cn(\n        \"relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 px-6 py-8 dark:border-zinc-800 dark:bg-zinc-950\",\n        className,\n      )}\n      {...props}\n    >\n      <Meteors number={meteorCount} />\n      <div className=\"relative z-10\">{children}</div>\n    </div>\n  )\n}\n",
       "type": "registry:ui",
-      "target": "components/magicui/meteors.tsx"
+      "target": "components/pioneerui/meteors.tsx"
     }
   ],
-  "tailwind": {
-    "config": {
-      "theme": {
-        "extend": {
-          "animation": {
-            "meteor": "meteor 5s linear infinite"
-          },
-          "keyframes": {
-            "meteor": {
-              "0%": {
-                "transform": "rotate(var(--angle)) translateX(0)",
-                "opacity": "1"
-              },
-              "70%": {
-                "opacity": "1"
-              },
-              "100%": {
-                "transform": "rotate(var(--angle)) translateX(-500px)",
-                "opacity": "0"
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  "type": "registry:ui"
 }

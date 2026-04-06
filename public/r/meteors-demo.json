@@ -1,18 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "meteors-demo",
-  "type": "registry:example",
   "title": "Meteors Demo",
-  "description": "Example showing a meteor shower effect.",
+  "description": "Example showing the meteor shooting effect on a card.",
   "registryDependencies": [
-    "https://magicui.design/r/meteors"
+    "https://pioneerui.com/r/meteors"
   ],
   "files": [
     {
       "path": "registry/example/meteors-demo.tsx",
-      "content": "import { Meteors } from \"@/components/magicui/meteors\";\n\nexport default function MeteorDemo() {\n  return (\n    <div className=\"relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border\">\n      <Meteors number={30} />\n      <span className=\"pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10\">\n        Meteors\n      </span>\n    </div>\n  );\n}\n",
+      "content": "import { MeteorsCard } from \"../pioneerui/meteors\"\n\nexport default function MeteorsDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <MeteorsCard className=\"max-w-sm w-full\">\n        <p className=\"relative z-10 mb-4 text-base font-normal text-zinc-500\">\n          Shooting meteors fly across any card with a simple wrapper component.\n        </p>\n        <p className=\"relative z-10 text-2xl font-bold text-zinc-900 dark:text-white\">\n          Meteors Effect\n        </p>\n      </MeteorsCard>\n    </div>\n  )\n}\n",
       "type": "registry:example",
       "target": "components/meteors-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

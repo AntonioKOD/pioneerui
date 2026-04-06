@@ -1,0 +1,63 @@
+---
+title: Neon Button
+description: Glowing neon-bordered button with expanding corner accent animations and five color themes.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="neon-button-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/neon-button"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="neon-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { NeonButton } from "@/components/pioneerui/neon-button"
+
+export default function Page() {
+  return (
+    <div className="bg-zinc-950 p-8">
+      <NeonButton color="purple">Launch App</NeonButton>
+      <NeonButton color="cyan" size="lg">Connect Wallet</NeonButton>
+    </div>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `color` | `"purple" \| "cyan" \| "green" \| "pink" \| "orange"` | `"purple"` | Neon glow color theme |
+| `size` | `"sm" \| "md" \| "lg"` | `"md"` | Button size |
+| `children` | `ReactNode` | — | Button label |

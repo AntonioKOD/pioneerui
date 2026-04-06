@@ -4,7 +4,7 @@ import { z } from "zod";
 
 import { logger } from "./logger";
 
-const baseUrl = process.env.PRO_REGISTRY_URL ?? "https://pro.magicui.design";
+const baseUrl = process.env.PRO_REGISTRY_URL ?? "https://pioneerui.com";
 
 const projectTemplatesSchema = z.object({
   repo: z.string(),

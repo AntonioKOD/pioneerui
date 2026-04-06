@@ -1,0 +1,62 @@
+---
+title: Aurora Background
+description: Animated aurora-style gradient backdrop using CSS keyframes and blend modes.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="aurora-background-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/aurora-background"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="aurora-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { AuroraBackground } from "@/components/pioneerui/aurora-background"
+
+export default function Page() {
+  return (
+    <AuroraBackground>
+      <h1 className="text-4xl font-bold">Your content here</h1>
+    </AuroraBackground>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `showRadialGradient` | `boolean` | `true` | Whether to apply the radial gradient mask |
+| `children` | `React.ReactNode` | `undefined` | Content to render over the aurora |
+| `className` | `string` | `undefined` | Additional CSS classes for the wrapper |

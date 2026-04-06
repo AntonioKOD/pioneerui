@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "simple-date-selector",
-  "type": "registry:ui",
   "title": "Simple Date Selector",
   "description": "A simple date selector component",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:ui",
       "target": "components/pioneerui/simple-date-selector.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

@@ -1,0 +1,69 @@
+---
+title: Tilt Card
+description: 3D perspective tilt on mousemove using Framer Motion spring physics.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="tilt-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/tilt-card"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="tilt-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { TiltCard } from "@/components/pioneerui/tilt-card"
+
+export default function Card() {
+  return (
+    <TiltCard tiltAmount={12} glare>
+      <h3>Tilt me</h3>
+    </TiltCard>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `tiltAmount` | `number` | `10` | Maximum tilt angle in degrees |
+| `glare` | `boolean` | `true` | Whether to show a glare overlay |
+| `children` | `React.ReactNode` | `undefined` | Card content |
+| `className` | `string` | `undefined` | Additional CSS classes for the wrapper |

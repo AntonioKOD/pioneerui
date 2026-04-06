@@ -1,0 +1,79 @@
+---
+title: Progress Bar
+description: Animated progress bar with default, gradient, striped, and multi-segment variants.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="progress-bar-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/progress-bar"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="progress-bar" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { ProgressBar, MultiProgressBar } from "@/components/pioneerui/progress-bar"
+
+export default function Stats() {
+  return (
+    <>
+      <ProgressBar value={75} label="Storage used" showValue variant="gradient" />
+      <MultiProgressBar
+        segments={[
+          { value: 50, color: "#6366f1", label: "React" },
+          { value: 30, color: "#a855f7", label: "Vue" },
+          { value: 20, color: "#ec4899", label: "Other" },
+        ]}
+      />
+    </>
+  )
+}
+```
+
+## Props — `ProgressBar`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `value` | `number` | — | Current value (required) |
+| `max` | `number` | `100` | Maximum value |
+| `label` | `string` | `undefined` | Label text above the bar |
+| `showValue` | `boolean` | `false` | Show percentage on the right |
+| `variant` | `default \| gradient \| striped` | `default` | Visual style |
+| `size` | `sm \| md \| lg` | `md` | Bar height |
+| `animated` | `boolean` | `true` | Animate fill on mount |

@@ -1,0 +1,100 @@
+---
+title: Contributing
+description: How to submit your own components to PioneerUI and get featured in the community gallery.
+published: true
+---
+
+PioneerUI is an open platform — anyone can contribute components. Great submissions get featured in the gallery, credited to you, and made installable via the CLI.
+
+## What makes a good submission
+
+- **Animated** — uses Framer Motion, CSS keyframes, or Tailwind transitions
+- **Composable** — accepts `className` and follows existing prop patterns
+- **Accessible** — uses semantic HTML, proper ARIA attributes
+- **TypeScript** — fully typed with exported interfaces
+- **Dark mode ready** — uses `dark:` variants or CSS variables from the design system
+
+## Submission process
+
+### Option 1 — Pull Request (fastest)
+
+1. Fork the [PioneerUI repository](https://github.com/AntonioKOD/pioneerui)
+2. Create your component in `/registry/pioneerui/<name>.tsx`
+3. Add a demo in `/registry/example/<name>-demo.tsx`
+4. Add registry entries to `registry-ui.ts` and `registry-examples.ts`
+5. Add an MDX doc to `/content/docs/components/<name>.mdx`
+6. Add a sidebar entry to `/config/docs.ts`
+7. Run `pnpm build:registry` and open a PR
+
+### Option 2 — Community portal (coming soon)
+
+We're building a submission portal where you'll be able to:
+- Paste component code directly in the browser
+- Preview it live before submitting
+- Set your contributor profile
+- Track review status
+
+Sign up to be notified when it launches.
+
+## File structure for a new component
+
+```
+registry/pioneerui/<name>.tsx          ← component source
+registry/example/<name>-demo.tsx       ← minimal demo
+content/docs/components/<name>.mdx     ← documentation page
+```
+
+### Component template
+
+```tsx
+"use client"
+
+import React from "react"
+import { cn } from "@/lib/utils"
+
+export interface MyComponentProps extends React.HTMLAttributes<HTMLDivElement> {
+  children?: React.ReactNode
+}
+
+export function MyComponent({ className, children, ...props }: MyComponentProps) {
+  return (
+    <div className={cn("relative", className)} {...props}>
+      {children}
+    </div>
+  )
+}
+```
+
+### Registry entry template
+
+```ts
+// registry/registry-ui.ts
+{
+  name: "my-component",
+  type: "registry:ui",
+  title: "My Component",
+  description: "One sentence description of what it does.",
+  dependencies: ["motion"], // if using Framer Motion
+  files: [
+    {
+      path: "registry/pioneerui/my-component.tsx",
+      type: "registry:ui",
+      target: "components/pioneerui/my-component.tsx",
+    },
+  ],
+},
+```
+
+## Review criteria
+
+| Criteria | Notes |
+| --- | --- |
+| Visual quality | Should look polished and intentional |
+| Code quality | Clean TypeScript, no unused variables |
+| Animation | Smooth, performant (prefer `transform`/`opacity`) |
+| Accessibility | No keyboard traps, proper focus management |
+| Uniqueness | Not a direct copy of an existing component |
+
+## Need help?
+
+Open a [GitHub Discussion](https://github.com/AntonioKOD/pioneerui/discussions) or ask in the community.

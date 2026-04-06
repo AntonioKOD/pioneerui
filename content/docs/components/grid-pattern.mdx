@@ -1,0 +1,65 @@
+---
+title: Grid Pattern
+description: Subtle SVG grid lines background with optional highlighted squares.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="grid-pattern-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/grid-pattern"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="grid-pattern" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { GridPatternBackground } from "@/components/pioneerui/grid-pattern"
+
+export default function Page() {
+  return (
+    <GridPatternBackground
+      squares={[[2, 2], [4, 3], [6, 1]]}
+    >
+      <h1>Your content</h1>
+    </GridPatternBackground>
+  )
+}
+```
+
+## Props — `GridPattern`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `width` | `number` | `40` | Grid cell width in px |
+| `height` | `number` | `40` | Grid cell height in px |
+| `squares` | `[x, y][]` | `undefined` | Highlighted cell coordinates |
+| `className` | `string` | `undefined` | SVG class (use for mask, color) |

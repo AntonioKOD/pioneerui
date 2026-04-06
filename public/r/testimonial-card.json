@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonial-card",
+  "title": "Testimonial Card",
+  "description": "Quote card with avatar, name, role, company and star rating",
+  "files": [
+    {
+      "path": "registry/pioneerui/testimonial-card.tsx",
+      "content": "import React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface TestimonialCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  quote: string\n  name: string\n  role?: string\n  company?: string\n  avatar?: string\n  rating?: number\n  variant?: \"default\" | \"bordered\" | \"elevated\"\n}\n\nfunction StarRating({ rating }: { rating: number }) {\n  return (\n    <div className=\"flex gap-0.5\" aria-label={`${rating} out of 5 stars`}>\n      {Array.from({ length: 5 }).map((_, i) => (\n        <svg\n          key={i}\n          xmlns=\"http://www.w3.org/2000/svg\"\n          viewBox=\"0 0 24 24\"\n          className={cn(\"h-4 w-4\", i < rating ? \"fill-amber-400 text-amber-400\" : \"fill-muted text-muted\")}\n        >\n          <polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\" />\n        </svg>\n      ))}\n    </div>\n  )\n}\n\nexport function TestimonialCard({\n  quote,\n  name,\n  role,\n  company,\n  avatar,\n  rating,\n  variant = \"default\",\n  className,\n  ...props\n}: TestimonialCardProps) {\n  return (\n    <div\n      className={cn(\n        \"flex flex-col gap-4 rounded-xl p-6\",\n        variant === \"default\" && \"bg-muted/50\",\n        variant === \"bordered\" && \"border bg-card\",\n        variant === \"elevated\" && \"bg-card shadow-md\",\n        className,\n      )}\n      {...props}\n    >\n      {rating !== undefined && <StarRating rating={rating} />}\n      <blockquote className=\"text-sm leading-relaxed text-foreground\">\n        &ldquo;{quote}&rdquo;\n      </blockquote>\n      <div className=\"mt-auto flex items-center gap-3\">\n        {avatar ? (\n          <img\n            src={avatar}\n            alt={name}\n            className=\"h-9 w-9 rounded-full object-cover\"\n          />\n        ) : (\n          <div className=\"flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary\">\n            {name.charAt(0).toUpperCase()}\n          </div>\n        )}\n        <div>\n          <p className=\"text-sm font-semibold text-foreground\">{name}</p>\n          {(role || company) && (\n            <p className=\"text-xs text-muted-foreground\">\n              {role}\n              {role && company && \" · \"}\n              {company}\n            </p>\n          )}\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/testimonial-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

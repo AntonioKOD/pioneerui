@@ -110,6 +110,8 @@ const documents = defineCollection({
     component: z.boolean().optional().default(false),
     toc: z.boolean().optional().default(true),
     image: z.string().optional(),
+    // Category for component browse page (e.g. "backgrounds", "cards", "buttons")
+    category: z.string().optional(),
   }),
   transform: async (document, context) => {
     const body = await compileMDX(context, document, {
@@ -207,6 +209,9 @@ const blog = defineCollection({
     author: z.string().optional(),
     publishedOn: z.string(),
     featured: z.boolean().optional().default(false),
+    // Series grouping (e.g. "build-with-pioneerui", "component-spotlight")
+    series: z.string().optional(),
+    seriesOrder: z.number().optional(),
   }),
   transform: async (document, context) => {
     const body = await compileMDX(context, document, {

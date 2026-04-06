@@ -1,18 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "border-beam-demo",
-  "type": "registry:example",
   "title": "Border Beam Demo",
-  "description": "Example showing an animated border beam effect.",
+  "description": "Example showing an animated rotating gradient border.",
   "registryDependencies": [
-    "https://magicui.design/r/border-beam"
+    "https://pioneerui.com/r/border-beam"
   ],
   "files": [
     {
       "path": "registry/example/border-beam-demo.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\nimport { BorderBeam } from \"@/components/magicui/border-beam\";\n\nexport default function Component() {\n  return (\n    <Card className=\"relative w-[350px] overflow-hidden\">\n      <CardHeader>\n        <CardTitle>Login</CardTitle>\n        <CardDescription>\n          Enter your credentials to access your account.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <form>\n          <div className=\"grid w-full items-center gap-4\">\n            <div className=\"flex flex-col space-y-1.5\">\n              <Label htmlFor=\"email\">Email</Label>\n              <Input id=\"email\" type=\"email\" placeholder=\"Enter your email\" />\n            </div>\n            <div className=\"flex flex-col space-y-1.5\">\n              <Label htmlFor=\"password\">Password</Label>\n              <Input\n                id=\"password\"\n                type=\"password\"\n                placeholder=\"Enter your password\"\n              />\n            </div>\n          </div>\n        </form>\n      </CardContent>\n      <CardFooter className=\"flex justify-between\">\n        <Button variant=\"outline\">Register</Button>\n        <Button>Login</Button>\n      </CardFooter>\n      <BorderBeam duration={8} size={100} />\n    </Card>\n  );\n}\n",
+      "content": "import { BorderBeamCard } from \"../pioneerui/border-beam\"\n\nexport default function BorderBeamDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <BorderBeamCard className=\"max-w-sm w-full\">\n        <h3 className=\"text-lg font-semibold text-foreground\">Border Beam</h3>\n        <p className=\"mt-2 text-sm text-muted-foreground\">\n          An animated rotating gradient border that brings attention to any card or container.\n        </p>\n        <div className=\"mt-4 flex gap-2\">\n          <button className=\"rounded-lg bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground\">\n            Get started\n          </button>\n          <button className=\"rounded-lg border px-3 py-1.5 text-sm font-medium text-foreground\">\n            Learn more\n          </button>\n        </div>\n      </BorderBeamCard>\n    </div>\n  )\n}\n",
       "type": "registry:example",
       "target": "components/border-beam-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

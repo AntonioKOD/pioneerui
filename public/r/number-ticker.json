@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "number-ticker",
-  "type": "registry:ui",
   "title": "Number Ticker",
   "description": "Animate numbers to count up or down to a target number",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:ui",
       "target": "components/magicui/number-ticker.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-card",
+  "title": "Skeleton Card",
+  "description": "Shimmer-animated skeleton placeholder components",
+  "files": [
+    {
+      "path": "registry/pioneerui/skeleton-card.tsx",
+      "content": "import React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      className={cn(\"animate-pulse rounded-md bg-muted\", className)}\n      {...props}\n    />\n  )\n}\n\nexport function SkeletonCard({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      className={cn(\"rounded-xl border bg-card p-6 space-y-4\", className)}\n      {...props}\n    >\n      <div className=\"flex items-center gap-3\">\n        <Skeleton className=\"h-10 w-10 rounded-full\" />\n        <div className=\"space-y-2 flex-1\">\n          <Skeleton className=\"h-4 w-1/3\" />\n          <Skeleton className=\"h-3 w-1/4\" />\n        </div>\n      </div>\n      <Skeleton className=\"h-32 w-full rounded-lg\" />\n      <div className=\"space-y-2\">\n        <Skeleton className=\"h-4 w-full\" />\n        <Skeleton className=\"h-4 w-5/6\" />\n        <Skeleton className=\"h-4 w-4/6\" />\n      </div>\n      <div className=\"flex gap-2 pt-1\">\n        <Skeleton className=\"h-8 w-20 rounded-md\" />\n        <Skeleton className=\"h-8 w-20 rounded-md\" />\n      </div>\n    </div>\n  )\n}\n\nexport function SkeletonList({ rows = 5, className, ...props }: React.HTMLAttributes<HTMLDivElement> & { rows?: number }) {\n  return (\n    <div className={cn(\"space-y-3\", className)} {...props}>\n      {Array.from({ length: rows }).map((_, i) => (\n        <div key={i} className=\"flex items-center gap-3 rounded-lg border bg-card p-4\">\n          <Skeleton className=\"h-8 w-8 rounded-full shrink-0\" />\n          <div className=\"space-y-2 flex-1\">\n            <Skeleton className=\"h-3.5 w-1/3\" />\n            <Skeleton className=\"h-3 w-2/3\" />\n          </div>\n          <Skeleton className=\"h-3.5 w-16 shrink-0\" />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/skeleton-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

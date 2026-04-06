@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "text-animate",
-  "type": "registry:ui",
   "title": "Text Animate",
   "description": "A text animation component that animates text using a variety of different animations.",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:ui",
       "target": "components/magicui/text-animate.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

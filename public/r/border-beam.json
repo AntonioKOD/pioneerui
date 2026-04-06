@@ -1,15 +1,33 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "border-beam",
-  "type": "registry:ui",
   "title": "Border Beam",
-  "description": "An animated beam of light which travels along the border of its container.",
+  "description": "Animated rotating gradient border that highlights any card or container",
   "files": [
     {
-      "path": "registry/magicui/border-beam.tsx",
-      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\nimport { motion, MotionStyle, Transition } from \"motion/react\";\n\ninterface BorderBeamProps {\n  /**\n   * The size of the border beam.\n   */\n  size?: number;\n  /**\n   * The duration of the border beam.\n   */\n  duration?: number;\n  /**\n   * The delay of the border beam.\n   */\n  delay?: number;\n  /**\n   * The color of the border beam from.\n   */\n  colorFrom?: string;\n  /**\n   * The color of the border beam to.\n   */\n  colorTo?: string;\n  /**\n   * The motion transition of the border beam.\n   */\n  transition?: Transition;\n  /**\n   * The class name of the border beam.\n   */\n  className?: string;\n  /**\n   * The style of the border beam.\n   */\n  style?: React.CSSProperties;\n  /**\n   * Whether to reverse the animation direction.\n   */\n  reverse?: boolean;\n  /**\n   * The initial offset position (0-100).\n   */\n  initialOffset?: number;\n}\n\nexport const BorderBeam = ({\n  className,\n  size = 50,\n  delay = 0,\n  duration = 6,\n  colorFrom = \"#ffaa40\",\n  colorTo = \"#9c40ff\",\n  transition,\n  style,\n  reverse = false,\n  initialOffset = 0,\n}: BorderBeamProps) => {\n  return (\n    <div className=\"pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)]\">\n      <motion.div\n        className={cn(\n          \"absolute aspect-square\",\n          \"bg-gradient-to-l from-[var(--color-from)] via-[var(--color-to)] to-transparent\",\n          className,\n        )}\n        style={\n          {\n            width: size,\n            offsetPath: `rect(0 auto auto 0 round ${size}px)`,\n            \"--color-from\": colorFrom,\n            \"--color-to\": colorTo,\n            ...style,\n          } as MotionStyle\n        }\n        initial={{ offsetDistance: `${initialOffset}%` }}\n        animate={{\n          offsetDistance: reverse\n            ? [`${100 - initialOffset}%`, `${-initialOffset}%`]\n            : [`${initialOffset}%`, `${100 + initialOffset}%`],\n        }}\n        transition={{\n          repeat: Infinity,\n          ease: \"linear\",\n          duration,\n          delay: -delay,\n          ...transition,\n        }}\n      />\n    </div>\n  );\n};\n",
+      "path": "registry/pioneerui/border-beam.tsx",
+      "content": "\"use client\"\n\nimport React, { type CSSProperties } from \"react\"\nimport { motion } from \"motion/react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface BorderBeamProps {\n  className?: string\n  size?: number\n  duration?: number\n  delay?: number\n  colorFrom?: string\n  colorTo?: string\n  borderWidth?: number\n  reverse?: boolean\n  initialOffset?: number\n}\n\nexport function BorderBeam({\n  className,\n  size = 50,\n  duration = 6,\n  delay = 0,\n  colorFrom = \"#ffaa40\",\n  colorTo = \"#9c40ff\",\n  borderWidth = 1.5,\n  reverse = false,\n  initialOffset = 0,\n}: BorderBeamProps) {\n  return (\n    <div\n      style={\n        {\n          \"--border-beam-width\": `${borderWidth}px`,\n        } as CSSProperties\n      }\n      className={cn(\n        \"pointer-events-none absolute inset-0 rounded-[inherit]\",\n        \"[border:var(--border-beam-width)_solid_transparent]\",\n        \"[mask-clip:padding-box,border-box]\",\n        \"[mask-composite:intersect]\",\n        \"[mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)]\",\n        className,\n      )}\n    >\n      <motion.div\n        // eslint-disable-next-line @typescript-eslint/no-explicit-any\n        style={\n          {\n            width: size,\n            offsetPath: `rect(0 auto auto 0 round ${size}px)`,\n            background: `linear-gradient(to left, ${colorFrom}, ${colorTo}, transparent)`,\n          } as any\n        }\n        // eslint-disable-next-line @typescript-eslint/no-explicit-any\n        initial={{ offsetDistance: `${initialOffset}%` } as any}\n        // eslint-disable-next-line @typescript-eslint/no-explicit-any\n        animate={\n          {\n            offsetDistance: reverse\n              ? [`${100 - initialOffset}%`, `${-initialOffset}%`]\n              : [`${initialOffset}%`, `${100 + initialOffset}%`],\n          } as any\n        }\n        transition={{\n          repeat: Infinity,\n          ease: \"linear\",\n          duration,\n          delay: -delay,\n        }}\n        className=\"absolute aspect-square\"\n      />\n    </div>\n  )\n}\n\nexport interface BorderBeamCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  beamProps?: BorderBeamProps\n}\n\nexport function BorderBeamCard({\n  children,\n  className,\n  beamProps,\n  ...props\n}: BorderBeamCardProps) {\n  return (\n    <div\n      className={cn(\n        \"relative overflow-hidden rounded-xl bg-background p-6 shadow-sm\",\n        className,\n      )}\n      {...props}\n    >\n      {children}\n      <BorderBeam {...beamProps} />\n    </div>\n  )\n}\n",
       "type": "registry:ui",
-      "target": "components/magicui/border-beam.tsx"
+      "target": "components/pioneerui/border-beam.tsx"
     }
-  ]
+  ],
+  "tailwind": {
+    "config": {
+      "theme": {
+        "extend": {
+          "animation": {
+            "border-beam": "border-beam calc(var(--duration)*1s) linear infinite"
+          },
+          "keyframes": {
+            "border-beam": {
+              "100%": {
+                "--angle": "360deg"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "type": "registry:ui"
 }

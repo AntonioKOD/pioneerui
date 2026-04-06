@@ -1,0 +1,68 @@
+---
+title: Bento Grid
+description: CSS Grid bento layout with variable column and row spanning slots.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="bento-grid-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/bento-grid"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="bento-grid" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { BentoGrid, BentoCard } from "@/components/pioneerui/bento-grid"
+
+export default function Features() {
+  return (
+    <BentoGrid>
+      <BentoCard colSpan={2} name="Wide card" description="Spans two columns." />
+      <BentoCard name="Normal card" description="Single column." />
+    </BentoGrid>
+  )
+}
+```
+
+## Props — `BentoCard`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `name` | `string` | `undefined` | Card title |
+| `description` | `string` | `undefined` | Card description |
+| `icon` | `React.ReactNode` | `undefined` | Icon element |
+| `background` | `React.ReactNode` | `undefined` | Background slot (absolutely positioned) |
+| `colSpan` | `1 \| 2 \| 3` | `1` | Column span |
+| `rowSpan` | `1 \| 2` | `1` | Row span |
+| `cta` | `string` | `undefined` | CTA link text |
+| `href` | `string` | `undefined` | CTA link URL |

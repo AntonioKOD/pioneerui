@@ -1,0 +1,77 @@
+---
+title: Animated Testimonials
+description: Stacked testimonial card carousel with smooth 3D transitions and word-by-word blur reveal animation.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="animated-testimonials-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/animated-testimonials"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="animated-testimonials" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { AnimatedTestimonials } from "@/components/pioneerui/animated-testimonials"
+
+const testimonials = [
+  {
+    quote: "This component library ships faster than any other I've used.",
+    name: "Jane Doe",
+    designation: "CTO at Acme Corp",
+    src: "https://example.com/avatar.jpg",
+  },
+  // ...more testimonials
+]
+
+export default function Page() {
+  return <AnimatedTestimonials testimonials={testimonials} autoplay />
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `testimonials` | `Testimonial[]` | — | Array of testimonial objects |
+| `autoplay` | `boolean` | `true` | Auto-advance every 5 seconds |
+| `className` | `string` | — | Extra classes for the wrapper |
+
+## Testimonial Object
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `quote` | `string` | The testimonial text |
+| `name` | `string` | Author's full name |
+| `designation` | `string` | Author's title and company |
+| `src` | `string` | URL of the author's portrait image |

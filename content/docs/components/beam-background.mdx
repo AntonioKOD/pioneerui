@@ -1,0 +1,63 @@
+---
+title: Beam Background
+description: Canvas-based animated light beam sweeps ideal for dark hero sections.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="beam-background-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/beam-background"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="beam-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { BeamBackground } from "@/components/pioneerui/beam-background"
+
+export default function Hero() {
+  return (
+    <BeamBackground numBeams={8}>
+      <h1 className="text-white text-4xl font-bold">Dark Hero</h1>
+    </BeamBackground>
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `numBeams` | `number` | `6` | Number of light beams |
+| `beamColors` | `string[]` | purple/indigo/pink | Beam rgba colors array |
+| `children` | `React.ReactNode` | `undefined` | Content rendered above canvas |
+| `className` | `string` | `undefined` | Additional CSS classes |

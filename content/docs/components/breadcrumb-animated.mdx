@@ -1,0 +1,73 @@
+---
+title: Breadcrumb Animated
+description: Staggered breadcrumb reveal animation with overflow truncation support.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="breadcrumb-animated-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/breadcrumb-animated"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="breadcrumb-animated" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { BreadcrumbAnimated } from "@/components/pioneerui/breadcrumb-animated"
+
+export default function Page() {
+  return (
+    <BreadcrumbAnimated
+      items={[
+        { label: "Home", href: "/" },
+        { label: "Docs", href: "/docs" },
+        { label: "Breadcrumb Animated" },
+      ]}
+      maxVisible={3}
+    />
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `items` | `BreadcrumbItem[]` | — | Breadcrumb items (required) |
+| `separator` | `React.ReactNode` | chevron icon | Custom separator element |
+| `maxVisible` | `number` | `undefined` | Max items; extras collapse to `…` |

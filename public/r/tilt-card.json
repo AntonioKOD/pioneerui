@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tilt-card",
+  "title": "Tilt Card",
+  "description": "3D perspective tilt on mousemove using Framer Motion spring physics",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/pioneerui/tilt-card.tsx",
+      "content": "\"use client\"\n\nimport React, { useRef } from \"react\"\nimport { motion, useMotionValue, useSpring, useTransform } from \"motion/react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface TiltCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  tiltAmount?: number\n  glare?: boolean\n}\n\nexport function TiltCard({\n  children,\n  className,\n  tiltAmount = 10,\n  glare = true,\n  ...props\n}: TiltCardProps) {\n  const ref = useRef<HTMLDivElement>(null)\n\n  const mouseX = useMotionValue(0)\n  const mouseY = useMotionValue(0)\n\n  const springX = useSpring(mouseX, { stiffness: 200, damping: 20 })\n  const springY = useSpring(mouseY, { stiffness: 200, damping: 20 })\n\n  const rotateX = useTransform(springY, [-0.5, 0.5], [tiltAmount, -tiltAmount])\n  const rotateY = useTransform(springX, [-0.5, 0.5], [-tiltAmount, tiltAmount])\n\n  const glareX = useTransform(springX, [-0.5, 0.5], [\"0%\", \"100%\"])\n  const glareY = useTransform(springY, [-0.5, 0.5], [\"0%\", \"100%\"])\n  const glareBackground = useTransform(\n    [glareX, glareY],\n    ([x, y]) =>\n      `radial-gradient(circle at ${x} ${y}, rgba(255,255,255,0.15) 0%, transparent 60%)`,\n  )\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\n    if (!ref.current) return\n    const rect = ref.current.getBoundingClientRect()\n    mouseX.set((e.clientX - rect.left) / rect.width - 0.5)\n    mouseY.set((e.clientY - rect.top) / rect.height - 0.5)\n  }\n\n  const handleMouseLeave = () => {\n    mouseX.set(0)\n    mouseY.set(0)\n  }\n\n  return (\n    <div\n      ref={ref}\n      onMouseMove={handleMouseMove}\n      onMouseLeave={handleMouseLeave}\n      className={cn(\"perspective-[1200px]\", className)}\n      {...props}\n    >\n      <motion.div\n        style={{ rotateX, rotateY, transformStyle: \"preserve-3d\" }}\n        className=\"relative overflow-hidden rounded-xl border bg-card p-6 text-card-foreground shadow-sm\"\n      >\n        {glare && (\n          <motion.div\n            className=\"pointer-events-none absolute inset-0 z-10 rounded-[inherit]\"\n            style={{ background: glareBackground }}\n          />\n        )}\n        {children}\n      </motion.div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/tilt-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

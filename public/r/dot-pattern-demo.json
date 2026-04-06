@@ -1,18 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dot-pattern-demo",
-  "type": "registry:example",
   "title": "Dot Pattern Demo",
-  "description": "Example showing a background dot pattern made with SVGs.",
+  "description": "Example showing a repeating radial dot pattern background.",
   "registryDependencies": [
-    "https://magicui.design/r/dot-pattern"
+    "https://pioneerui.com/r/dot-pattern"
   ],
   "files": [
     {
       "path": "registry/example/dot-pattern-demo.tsx",
-      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\nimport { DotPattern } from \"@/components/magicui/dot-pattern\";\n\nexport default function DotPatternDemo() {\n  return (\n    <div className=\"relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background\">\n      <DotPattern\n        className={cn(\n          \"[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]\",\n        )}\n      />\n    </div>\n  );\n}\n",
+      "content": "import { DotPatternBackground } from \"../pioneerui/dot-pattern\"\n\nexport default function DotPatternDemo() {\n  return (\n    <DotPatternBackground className=\"rounded-xl min-h-[320px]\">\n      <div className=\"text-center space-y-2\">\n        <h2 className=\"text-3xl font-bold text-foreground\">Dot Pattern</h2>\n        <p className=\"text-muted-foreground\">Subtle radial dot grid background</p>\n      </div>\n    </DotPatternBackground>\n  )\n}\n",
       "type": "registry:example",
       "target": "components/dot-pattern-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

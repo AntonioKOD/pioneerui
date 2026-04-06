@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .input-base {
+    @apply w-full rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-violet-500/50;
+  }
+
+  .btn-primary {
+    @apply rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-violet-500;
+  }
+
+  .btn-outline-sm {
+    @apply rounded-lg border border-border px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground;
+  }
+}
+
 @layer base {
   :root {
     --background: 220 33% 98%;
@@ -63,17 +77,17 @@
     --primary: 265 89% 78%;
     --primary-foreground: 240 20% 3%;
   
-    /* Glassy secondary */
-    --secondary: 240 20% 12%;
-    --secondary-foreground: 0 0% 98%;
-  
+    /* Cyan secondary — matches violet/cyan brand */
+    --secondary: 199 89% 48%;
+    --secondary-foreground: 0 0% 100%;
+
     /* Subtle muted tones */
     --muted: 240 20% 8%;
     --muted-foreground: 240 5% 64%;
-  
-    /* Accent matches primary for consistency */
-    --accent: 265 89% 78%;
-    --accent-foreground: 240 20% 3%;
+
+    /* Muted cyan accent — distinct from primary violet */
+    --accent: 199 89% 22%;
+    --accent-foreground: 0 0% 98%;
   
     /* Bright destructive for warnings */
     --destructive: 0 84% 60%;

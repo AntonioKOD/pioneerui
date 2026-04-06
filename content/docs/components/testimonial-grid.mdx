@@ -1,0 +1,68 @@
+---
+title: Testimonial Grid
+description: Staggered testimonial grid with scroll-triggered entrance animations.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="testimonial-grid-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/testimonial-grid"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="testimonial-grid" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { TestimonialGrid } from "@/components/pioneerui/testimonial-grid"
+
+const items = [
+  { quote: "...", name: "Jane", role: "CTO", company: "Acme", rating: 5 },
+]
+
+export default function Wall() {
+  return <TestimonialGrid items={items} columns={3} />
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `items` | `TestimonialGridItem[]` | — | Array of testimonials (required) |
+| `columns` | `2 \| 3` | `3` | Number of grid columns |
+| `animated` | `boolean` | `true` | Scroll-triggered entrance animations |

@@ -21,8 +21,8 @@ module.exports = {
     },
     extend: {
   fontFamily: {
-        sans: ["'Roboto'", "'Overpass'", ...fontFamily.sans],
-        mono: ["'Roboto Mono'", ...fontFamily.mono],
+        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        mono: ["var(--font-geist-mono)", ...fontFamily.mono],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -67,6 +67,7 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        aurora: "aurora 60s linear infinite",
         gradient: "gradient 8s linear infinite",
         meteor: "meteor 5s linear infinite",
         grid: "grid 15s linear infinite",
@@ -208,6 +209,10 @@ module.exports = {
         "line-shadow": {
           "0%": { "background-position": "0 0" },
           "100%": { "background-position": "100% -100%" },
+        },
+        aurora: {
+          from: { backgroundPosition: "50% 50%, 50% 50%" },
+          to: { backgroundPosition: "350% 50%, 350% 50%" },
         },
         "aurora-border": {
           "0%, 100%": { borderRadius: "37% 29% 27% 27% / 28% 25% 41% 37%" },

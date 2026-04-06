@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "feature-card",
+  "title": "Feature Card",
+  "description": "Icon, title, and description layout with optional highlighted variant",
+  "files": [
+    {
+      "path": "registry/pioneerui/feature-card.tsx",
+      "content": "import React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface FeatureCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  icon?: React.ReactNode\n  title: string\n  description: string\n  highlighted?: boolean\n}\n\nexport function FeatureCard({\n  icon,\n  title,\n  description,\n  highlighted = false,\n  className,\n  ...props\n}: FeatureCardProps) {\n  return (\n    <div\n      className={cn(\n        \"group relative rounded-xl border p-6 transition-all duration-200\",\n        \"hover:shadow-md hover:-translate-y-0.5\",\n        highlighted\n          ? \"border-primary/50 bg-primary/5 shadow-sm shadow-primary/10\"\n          : \"border-border bg-card\",\n        className,\n      )}\n      {...props}\n    >\n      {highlighted && (\n        <div className=\"pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(ellipse_at_top_left,rgba(99,102,241,0.08),transparent_70%)]\" />\n      )}\n      {icon && (\n        <div\n          className={cn(\n            \"mb-4 inline-flex items-center justify-center rounded-lg p-2.5\",\n            highlighted\n              ? \"bg-primary/10 text-primary\"\n              : \"bg-muted text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-200\",\n          )}\n        >\n          {icon}\n        </div>\n      )}\n      <h3 className=\"mb-2 text-base font-semibold tracking-tight text-foreground\">{title}</h3>\n      <p className=\"text-sm leading-relaxed text-muted-foreground\">{description}</p>\n    </div>\n  )\n}\n\nexport interface FeatureGridProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  columns?: 2 | 3 | 4\n}\n\nexport function FeatureGrid({ children, className, columns = 3, ...props }: FeatureGridProps) {\n  const colClass = {\n    2: \"sm:grid-cols-2\",\n    3: \"sm:grid-cols-2 lg:grid-cols-3\",\n    4: \"sm:grid-cols-2 lg:grid-cols-4\",\n  }[columns]\n\n  return (\n    <div className={cn(\"grid grid-cols-1 gap-4\", colClass, className)} {...props}>\n      {children}\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/feature-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

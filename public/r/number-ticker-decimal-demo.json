@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "number-ticker-decimal-demo",
-  "type": "registry:example",
   "title": "Number Ticker Decimal Demo",
   "description": "Example showing animated counting decimal numbers.",
   "registryDependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:example",
       "target": "components/number-ticker-decimal-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

@@ -1,0 +1,103 @@
+---
+title: Meteors
+description: Shooting meteor effect that flies across cards or backgrounds with pure CSS animation.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="meteors-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/meteors"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="meteors" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Make sure the `animate-meteor` keyframe is in your `tailwind.config.js`</Step>
+
+The `meteor` animation is already included in PioneerUI's Tailwind config. If you're using this standalone, add:
+
+```js title="tailwind.config.js"
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        meteor: "meteor 5s linear infinite",
+      },
+      keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": { transform: "rotate(215deg) translateX(-500px)", opacity: "0" },
+        },
+      },
+    },
+  },
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Meteors, MeteorsCard } from "@/components/pioneerui/meteors"
+
+// Pre-built card wrapper
+export default function Demo() {
+  return (
+    <MeteorsCard>
+      <p className="text-2xl font-bold">Meteors Effect</p>
+    </MeteorsCard>
+  )
+}
+
+// Or add Meteors to any overflow-hidden container
+function CustomSection() {
+  return (
+    <div className="relative overflow-hidden rounded-2xl p-8">
+      <Meteors number={30} />
+      <div className="relative z-10">Content here</div>
+    </div>
+  )
+}
+```
+
+## Props — `Meteors`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `number` | `number` | `20` | Number of meteors to render |
+| `className` | `string` | — | Extra classes applied to each meteor |
+
+## Props — `MeteorsCard`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `meteorCount` | `number` | `20` | Number of meteors |
+| `className` | `string` | — | Classes for the card wrapper |
+| `children` | `ReactNode` | — | Card content |

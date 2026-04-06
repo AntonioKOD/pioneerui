@@ -1,0 +1,73 @@
+---
+title: Hero Video
+description: Video thumbnail with a play button that opens a modal player with multiple animation styles.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="hero-video-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/hero-video"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the `motion` dependency.</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="hero-video" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { HeroVideo } from "@/components/pioneerui/hero-video"
+
+export default function Demo() {
+  return (
+    <HeroVideo
+      videoSrc="https://www.youtube.com/embed/VIDEO_ID?autoplay=1"
+      thumbnailSrc="/thumbnail.jpg"
+      buttonText="Watch demo"
+      animationStyle="from-center"
+    />
+  )
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `videoSrc` | `string` | — | Embeddable video URL (required) |
+| `thumbnailSrc` | `string` | `undefined` | Thumbnail image URL |
+| `thumbnailAlt` | `string` | `Video thumbnail` | Thumbnail alt text |
+| `buttonText` | `string` | `Watch video` | Label under play button |
+| `animationStyle` | `from-center \| from-bottom \| fade` | `from-center` | Modal entrance animation |

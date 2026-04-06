@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aurora-background",
+  "title": "Aurora Background",
+  "description": "Animated aurora-style gradient backdrop using CSS keyframes",
+  "files": [
+    {
+      "path": "registry/pioneerui/aurora-background.tsx",
+      "content": "\"use client\"\n\nimport React, { type CSSProperties } from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nexport interface AuroraBackgroundProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  showRadialGradient?: boolean\n}\n\nexport function AuroraBackground({\n  className,\n  children,\n  showRadialGradient = true,\n  ...props\n}: AuroraBackgroundProps) {\n  return (\n    <div\n      className={cn(\n        \"relative flex min-h-[400px] flex-col items-center justify-center overflow-hidden bg-zinc-50 dark:bg-zinc-950\",\n        className,\n      )}\n      {...props}\n    >\n      <div\n        className=\"absolute inset-0 overflow-hidden\"\n        style={\n          {\n            \"--aurora\":\n              \"repeating-linear-gradient(100deg, #3b82f6 10%, #a5b4fc 15%, #93c5fd 20%, #ddd6fe 25%, #818cf8 30%)\",\n            \"--dark-gradient\":\n              \"repeating-linear-gradient(100deg, #000 0%, #000 7%, transparent 10%, transparent 12%, #000 16%)\",\n            \"--white-gradient\":\n              \"repeating-linear-gradient(100deg, #fff 0%, #fff 7%, transparent 10%, transparent 12%, #fff 16%)\",\n          } as CSSProperties\n        }\n      >\n        <div\n          className={cn(\n            \"pointer-events-none absolute -inset-[10px] opacity-50 blur-[10px] invert filter will-change-transform dark:invert-0\",\n            \"[background-image:var(--white-gradient),var(--aurora)]\",\n            \"[background-size:300%,_200%]\",\n            \"[background-attachment:fixed]\",\n            \"animate-aurora\",\n            \"after:absolute after:inset-0\",\n            \"after:[background-image:var(--white-gradient),var(--aurora)]\",\n            \"after:[background-size:200%,_100%]\",\n            \"after:animate-aurora\",\n            \"after:[background-attachment:fixed]\",\n            \"after:mix-blend-difference\",\n            \"after:content-['']\",\n            showRadialGradient &&\n              \"[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)]\",\n          )}\n        />\n      </div>\n      <div className=\"relative z-10\">{children}</div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/pioneerui/aurora-background.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

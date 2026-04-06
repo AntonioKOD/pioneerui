@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dock",
-  "type": "registry:ui",
   "title": "Dock",
   "description": "A dock component",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:ui",
       "target": "components/pioneerui/dock.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

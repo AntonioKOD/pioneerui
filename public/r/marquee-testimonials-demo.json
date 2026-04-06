@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marquee-testimonials-demo",
+  "title": "Marquee Testimonials Demo",
+  "description": "Example showing an infinite-scroll testimonial marquee.",
+  "registryDependencies": [
+    "https://pioneerui.com/r/marquee-testimonials"
+  ],
+  "files": [
+    {
+      "path": "registry/example/marquee-testimonials-demo.tsx",
+      "content": "import { MarqueeTestimonials } from \"../pioneerui/marquee-testimonials\"\n\nconst testimonials = [\n  { quote: \"Best component library I've ever used. The animations are buttery smooth.\", name: \"Alex Johnson\", role: \"Senior Engineer\", company: \"GitHub\" },\n  { quote: \"PioneerUI saved us weeks of development time. Absolutely worth it.\", name: \"Maria Garcia\", role: \"Product Designer\", company: \"Figma\" },\n  { quote: \"The quality and attention to detail is remarkable. Our users love the UI.\", name: \"David Kim\", role: \"CTO\", company: \"Notion\" },\n  { quote: \"Copy-paste simplicity meets production-grade quality. Perfect combination.\", name: \"Emma Wilson\", role: \"Frontend Lead\", company: \"Linear\" },\n  { quote: \"I rebuilt our entire landing page in a weekend using PioneerUI components.\", name: \"Chris Lee\", role: \"Indie Maker\", company: \"Buildspace\" },\n  { quote: \"The dark mode support and accessibility are top notch. Highly recommend.\", name: \"Priya Patel\", role: \"Design Engineer\", company: \"Stripe\" },\n]\n\nexport default function MarqueeTestimonialsDemo() {\n  return (\n    <div className=\"py-6\">\n      <MarqueeTestimonials items={testimonials} rows={2} />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/marquee-testimonials-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

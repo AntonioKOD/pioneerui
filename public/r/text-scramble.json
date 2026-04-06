@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "text-scramble",
-  "type": "registry:ui",
   "title": "Text Scramble",
   "description": "A text scramble effect component",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:ui",
       "target": "components/pioneerui/text-scramble.tsx"
     }
-  ]
+  ],
+  "type": "registry:ui"
 }

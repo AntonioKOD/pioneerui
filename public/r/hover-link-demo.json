@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hover-link-demo",
-  "type": "registry:example",
   "title": "Hover Link Demo",
   "description": "Example showing a collection of links with hover effects.",
   "dependencies": [
@@ -14,5 +13,6 @@
       "type": "registry:example",
       "target": "components/hover-link-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

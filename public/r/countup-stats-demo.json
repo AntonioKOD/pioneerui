@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "countup-stats-demo",
-  "type": "registry:example",
   "title": "Countup Stats Demo",
   "description": "Example showing animated counting numbers.",
   "dependencies": [
@@ -15,5 +14,6 @@
       "type": "registry:example",
       "target": "components/countup-stats-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

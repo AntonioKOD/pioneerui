@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dock-demo",
-  "type": "registry:example",
   "title": "Dock Demo",
   "description": "Example showing a dock component.",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:example",
       "target": "components/dock-demo.tsx"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

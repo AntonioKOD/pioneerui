@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "magnetic-button-demo",
+  "title": "Magnetic Button Demo",
+  "description": "Example showing a button with magnetic cursor tracking.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/magnetic-button"
+  ],
+  "files": [
+    {
+      "path": "registry/example/magnetic-button-demo.tsx",
+      "content": "import { MagneticButton } from \"../pioneerui/magnetic-button\"\n\nexport default function MagneticButtonDemo() {\n  return (\n    <div className=\"flex items-center justify-center gap-6 p-12\">\n      <MagneticButton>Hover me</MagneticButton>\n      <MagneticButton className=\"bg-secondary text-secondary-foreground\" strength={0.6}>\n        Strong pull\n      </MagneticButton>\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/magnetic-button-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-gradient-demo",
+  "title": "Hero Gradient Demo",
+  "description": "Example showing a full-bleed gradient hero section.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://pioneerui.com/r/hero-gradient"
+  ],
+  "files": [
+    {
+      "path": "registry/example/hero-gradient-demo.tsx",
+      "content": "import { HeroGradient } from \"../pioneerui/hero-gradient\"\n\nexport default function HeroGradientDemo() {\n  return (\n    <HeroGradient\n      badge=\"New components every week\"\n      headline=\"Build beautiful interfaces faster\"\n      subheadline=\"Production-ready animated components built with Tailwind CSS and Framer Motion. Copy, paste, ship.\"\n      cta={\n        <div className=\"flex flex-wrap items-center justify-center gap-3\">\n          <a\n            href=\"/docs\"\n            className=\"rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:-translate-y-0.5\"\n          >\n            Browse components\n          </a>\n          <a\n            href=\"/docs/installation\"\n            className=\"rounded-xl border bg-background/80 px-5 py-2.5 text-sm font-semibold text-foreground backdrop-blur-sm transition-all hover:-translate-y-0.5\"\n          >\n            Get started\n          </a>\n        </div>\n      }\n    />\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/hero-gradient-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}

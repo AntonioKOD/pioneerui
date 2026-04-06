@@ -1,0 +1,75 @@
+---
+title: Skeleton Card
+description: Shimmer-animated skeleton loading placeholders for cards and lists.
+author: codewithtoni
+published: true
+---
+
+<ComponentPreview name="skeleton-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://pioneerui.com/r/skeleton-card"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="skeleton-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Skeleton, SkeletonCard, SkeletonList } from "@/components/pioneerui/skeleton-card"
+
+// Low-level primitive
+function Loading() {
+  return <Skeleton className="h-4 w-32" />
+}
+
+// Pre-built card skeleton
+function CardLoading() {
+  return <SkeletonCard />
+}
+
+// Pre-built list skeleton
+function ListLoading() {
+  return <SkeletonList rows={5} />
+}
+```
+
+## Components
+
+| Component | Description |
+| --- | --- |
+| `Skeleton` | Base shimmer primitive — use for custom layouts |
+| `SkeletonCard` | Full card skeleton with avatar, image, and text rows |
+| `SkeletonList` | Repeating list rows with avatar and text |
+
+## Props — `SkeletonList`
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `rows` | `number` | `5` | Number of list rows |

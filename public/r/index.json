@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "index",
-  "type": "registry:style",
   "dependencies": [
     "tailwindcss-animate",
     "class-variance-authority",
@@ -18,5 +17,6 @@
       ]
     }
   },
-  "cssVars": {}
+  "cssVars": {},
+  "type": "registry:style"
 }

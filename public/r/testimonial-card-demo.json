@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonial-card-demo",
+  "title": "Testimonial Card Demo",
+  "description": "Example showing testimonial cards with three style variants.",
+  "registryDependencies": [
+    "https://pioneerui.com/r/testimonial-card"
+  ],
+  "files": [
+    {
+      "path": "registry/example/testimonial-card-demo.tsx",
+      "content": "import { TestimonialCard } from \"../pioneerui/testimonial-card\"\n\nexport default function TestimonialCardDemo() {\n  return (\n    <div className=\"grid grid-cols-1 gap-4 p-6 sm:grid-cols-3 max-w-4xl mx-auto\">\n      <TestimonialCard\n        quote=\"PioneerUI has completely transformed how we build landing pages. The components are stunning.\"\n        name=\"Sarah Chen\"\n        role=\"Lead Designer\"\n        company=\"Vercel\"\n        rating={5}\n        variant=\"default\"\n      />\n      <TestimonialCard\n        quote=\"The best component library I've used. Copy-paste simplicity with production quality.\"\n        name=\"Marcus Rivera\"\n        role=\"Frontend Engineer\"\n        company=\"Stripe\"\n        rating={5}\n        variant=\"bordered\"\n      />\n      <TestimonialCard\n        quote=\"Saved our team dozens of hours. The animation quality is unmatched.\"\n        name=\"Aiko Tanaka\"\n        role=\"CTO\"\n        company=\"Linear\"\n        rating={5}\n        variant=\"elevated\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": "components/testimonial-card-demo.tsx"
+    }
+  ],
+  "type": "registry:example"
+}
