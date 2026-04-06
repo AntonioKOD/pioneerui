@@ -202,8 +202,8 @@ export function Hero3D() {
             <Link
               href="/community"
               className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "border-zinc-700 text-zinc-300 hover:border-zinc-500 hover:bg-zinc-800/50 hover:text-white",
+                buttonVariants({ size: "lg" }),
+                "border border-violet-500/40 bg-zinc-900 text-zinc-100 shadow-none hover:border-violet-400/60 hover:bg-zinc-800 hover:text-white",
               )}
             >
               Community
@@ -229,7 +229,7 @@ export function Hero3D() {
               ))}
             </div>
             <p className="text-sm text-zinc-500">
-              Free forever · MIT License · No account required
+              Free forever · MIT License · Open source
             </p>
           </div>
         </div>
