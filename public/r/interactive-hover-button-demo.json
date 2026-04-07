@@ -5,12 +5,12 @@
   "title": "Interactive Hover Button Demo",
   "description": "Example showing an interactive button with hover effects.",
   "registryDependencies": [
-    "https://magicui.design/r/interactive-hover-button"
+    "https://pioneerui.com/r/interactive-hover-button"
   ],
   "files": [
     {
       "path": "registry/example/interactive-hover-button-demo.tsx",
-      "content": "import { InteractiveHoverButton } from \"@/components/magicui/interactive-hover-button\";\n\nexport default function InteractiveHoverButtonDemo() {\n  return <InteractiveHoverButton>Hover Me</InteractiveHoverButton>;\n}\n",
+      "content": "import { InteractiveHoverButton } from \"@/components/pioneerui/interactive-hover-button\";\n\nexport default function InteractiveHoverButtonDemo() {\n  return <InteractiveHoverButton>Hover Me</InteractiveHoverButton>;\n}\n",
       "type": "registry:example",
       "target": "components/interactive-hover-button-demo.tsx"
     }

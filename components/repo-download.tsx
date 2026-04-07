@@ -46,7 +46,7 @@ export default function RepoDownload({ url, free = false }: RepoDownloadProps) {
 
   return (
     <Link
-      href="https://pro.magicui.design/#pricing"
+      href="https://pioneerui.com/pro#pricing"
       target="_blank"
       className={cn(
         buttonVariants({

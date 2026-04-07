@@ -4,12 +4,12 @@
   "title": "Text Animate Demo 2",
   "description": "Second example showing various text animations.",
   "registryDependencies": [
-    "https://magicui.design/r/text-animate"
+    "https://pioneerui.com/r/text-animate"
   ],
   "files": [
     {
       "path": "registry/example/text-animate-demo-2.tsx",
-      "content": "import { TextAnimate } from \"@/components/magicui/text-animate\";\n\nexport default function TextAnimateDemo2() {\n  return (\n    <TextAnimate animation=\"blurIn\" as=\"h1\">\n      Blur in text\n    </TextAnimate>\n  );\n}\n",
+      "content": "import { TextAnimate } from \"@/components/pioneerui/text-animate\";\n\nexport default function TextAnimateDemo2() {\n  return (\n    <TextAnimate animation=\"blurIn\" as=\"h1\">\n      Blur in text\n    </TextAnimate>\n  );\n}\n",
       "type": "registry:example",
       "target": "components/text-animate-demo-2.tsx"
     }

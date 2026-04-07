@@ -9,9 +9,9 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "registry/magicui/number-ticker.tsx",
+        path: "registry/pioneerui/number-ticker.tsx",
         type: "registry:ui",
-        target: "components/magicui/number-ticker.tsx",
+        target: "components/pioneerui/number-ticker.tsx",
       },
     ],
   },
@@ -23,9 +23,9 @@ export const ui: Registry["items"] = [
       "A light glare effect which pans across text making it appear as if it is shimmering.",
     files: [
       {
-        path: "registry/magicui/animated-shiny-text.tsx",
+        path: "registry/pioneerui/animated-shiny-text.tsx",
         type: "registry:ui",
-        target: "components/magicui/animated-shiny-text.tsx",
+        target: "components/pioneerui/animated-shiny-text.tsx",
       },
     ],
     tailwind: {
@@ -59,9 +59,9 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "registry/magicui/text-animate.tsx",
+        path: "registry/pioneerui/text-animate.tsx",
         type: "registry:ui",
-        target: "components/magicui/text-animate.tsx",
+        target: "components/pioneerui/text-animate.tsx",
       },
     ],
   },

@@ -9,7 +9,7 @@ const nextConfig = {
     optimizeCss: true,
   },
   images: {
-    domains: ["localhost", "cdn.magicui.design"],
+    domains: ["localhost"],
   },
   async redirects() {
     return [

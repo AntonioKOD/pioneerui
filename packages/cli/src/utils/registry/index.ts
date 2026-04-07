@@ -100,9 +100,9 @@ export async function resolveTreeWithShadcn(
   index: theTree,
   names: string[],
   calledByShadcn = false,
-): Promise<{ shadcnTree: theTree; magicuiTree: theTree }> {
+): Promise<{ shadcnTree: theTree; pioneeruiTree: theTree }> {
   const shadcnTree: theTree = [];
-  const magicuiTree: theTree = [];
+  const pioneeruiTree: theTree = [];
 
   for (const name of names) {
     if (!calledByShadcn) {
@@ -129,11 +129,11 @@ export async function resolveTreeWithShadcn(
         }
       }
 
-      entry && magicuiTree.push(entry);
+      entry && pioneeruiTree.push(entry);
 
       if (entry && entry.registryDependencies) {
         const {
-          magicuiTree: magicuiTreeDependencies,
+          pioneeruiTree: pioneeruiTreeDependencies,
           shadcnTree: shadcnTreeDependencies,
         } = await resolveTreeWithShadcn(
           shadcnIndex,
@@ -142,7 +142,7 @@ export async function resolveTreeWithShadcn(
           false,
         );
         shadcnTree.push(...shadcnTreeDependencies);
-        magicuiTree.push(...magicuiTreeDependencies);
+        pioneeruiTree.push(...pioneeruiTreeDependencies);
       }
     } else {
       const entry = shadcnIndex.find((e) => e.name === name);
@@ -171,7 +171,7 @@ export async function resolveTreeWithShadcn(
       (component, index, self) =>
         self.findIndex((c) => c.name === component.name) === index,
     ),
-    magicuiTree: magicuiTree.filter(
+    pioneeruiTree: pioneeruiTree.filter(
       (component, index, self) =>
         self.findIndex((c) => c.name === component.name) === index,
     ),
@@ -206,7 +206,7 @@ export async function fetchTree(tree: theTree, env?: string) {
   try {
     const treeNormal = tree.filter((item) => !item.type.includes("blocks"));
     const treePro = tree.filter((item) => item.type.includes("blocks"));
-    // {baseUrl}/registry/components/magicui/[name].json.
+    // {baseUrl}/registry/components/pioneerui/[name].json.
     const paths = treeNormal.map((item) => {
       const [parent, subfolder] = item.type.split(":");
       return `${parent}/${subfolder}/${item.name}.json`;
@@ -269,7 +269,7 @@ async function fetchRegistry(
           headers: env
             ? {
                 // the Pro registry route will valid this env cookie
-                cookie: `x-magicui-env=${env}`,
+                cookie: `x-pioneerui-env=${env}`,
               }
             : {},
         });

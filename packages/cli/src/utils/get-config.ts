@@ -7,7 +7,7 @@ import { z } from "zod";
 export const DEFAULT_STYLE = "default";
 export const DEFAULT_COMPONENTS = "@/components";
 export const DEFAULT_COMPONENTS_UI = "@/components/ui";
-export const DEFAULT_COMPONENTS_MAGICUI = "@/components/magicui";
+export const DEFAULT_COMPONENTS_PIONEERUI = "@/components/pioneerui";
 export const DEFAULT_UTILS = "@/lib/utils";
 export const DEFAULT_TAILWIND_CSS = "app/globals.css";
 export const DEFAULT_TAILWIND_CONFIG = "tailwind.config.js";
@@ -36,7 +36,7 @@ export const rawConfigSchema = z
       components: z.string(),
       utils: z.string(),
       ui: z.string().optional(),
-      magicui: z.string().optional(),
+      pioneerui: z.string().optional(),
     }),
   })
   .strict();
@@ -50,7 +50,7 @@ export const configSchema = rawConfigSchema.extend({
     utils: z.string(),
     components: z.string(),
     ui: z.string(),
-    magicui: z.string(),
+    pioneerui: z.string(),
   }),
 });
 
@@ -82,11 +82,11 @@ export async function resolveConfigPaths(cwd: string, config: RawConfig) {
     tsConfig,
   );
   const ui = `${components}/ui`;
-  const magicui = `${components}/magicui`;
+  const pioneerui = `${components}/pioneerui`;
 
   const newAliases = {
     ui: `${config.aliases.components}/ui`,
-    magicui: `${config.aliases.components}/magicui`,
+    pioneerui: `${config.aliases.components}/pioneerui`,
   };
 
   const newConfig = {
@@ -103,8 +103,8 @@ export async function resolveConfigPaths(cwd: string, config: RawConfig) {
       ui,
       //   ? await resolveImport(config.aliases["ui"], tsConfig)
       //   : await resolveImport(config.aliases["components"], tsConfig),
-      magicui,
-      //   ? await resolveImport(config.aliases["magicui"], tsConfig)
+      pioneerui,
+      //   ? await resolveImport(config.aliases["pioneerui"], tsConfig)
       //   : config.aliases["ui"] ? await resolveImport(config.aliases["ui"], tsConfig)
       //     : await resolveImport(config.aliases["components"], tsConfig)
     },

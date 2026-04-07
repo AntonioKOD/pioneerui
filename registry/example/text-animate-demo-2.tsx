@@ -1,4 +1,4 @@
-import { TextAnimate } from "@/registry/magicui/text-animate";
+import { TextAnimate } from "@/registry/pioneerui/text-animate";
 
 export default function TextAnimateDemo2() {
   return (

@@ -5,7 +5,7 @@ import Script from "next/script";
 export function Analytics() {
   return (
     <>
-      <Script id="id">{`window.lemonSqueezyAffiliateConfig = { store: "magicui" };`}</Script>
+      <Script id="id">{`window.lemonSqueezyAffiliateConfig = { store: "pioneerui" };`}</Script>
       <Script src="https://lmsqueezy.com/affiliate.js" defer></Script>
       <Script
         async

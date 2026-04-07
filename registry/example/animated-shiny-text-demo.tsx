@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
-import { AnimatedShinyText } from "@/registry/magicui/animated-shiny-text";
+import { AnimatedShinyText } from "@/registry/pioneerui/animated-shiny-text";
 
 export default function AnimatedShinyTextDemo() {
   return (

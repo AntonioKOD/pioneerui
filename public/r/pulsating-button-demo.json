@@ -5,12 +5,12 @@
   "title": "Pulsating Button Demo",
   "description": "Example showing an animated pulsating button.",
   "registryDependencies": [
-    "https://magicui.design/r/pulsating-button"
+    "https://pioneerui.com/r/pulsating-button"
   ],
   "files": [
     {
       "path": "registry/example/pulsating-button-demo.tsx",
-      "content": "import { PulsatingButton } from \"@/components/magicui/pulsating-button\";\n\nexport default function PulsatingButtonDemo() {\n  return <PulsatingButton>Join Affiliate Program</PulsatingButton>;\n}\n",
+      "content": "import { PulsatingButton } from \"@/components/pioneerui/pulsating-button\";\n\nexport default function PulsatingButtonDemo() {\n  return <PulsatingButton>Join Affiliate Program</PulsatingButton>;\n}\n",
       "type": "registry:example",
       "target": "components/pulsating-button-demo.tsx"
     }

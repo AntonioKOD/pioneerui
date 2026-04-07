@@ -43,7 +43,7 @@ const addOptionsSchema = z.object({
   path: z.string().optional(),
 });
 
-const MAGICUI_PRO_ENV = getEnv();
+const PIONEERUI_PRO_ENV = getEnv();
 
 export const add = new Command()
   .name("add")
@@ -62,14 +62,14 @@ export const add = new Command()
     "include pro magic-ui blocks & components (make sure to add your secret .env)",
     false,
   )
-  .addHelpText("after", ColorFullText(MAGICUI_PRO_ENV ? hasPro : tryPro))
+  .addHelpText("after", ColorFullText(PIONEERUI_PRO_ENV ? hasPro : tryPro))
   .option("-e, --example", "include available examples & demos", false)
   .option("-s, --shadcn", "include available components from shadcn-ui", false)
   .option("-p, --path <path>", "the path to add the component to.")
   .action(async (components, opts) => {
     console.log(
-      MAGICUI_PRO_ENV ? ASCII_PRO : ASCII_TEXT,
-      ColorFullText(!MAGICUI_PRO_ENV ? tryPro : hasPro),
+      PIONEERUI_PRO_ENV ? ASCII_PRO : ASCII_TEXT,
+      ColorFullText(!PIONEERUI_PRO_ENV ? tryPro : hasPro),
     );
     try {
       const options = addOptionsSchema.parse({
@@ -94,7 +94,7 @@ export const add = new Command()
         process.exit(1);
       }
 
-      if (options.pro && !MAGICUI_PRO_ENV) {
+      if (options.pro && !PIONEERUI_PRO_ENV) {
         logger.warn("You're not authenticated to add Magic UI Pro components");
         return;
       }
@@ -118,7 +118,7 @@ export const add = new Command()
 
             if (options.example) return type === "example";
 
-            return type === "magicui";
+            return type === "pioneerui";
           });
 
         const multiselectChoice = options.shadcn
@@ -147,28 +147,28 @@ export const add = new Command()
       }
 
       // const tree = await resolveTree(registryIndex, selectedComponents)
-      const { magicuiTree, shadcnTree } = await resolveTreeWithShadcn(
+      const { pioneeruiTree, shadcnTree } = await resolveTreeWithShadcn(
         shadcnRegistryIndex,
         registryIndex,
         selectedComponents,
         options.shadcn,
       );
 
-      const magicuiPayload = await fetchTree(magicuiTree, MAGICUI_PRO_ENV);
+      const pioneeruiPayload = await fetchTree(pioneeruiTree, PIONEERUI_PRO_ENV);
       const shadcnPayload = await fetchTreeFromShadcn(config.style, shadcnTree);
       const baseColor = await getRegistryBaseColor(config.tailwind.baseColor);
 
-      if (!magicuiPayload.length && !shadcnPayload.length) {
+      if (!pioneeruiPayload.length && !shadcnPayload.length) {
         logger.warn("Selected components not found. Exiting.");
         process.exit(0);
       } else {
-        magicuiPayload.length !== 0 &&
-          logger.info(`Found ${magicuiPayload.length}x Magic UI components.`);
+        pioneeruiPayload.length !== 0 &&
+          logger.info(`Found ${pioneeruiPayload.length}x Pioneer UI components.`);
         shadcnPayload.length !== 0 &&
           logger.info(`Found ${shadcnPayload.length}x Shadcn UI components.`);
       }
 
-      const totalPayload = [...magicuiPayload, ...shadcnPayload];
+      const totalPayload = [...pioneeruiPayload, ...shadcnPayload];
 
       if (!options.yes) {
         const { proceed } = await prompts({

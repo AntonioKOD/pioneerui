@@ -21,12 +21,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/magicui/number-ticker.tsx",
+      path: "registry/pioneerui/number-ticker.tsx",
       type: "registry:ui",
-      target: "components/magicui/number-ticker.tsx"
+      target: "components/pioneerui/number-ticker.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/magicui/number-ticker.tsx")
+      const mod = await import("@/registry/pioneerui/number-ticker.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -38,12 +38,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/magicui/animated-shiny-text.tsx",
+      path: "registry/pioneerui/animated-shiny-text.tsx",
       type: "registry:ui",
-      target: "components/magicui/animated-shiny-text.tsx"
+      target: "components/pioneerui/animated-shiny-text.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/magicui/animated-shiny-text.tsx")
+      const mod = await import("@/registry/pioneerui/animated-shiny-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -55,12 +55,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/magicui/text-animate.tsx",
+      path: "registry/pioneerui/text-animate.tsx",
       type: "registry:ui",
-      target: "components/magicui/text-animate.tsx"
+      target: "components/pioneerui/text-animate.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/magicui/text-animate.tsx")
+      const mod = await import("@/registry/pioneerui/text-animate.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -869,7 +869,7 @@ export const Index: Record<string, any> = {
     name: "number-ticker-demo",
     description: "Example showing animated counting numbers.",
     type: "registry:example",
-    registryDependencies: ["https://magicui.design/r/number-ticker"],
+    registryDependencies: ["https://pioneerui.com/r/number-ticker"],
     files: [{
       path: "registry/example/number-ticker-demo.tsx",
       type: "registry:example",
@@ -886,7 +886,7 @@ export const Index: Record<string, any> = {
     name: "number-ticker-decimal-demo",
     description: "Example showing animated counting decimal numbers.",
     type: "registry:example",
-    registryDependencies: ["https://magicui.design/r/number-ticker"],
+    registryDependencies: ["https://pioneerui.com/r/number-ticker"],
     files: [{
       path: "registry/example/number-ticker-decimal-demo.tsx",
       type: "registry:example",
@@ -903,7 +903,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-2",
     description: "Second example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["https://magicui.design/r/text-animate"],
+    registryDependencies: ["https://pioneerui.com/r/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-2.tsx",
       type: "registry:example",
@@ -920,7 +920,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-3",
     description: "Third example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["https://magicui.design/r/text-animate"],
+    registryDependencies: ["https://pioneerui.com/r/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-3.tsx",
       type: "registry:example",

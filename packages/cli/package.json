@@ -1,5 +1,5 @@
 {
-  "name": "magicui-cli",
+  "name": "pioneerui-cli",
   "version": "0.1.6",
   "description": "Add magic ui components to your apps. Shadcn-ui based config",
   "publishConfig": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/magicuidesign/magicui",
+    "url": "https://github.com/AntonioKOD/pioneerui",
     "directory": "packages/cli"
   },
   "files": [
@@ -25,7 +25,7 @@
     "radix-ui",
     "shadcn",
     "magic-ui",
-    "magicui",
+    "pioneerui",
     "framer-motion"
   ],
   "type": "module",
@@ -33,7 +33,7 @@
   "bin": "./dist/index.js",
   "scripts": {
     "dev": "tsup --watch --env.COMPONENTS_REGISTRY_URL http://localhost:3000 --env.PRO_REGISTRY_URL http://localhost:3001",
-    "build": "tsup --env.COMPONENTS_REGISTRY_URL https://magicui.design --env.PRO_REGISTRY_URL https://pro.magicui.design --env.POSTHOG_API_KEY $POSTHOG_API_KEY",
+    "build": "tsup --env.COMPONENTS_REGISTRY_URL https://pioneerui.com --env.PRO_REGISTRY_URL https://pioneerui.com/pro --env.POSTHOG_API_KEY $POSTHOG_API_KEY",
     "typecheck": "tsc --noEmit",
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",

@@ -31,7 +31,7 @@ async function main() {
   const program = new Command()
     .addHelpText("before", MAGICUI_PRO_ENV ? ASCII_PRO : ASCII_TEXT)
     .addHelpText("after", ColorFullText(MAGICUI_PRO_ENV ? hasPro : tryPro))
-    .name("magicui-cli")
+    .name("pioneerui-cli")
     .description("Add Magic UI components to your apps.")
     .version(
       packageInfo.version || "1.0.0",

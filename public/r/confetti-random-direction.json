@@ -5,12 +5,12 @@
   "title": "Confetti Random Direction",
   "description": "Example showing confetti with random directions.",
   "registryDependencies": [
-    "https://magicui.design/r/confetti"
+    "https://pioneerui.com/r/confetti"
   ],
   "files": [
     {
       "path": "registry/example/confetti-random-direction.tsx",
-      "content": "import { ConfettiButton } from \"@/components/magicui/confetti\";\n\nexport default function ConfettiButtonDemo() {\n  return (\n    <div className=\"relative\">\n      <ConfettiButton\n        options={{\n          get angle() {\n            return Math.random() * 360;\n          },\n        }}\n      >\n        Random Confetti 🎉\n      </ConfettiButton>\n    </div>\n  );\n}\n",
+      "content": "import { ConfettiButton } from \"@/components/pioneerui/confetti\";\n\nexport default function ConfettiButtonDemo() {\n  return (\n    <div className=\"relative\">\n      <ConfettiButton\n        options={{\n          get angle() {\n            return Math.random() * 360;\n          },\n        }}\n      >\n        Random Confetti 🎉\n      </ConfettiButton>\n    </div>\n  );\n}\n",
       "type": "registry:example",
       "target": "components/confetti-random-direction.tsx"
     }

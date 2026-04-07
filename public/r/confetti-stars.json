@@ -5,7 +5,7 @@
   "title": "Confetti Stars",
   "description": "Example showing star-shaped confetti animation.",
   "registryDependencies": [
-    "https://magicui.design/r/confetti"
+    "https://pioneerui.com/r/confetti"
   ],
   "files": [
     {

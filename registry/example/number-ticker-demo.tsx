@@ -1,4 +1,4 @@
-import { NumberTicker } from "@/registry/magicui/number-ticker";
+import { NumberTicker } from "@/registry/pioneerui/number-ticker";
 
 export default function NumberTickerDemo() {
   return (

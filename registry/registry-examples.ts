@@ -20,7 +20,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Number Ticker Demo",
     description: "Example showing animated counting numbers.",
-    registryDependencies: ["https://magicui.design/r/number-ticker"],
+    registryDependencies: ["https://pioneerui.com/r/number-ticker"],
     files: [
       {
         path: "registry/example/number-ticker-demo.tsx",
@@ -34,7 +34,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Number Ticker Decimal Demo",
     description: "Example showing animated counting decimal numbers.",
-    registryDependencies: ["https://magicui.design/r/number-ticker"],
+    registryDependencies: ["https://pioneerui.com/r/number-ticker"],
     files: [
       {
         path: "registry/example/number-ticker-decimal-demo.tsx",
@@ -48,7 +48,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 2",
     description: "Second example showing various text animations.",
-    registryDependencies: ["https://magicui.design/r/text-animate"],
+    registryDependencies: ["https://pioneerui.com/r/text-animate"],
     files: [
       {
         path: "registry/example/text-animate-demo-2.tsx",
@@ -62,7 +62,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 3",
     description: "Third example showing various text animations.",
-    registryDependencies: ["https://magicui.design/r/text-animate"],
+    registryDependencies: ["https://pioneerui.com/r/text-animate"],
     files: [
       {
         path: "registry/example/text-animate-demo-3.tsx",

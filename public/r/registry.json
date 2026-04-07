@@ -33,9 +33,9 @@
       ],
       "files": [
         {
-          "path": "registry/magicui/number-ticker.tsx",
+          "path": "registry/pioneerui/number-ticker.tsx",
           "type": "registry:ui",
-          "target": "components/magicui/number-ticker.tsx"
+          "target": "components/pioneerui/number-ticker.tsx"
         }
       ]
     },
@@ -46,9 +46,9 @@
       "description": "A light glare effect which pans across text making it appear as if it is shimmering.",
       "files": [
         {
-          "path": "registry/magicui/animated-shiny-text.tsx",
+          "path": "registry/pioneerui/animated-shiny-text.tsx",
           "type": "registry:ui",
-          "target": "components/magicui/animated-shiny-text.tsx"
+          "target": "components/pioneerui/animated-shiny-text.tsx"
         }
       ],
       "tailwind": {
@@ -83,9 +83,9 @@
       ],
       "files": [
         {
-          "path": "registry/magicui/text-animate.tsx",
+          "path": "registry/pioneerui/text-animate.tsx",
           "type": "registry:ui",
-          "target": "components/magicui/text-animate.tsx"
+          "target": "components/pioneerui/text-animate.tsx"
         }
       ]
     },
@@ -799,7 +799,7 @@
       "title": "Number Ticker Demo",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "https://magicui.design/r/number-ticker"
+        "https://pioneerui.com/r/number-ticker"
       ],
       "files": [
         {
@@ -815,7 +815,7 @@
       "title": "Number Ticker Decimal Demo",
       "description": "Example showing animated counting decimal numbers.",
       "registryDependencies": [
-        "https://magicui.design/r/number-ticker"
+        "https://pioneerui.com/r/number-ticker"
       ],
       "files": [
         {
@@ -831,7 +831,7 @@
       "title": "Text Animate Demo 2",
       "description": "Second example showing various text animations.",
       "registryDependencies": [
-        "https://magicui.design/r/text-animate"
+        "https://pioneerui.com/r/text-animate"
       ],
       "files": [
         {
@@ -847,7 +847,7 @@
       "title": "Text Animate Demo 3",
       "description": "Third example showing various text animations.",
       "registryDependencies": [
-        "https://magicui.design/r/text-animate"
+        "https://pioneerui.com/r/text-animate"
       ],
       "files": [
         {
